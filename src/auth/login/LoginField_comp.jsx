@@ -10,8 +10,10 @@ function LoginField_comp() {
                     </div>
 
                     <div className='my-[20px] text-center'>
+
                         <h1 className='xl:text-[50px] lg:text-[30px] mb-4 font-bold '>Welcome</h1>
                         <h1 className='xl:text-[24px] font-semibold '>Log in to climb on sight</h1>
+
                     </div>
                     <div className="w-full flex flex-col gap-4">
                         <div className='w-full'>
