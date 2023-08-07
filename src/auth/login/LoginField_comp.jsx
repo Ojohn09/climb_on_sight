@@ -9,7 +9,7 @@ function LoginField_comp() {
                         CLIMBONSIGHT
                     </div>
 
-                    <div className='my-[40px] text-center'>
+                    <div className='my-[20px] text-center'>
                         <h1 className='text-[50px] mb-4 font-bold '>Welcome</h1>
                         <h1 className='text-[24px] font-semibold '>Log in to climb on sight</h1>
                     </div>
