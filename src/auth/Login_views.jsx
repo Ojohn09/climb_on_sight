@@ -12,10 +12,11 @@ function Login_views() {
                 </div>
                 <div className='bg-white lg:w-[65%] min-h-[70vh] p-2 rounded-xl flex flex-col items-center'>
                     <LoginField_comp />
+                    <div>
+                        <p className='hover:underline cursor-pointer'>Don't have an account?</p>
+                    </div>
                 </div>
-                <div>
-                    <p className='hover:underline cursor-pointer'>Don't have an account?</p>
-                </div>
+               
 
             </div>
         </div>
