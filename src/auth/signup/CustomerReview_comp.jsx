@@ -32,21 +32,21 @@ function CustomerReview_comp() {
                                         {values.links.map((link, index) => (
                                             <div key={index} className='w-full'>
                                                 <label htmlFor='' className='text-[14px] text-gray-400'>
-                                                    {index === 0 ? 'If applicable' : ' '}
+                                                    {index === 1 ? 'If applicable' : ' '}
                                                 </label>
                                                 <div className='border-gray-300 border p-3 rounded-xl flex justify-between w-full'>
                                                     <input
                                                         type='text'
-                                                        name={`links.${index}`}
-                                                        label={`link${index}`}
+                                                        name={`links.${index + 1}`}
+                                                        label={`link${index + 1}`}
                                                         margin='normal'
-                                                        className=' outline-none w-full'
+                                                        className=' outline-none w-full mb-2'
                                                         placeholder='Add links to customer reviews'
                                                         onPaste={(e) => handlePasteLinks(e, push)}
                                                     />
                                                     <LinkIcon />
                                                 </div>
-                                                <ErrorMessage name={`links.${index}`} component='div' className='text-red-500 text-[12px]' />
+
                                                 {index !== 0 && (
                                                     <button type='button' onClick={() => remove(index)} className="text-center w-full">
                                                         Remove
