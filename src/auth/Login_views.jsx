@@ -11,7 +11,6 @@ function Login_views() {
                     <img src={back} alt="" className='rounded-xl' />
                 </div>
                 <div className='bg-white lg:w-[65%] rounded-xl flex flex-col items-center'>
-
                     <LoginField_comp />
                 </div>
 

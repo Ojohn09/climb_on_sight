@@ -34,9 +34,8 @@ function SignUpForm() {
     const handleFormSubmission = (values) => {
         console.log('Final Form Values:', values);
 
-        // You can dispatch actions to update the Redux store with the final form values for each component
         dispatch(updatePersonalInfo(values.personalInformation));
-
+        dispatch(updateAccountSettings(values.accountSettings));
         dispatch(updateGuidience(values.guidience));
         dispatch(updateCustomerReview(values.customerReview));
         dispatch(updateExperience(values.experience));
@@ -48,7 +47,7 @@ function SignUpForm() {
 
     return (
         <div className='flex flex-col items-center w-full'>
-            <div className='font-bold mt-16 mb-8'>
+            <div className='font-bold text-[14px] my-5'>
                 CLIMBONSIGHT
             </div>
             <FormStepper steps={steps} currentStep={currentStep} />

@@ -16,7 +16,7 @@ function AccountSettings_comp() {
                     validationSchema={accountSettingsSchema}
                 >
                     {({ values, handleChange, handleBlur, handleSubmit, errors, touched }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
+                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
                             <div className='my-[40px]'>
                                 <h1 className='text-[24px] font-semibold'>Account Settings</h1>
                             </div>

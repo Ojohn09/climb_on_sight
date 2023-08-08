@@ -1,3 +1,39 @@
 * {
   overflow-x: hidden;
 }
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.step-item {
+  @apply relative flex flex-col items-center justify-center text-center text-[14px] w-32
+}
+
+.step-item::before {
+  @apply content-[''] bg-black h-[3px] w-[100%] absolute right-2/4 top-1/3 -translate-y-2/4;
+}
+
+.menu {
+  width: 60px;
+  overflow: hidden;
+  transition: width 1.5s, border-radius 1.5s;
+  border-radius: 50px;
+}
+
+.menu:hover {
+  width: 200px;
+  border-radius: 30px;
+}
+
+.menu-icon .menu-text {
+  position: absolute;
+  left: 80px;
+  transition: left 2s;
+  font-size: 12px;
+}
+
+.menu:hover .menu-icon .menu-text {
+  left: 50px;
+}

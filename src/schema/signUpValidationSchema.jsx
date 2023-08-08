@@ -13,12 +13,11 @@ export const personalInformationSchema = Yup.object().shape({
 export const accountSettingsSchema = Yup.object().shape({
     userName: Yup.string().required('Username is required'),
     password: Yup.string().required('Password is required')
-        .min(8, 'Password must be at least 8 characters long.')
-        .matches(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-            'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.'
-        )
-        .required('Password is required.'),
+        .min(8, 'Password must be 8 characters long')
+        .matches(/[0-9]/, 'Password requires a number')
+        .matches(/[a-z]/, 'Password requires a lowercase letter')
+        .matches(/[A-Z]/, 'Password requires an uppercase letter')
+        .matches(/[^\w]/, 'Password requires a symbol'),
     confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Confirm password is required'),
