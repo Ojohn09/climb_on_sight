@@ -17,10 +17,10 @@ function PersonalInformation_comp() {
                         email: '',
                         phoneNumber: '',
                     }}
-                    validationSchema={personalInformationSchema}
+
                 >
                     {({ values, handleChange, handleBlur }) => (
-                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                        <Form className='flex flex-col items-center gap-4 w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
                             <div className='my-[20px]'>
                                 <h1 className='text-[18px] font-semibold'>Fill the forms below</h1>
                             </div>

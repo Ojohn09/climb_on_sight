@@ -18,17 +18,17 @@ function Guidience_comp() {
                     }}
                     validationSchema={guidienceSchema}
                 >
-                    {({ values, handleChange, handleBlur, handleSubmit, errors, touched }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
-                            <div className='my-[40px]'>
-                                <h1 className='text-[24px] font-semibold'>Provide guidance proofs</h1>
+                    {({ values, handleChange, handleBlur }) => (
+                        <Form className='flex flex-col items-center gap-4 w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                            <div className='my-[20px]'>
+                                <h1 className='text-[18px] font-semibold'>Provide guidance proofs</h1>
                             </div>
                             <div className='w-full'>
                                 <label htmlFor='' className='text-[14px] text-gray-400'>
                                     Mandatory
                                 </label>
                                 <input
-                                    type='text'
+                                    type='file'
                                     name='guidingInsurance'
                                     value={values.guidingInsurance}
                                     onChange={handleChange}
@@ -45,7 +45,7 @@ function Guidience_comp() {
                                     If applicable
                                 </label>
                                 <input
-                                    type='text'
+                                    type='file'
                                     name='guidingCertificate'
                                     value={values.guidingCertificate}
                                     onChange={handleChange}

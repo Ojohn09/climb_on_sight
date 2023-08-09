@@ -2,8 +2,8 @@
 const FormStepper = ({ steps, currentStep }) => {
 
     return (
-        <div className="w-full">
-            <div className="flex w-[75%] h-fit mx-auto">
+        <div className="lg:w-[75%] h-fit mx-auto">
+            <div className="flex items-center justify-center">
                 {steps.map((steps, index) => (
                     <div
                         key={index}
