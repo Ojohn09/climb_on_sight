@@ -1,6 +1,15 @@
 
 import * as Yup from 'yup';
 
+const FILE_SIZE = 160 * 1024;
+const SUPPORTED_FORMATS = [
+    "image/jpg",
+    "image/jpeg",
+    "image/gif",
+    "image/png",
+    "application/pdf"
+];
+
 export const personalInformationSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
@@ -24,8 +33,30 @@ export const accountSettingsSchema = Yup.object().shape({
 });
 
 export const guidienceSchema = Yup.object().shape({
-    guidingInsurance: Yup.string().required('Proof of guiding insurance is required'),
-    guidingCertificate: Yup.string(),
+    guidingInsurance: Yup.mixed()
+        .required("A file is required")
+        .test(
+            "fileSize",
+            "File too large",
+            value => value && value.size <= FILE_SIZE
+        )
+        .test(
+            "fileFormat",
+            "Unsupported Format",
+            value => value && SUPPORTED_FORMATS.includes(value.type)
+        ),
+    guidingCertificate: Yup.mixed()
+        .required("A file is required")
+        .test(
+            "fileSize",
+            "File too large",
+            value => value && value.size <= FILE_SIZE
+        )
+        .test(
+            "fileFormat",
+            "Unsupported Format",
+            value => value && SUPPORTED_FORMATS.includes(value.type)
+        )
 });
 
 export const reviewSchema = Yup.object().shape({
@@ -59,9 +90,10 @@ export const guideReferenceSchema = Yup.object().shape({
 // Combine all the schemas into one comprehensive schema
 export const signUpFormSchema = Yup.object().shape({
     personalInformation: personalInformationSchema,
+    accountSettings: accountSettingsSchema,
     guidience: guidienceSchema,
     customerReview: reviewSchema,
     experience: experienceSchema,
     guideReference: guideReferenceSchema,
-    accountSettings: accountSettingsSchema,
+
 });

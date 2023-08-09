@@ -7,7 +7,6 @@ import { reviewSchema } from '../../schema/signUpValidationSchema';
 
 function CustomerReview_comp() {
 
-    const dispatch = useDispatch();
     const handlePasteLinks = (event, push) => {
         const pastedLinks = event.clipboardData.getData('text').split('\n');
         push(...pastedLinks);
@@ -22,26 +21,41 @@ function CustomerReview_comp() {
                     }}
                 >
                     {({ values }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
-                            <div className='my-[40px]'>
-                                <h1 className='text-[24px] font-semibold'>Links to reviews</h1>
+                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                            <div className='my-[20px]'>
+                                <h1 className='text-[18px] font-semibold'>Links to reviews</h1>
                             </div>
                             <FieldArray name='links'>
                                 {({ push, remove }) => (
-                                    <div className='w-full'>
-                                        {values.links.map((link, index) => (
+                                    <div className='lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+
+                                        <div>
+                                            <label htmlFor='' className='text-[14px] text-gray-400'>
+                                                if applicable
+                                            </label>
+                                            <input
+                                                type='text'
+                                                name={`links`}
+                                                label={`link`}
+                                                margin='normal'
+                                                className=' outline-none w-full mb-2'
+                                                placeholder='Add links to customer reviews'
+                                            />
+                                            <LinkIcon />
+                                        </div>
+                                        {values.links.map((links, index) => (
                                             <div key={index} className='w-full'>
                                                 <label htmlFor='' className='text-[14px] text-gray-400'>
-                                                    {index === 1 ? 'If applicable' : ' '}
+                                                    {index === 0 ? 'If applicable' : ' '}
                                                 </label>
-                                                <div className='border-gray-300 border p-3 rounded-xl flex justify-between w-full'>
+                                                <div className='border-gray-300 border p-3 rounded-xl flex justify-between gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
                                                     <input
                                                         type='text'
                                                         name={`links.${index + 1}`}
                                                         label={`link${index + 1}`}
                                                         margin='normal'
                                                         className=' outline-none w-full mb-2'
-                                                        placeholder='Add links to customer reviews'
+                                                        placeholder=''
                                                         onPaste={(e) => handlePasteLinks(e, push)}
                                                     />
                                                     <LinkIcon />
@@ -63,8 +77,8 @@ function CustomerReview_comp() {
                         </Form>
                     )}
                 </Formik>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

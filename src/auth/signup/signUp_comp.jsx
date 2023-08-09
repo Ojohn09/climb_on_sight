@@ -8,6 +8,8 @@ import FormStepper from './FormStepper_comp';
 import { DocumentIcon, FingerPrintIcon, HashtagIcon, StarIcon, UserGroupIcon, UserIcon } from '../../utils/icons';
 import AccountSettings_comp from './AccountSettings_comp';
 import { Formik, Form } from 'formik';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const steps = [
     { icon: <UserIcon />, text: 'Personal Information' },
@@ -21,6 +23,10 @@ const steps = [
 
 
 function SignUpForm() {
+
+    const dispatch = useDispatch()
+
+    const navigate = useNavigate()
 
     const [currentStep, setCurrentStep] = useState(0);
     const totalSteps = steps.length - 1;
@@ -42,16 +48,21 @@ function SignUpForm() {
         dispatch(updateGuideReference(values.guideReference));
 
         // Perform any additional actions, such as submitting the entire form to the server.
+
+        navigate('/success-page')
         // ...
+
     };
 
     return (
-        <div className='flex flex-col items-center w-full'>
+        <div className='flex flex-col items-center w-full py-10 lg:py-0'>
             <div className='font-bold text-[14px] my-5'>
                 CLIMBONSIGHT
             </div>
-            <FormStepper steps={steps} currentStep={currentStep} />
             <div className='w-full'>
+                <FormStepper steps={steps} currentStep={currentStep} />
+            </div>
+            <div className='w-full mt-10'>
                 <div className='w-full'>
                     <Formik
                         initialValues={{
@@ -97,7 +108,7 @@ function SignUpForm() {
                                 {currentStep === 4 && <Experience_comp />}
                                 {currentStep === 5 && <GuideReference_comp />}
 
-                                <div className='max-w-[440px] mx-auto mt-4'>
+                                <div className='w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto mt-4'>
                                     {currentStep < totalSteps ? (
                                         <button
                                             onClick={handleNextStep}

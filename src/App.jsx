@@ -5,6 +5,7 @@ import SignUp_views from './auth/SignUp_views'
 import ProtectedRoute from './routes/ProtectedRoutes'
 import Dashboard_page from './pages/dashboard/Dashboard_page'
 import { useSelector } from 'react-redux'
+import SuccessPage_comp from './auth/signup/SuccessPage_comp'
 
 function App() {
 
@@ -22,8 +23,8 @@ function App() {
           <Route path='/signup' element={<SignUp_views />} />
           <Route path='/dashboard' element={<Dashboard_page />} />
 
-          {/* Protected routes */}
-          {/* <Route path='/dashboard' element={<ProtectedRoute component={Dashboard_page} />} /> */}
+          <Route path='/success-page' element={<SuccessPage_comp />} />
+
         </Routes>
       </BrowserRouter>
     </div>
