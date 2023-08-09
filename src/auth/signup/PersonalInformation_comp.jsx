@@ -17,7 +17,7 @@ function PersonalInformation_comp() {
                         email: '',
                         phoneNumber: '',
                     }}
-                    validationSchema={personalInformationSchema}
+
                 >
                     {({ values, handleChange, handleBlur }) => (
                         <Form className='flex flex-col items-center gap-4 w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto'>

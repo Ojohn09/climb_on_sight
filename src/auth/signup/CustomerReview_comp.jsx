@@ -28,11 +28,11 @@ function CustomerReview_comp() {
                             <FieldArray name='links'>
                                 {({ push, remove }) => (
                                     <div className='lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                                        <label htmlFor='' className='text-[14px] text-gray-400'>
+                                            if applicable
+                                        </label>
+                                        <div className='border w-[380px] xl:w-[440px] p-2 flex justify-between items-center rounded-xl'>
 
-                                        <div>
-                                            <label htmlFor='' className='text-[14px] text-gray-400'>
-                                                if applicable
-                                            </label>
                                             <input
                                                 type='text'
                                                 name={`links`}
