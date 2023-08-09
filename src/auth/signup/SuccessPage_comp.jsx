@@ -5,7 +5,7 @@ function SuccessPage_comp() {
         <div className='w-screen h-screen bg-orange-100 flex items-center justify-center'>
 
             <div className='max-w-[400px] mx-auto flex items-center justify-center p-4 bg-white rounded-xl'>
-                <div className="w-[70%] mx-auto flex flex-col items-center">
+                <div className="w-[70%] mx-auto flex flex-col items-center py-4">
                     <div className="text-black text-xs font-bold">CLIMBONSIGHT</div>
                     <div className="py-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="153" height="138" viewBox="0 0 153 138" fill="none">
@@ -19,7 +19,7 @@ function SuccessPage_comp() {
                         </svg>
                     </div>
                     <div className=" text-center text-black my-4 font-semibold">Great!!! You’ve successfully created a guide account we are gld to have you click on the buton below to go home</div>
-                    <Link to='/signup' className="self-stretch bg-black rounded-[20px] justify-center items-center gap-2.5 inline-flex">
+                    <Link to='/dashboard' className="self-stretch bg-black rounded-[20px] justify-center items-center gap-2.5 inline-flex">
                         <div className="text-stone-50 p-3 font-normal">Go Home</div>
                     </Link>
                 </div>
