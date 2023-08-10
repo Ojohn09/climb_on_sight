@@ -85,9 +85,9 @@ function Calender() {
 
 
     return (
-        <div className="bg-white rounded-xl pr-4 pb-4 pt-4">
+        <div className="bg-white rounded-xl pr-4 pb-8 h-auto">
             <div>
-                <p className="font-semibold mx-4 text-[14px]">
+                <p className="font-semibold mx-4 text-[12px] xl:text-[14px] my-[22px]">
                     {currentDate}
                 </p>
                 <div className="grid grid-cols-7 place-items-center">
@@ -95,15 +95,15 @@ function Calender() {
                     {
                         days.map((day, idx) => {
                             return (
-                                <div key={idx} className="capitalize text-[8px]">
+                                <div key={idx} className="capitalize text-[4px] sm:text-[8px]">
                                     {day}
                                 </div>
                             );
                         })}
                 </div>
 
-                <div>
-                    <div className="grid grid-cols-7 mt-2 place-items-center">
+                <div className="h-[100%]">
+                    <div className="grid grid-cols-7 mt-2 place-items-center h-[100%]">
                         {daysInMonth.map((day, idx) => {
                             const dayOfWeek = (getDay(day) + 6) % 7; // Adjust to start week on Monday
                             const isWeekend = dayOfWeek === 5 || dayOfWeek === 6; // Friday (5) and Saturday (6)
@@ -118,7 +118,7 @@ function Calender() {
                             return (
                                 <div
                                     key={idx}
-                                    className={`relative w-full h-12 p-1 font-semibold flex items-end ${borderClass} ${bgColor} justify-end text-[10px] ${textColor} ${eventTextColor}`}
+                                    className={`relative w-full h-12 xl:h-20 p-1 font-semibold flex items-end ${borderClass} ${bgColor} justify-end text-[10px] ${textColor} ${eventTextColor}`}
                                 >
                                     {format(day, "d")}
                                     {isEvent && <span className="absolute top-0 left-0 font-bold ml-1 text-[8px] text-black m-1 uppercase">event one</span>}

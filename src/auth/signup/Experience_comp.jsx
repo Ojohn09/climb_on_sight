@@ -17,7 +17,6 @@ function Experience_comp() {
                         rockClimbingExperience: '',
                         iceClimbingExperience: '',
                     }}
-                    validationSchema={experienceSchema}
                 >
                     {({ values, handleChange, handleBlur }) => (
                         <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
