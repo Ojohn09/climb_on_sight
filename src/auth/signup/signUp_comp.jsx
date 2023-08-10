@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PersonalInformation_comp from './PersonalInformation_comp';
 import Experience_comp from './Experience_comp';
 import GuideReference_comp from './GuideReference_comp';
-import Guidience_comp from './guidience_comp';
+import Guidience_comp from './Guidience_comp';
 import CustomerReview_comp from './CustomerReview_comp';
 import FormStepper from './FormStepper_comp';
 import { DocumentIcon, FingerPrintIcon, HashtagIcon, StarIcon, UserGroupIcon, UserIcon } from '../../utils/icons';
@@ -10,6 +10,23 @@ import AccountSettings_comp from './AccountSettings_comp';
 import { Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import {
+    updateAccountSettings,
+    updateCustomerReview,
+    updateExperience,
+    updateGuideReference,
+    updateGuidience,
+    updatePersonalInfo
+} from '../../redux/slices/auth/signUpFormSlice';
+
+import {
+    personalInformationSchema,
+    accountSettingsSchema,
+    experienceSchema,
+    guideReferenceSchema,
+    guidienceSchema,
+    reviewSchema
+} from '../../schema/signUpValidationSchema';
 
 const steps = [
     { icon: <UserIcon />, text: 'Personal Information' },
@@ -31,8 +48,8 @@ function SignUpForm() {
     const [currentStep, setCurrentStep] = useState(0);
     const totalSteps = steps.length - 1;
 
-    const handleNextStep = () => {
-        if (currentStep < totalSteps) {
+    const handleNextStep = (isValid) => {
+        if (isValid && currentStep < totalSteps) {
             setCurrentStep((prevStep) => prevStep + 1);
         }
     };
@@ -94,12 +111,27 @@ function SignUpForm() {
                             },
                         }}
                         // validationSchema={ }
-                        onSubmit={(values) => {
-                            // Handle the final form submission here
-                            handleFormSubmission(values);
+                        onSubmit={(values, { setSubmitting }) => {
+                            if (currentStep === totalSteps) {
+                                handleFormSubmission(values);
+                                setSubmitting(false);
+                            } else {
+                                handleNextStep(true);
+                                setSubmitting(false);
+                            }
                         }}
+
+                        validationSchema={
+                            currentStep === 0 ? personalInformationSchema :
+                                currentStep === 1 ? accountSettingsSchema :
+                                    currentStep === 2 ? guidienceSchema :
+                                        currentStep === 3 ? reviewSchema :
+                                            currentStep === 4 ? experienceSchema :
+                                                guideReferenceSchema
+                        }
+
                     >
-                        {({ values }) => (
+                        {({ isSubmitting, isValid }) => (
                             <Form>
                                 {currentStep === 0 && <PersonalInformation_comp />}
                                 {currentStep === 1 && <AccountSettings_comp />}
@@ -111,9 +143,10 @@ function SignUpForm() {
                                 <div className='w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto mt-4'>
                                     {currentStep < totalSteps ? (
                                         <button
-                                            onClick={handleNextStep}
+                                            onClick={() => handleNextStep(isValid)}
                                             type="submit"
                                             className="bg-black text-white font-semibold py-3 px-4 rounded-xl w-full"
+                                            disabled={isSubmitting}
                                         >
                                             Continue
                                         </button>
@@ -121,6 +154,7 @@ function SignUpForm() {
                                         <button
                                             type="submit"
                                             className="bg-black text-white font-semibold py-3 px-4 rounded-xl w-full"
+                                            disabled={isSubmitting}
                                         >
                                             Finish up
                                         </button>)}

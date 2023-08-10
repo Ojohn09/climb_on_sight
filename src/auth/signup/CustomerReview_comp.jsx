@@ -17,7 +17,7 @@ function CustomerReview_comp() {
             <div className='w-[100%]'>
                 <Formik
                     initialValues={{
-                        links: [],
+                        links: [''], // Initial value with an empty link
                     }}
                 >
                     {({ values }) => (
@@ -27,50 +27,45 @@ function CustomerReview_comp() {
                             </div>
                             <FieldArray name='links'>
                                 {({ push, remove }) => (
-                                    <div className='lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
-                                        <label htmlFor='' className='text-[14px] text-gray-400'>
-                                            if applicable
-                                        </label>
-                                        <div className='border w-[380px] xl:w-[440px] p-2 flex justify-between items-center rounded-xl'>
+                                    <div className='w-[440px] mx-auto mb-4'>
+                                        {values.links.map((link, index) => (
+                                            <div key={index} className='w-full flex  gap-4 mt-4 items-center'>
+                                                <div className='lg:w-[440px]'>
+                                                    <label htmlFor='' className='text-[14px] text-gray-400'>
+                                                        {index === 0 ? 'If applicable' : ' '}
+                                                    </label>
+                                                    <div className='border-gray-300 border p-2 rounded-xl items-center flex justify-between gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                                                        <input
+                                                            type='text'
+                                                            name={`links.${index}`}
+                                                            label={`link${index + 1}`}
+                                                            margin='normal'
+                                                            className=' outline-none w-full mb-2'
+                                                            placeholder='Add link to customer reviews'
+                                                            onPaste={(e) => handlePasteLinks(e, push)}
+                                                        />
+                                                        <LinkIcon />
+                                                    </div>
 
-                                            <input
-                                                type='text'
-                                                name={`links`}
-                                                label={`link`}
-                                                margin='normal'
-                                                className=' outline-none w-full mb-2'
-                                                placeholder='Add links to customer reviews'
-                                            />
-                                            <LinkIcon />
-                                        </div>
-                                        {values.links.map((links, index) => (
-                                            <div key={index} className='w-full'>
-                                                <label htmlFor='' className='text-[14px] text-gray-400'>
-                                                    {index === 0 ? 'If applicable' : ' '}
-                                                </label>
-                                                <div className='border-gray-300 border p-3 rounded-xl flex justify-between gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
-                                                    <input
-                                                        type='text'
-                                                        name={`links.${index + 1}`}
-                                                        label={`link${index + 1}`}
-                                                        margin='normal'
-                                                        className=' outline-none w-full mb-2'
-                                                        placeholder=''
-                                                        onPaste={(e) => handlePasteLinks(e, push)}
-                                                    />
-                                                    <LinkIcon />
                                                 </div>
 
+
                                                 {index !== 0 && (
-                                                    <button type='button' onClick={() => remove(index)} className="text-center w-full">
-                                                        Remove
-                                                    </button>
+                                                    <div className='w-fit border px-1 rounded-2xl border-black'>
+                                                        <button type='button' onClick={() => remove(index)} className="text-center p-2`">
+                                                            —
+                                                        </button>
+                                                    </div>
                                                 )}
+
+
                                             </div>
                                         ))}
-                                        <button type='button' onClick={() => push('')} className='text-center w-full'>
-                                            Add Link
-                                        </button>
+                                        <div className='w-full flex item-center justify-center mt-2'>
+                                            <button type='button' onClick={() => push('')} className='text-center w-fit mt-2 py-1 rounded-full px-3 border border-black'>
+                                                +
+                                            </button>
+                                        </div>
                                     </div>
                                 )}
                             </FieldArray>
