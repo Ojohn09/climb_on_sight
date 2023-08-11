@@ -4,23 +4,70 @@ import { ArrowUpRightIcon } from "../../../utils/icons"
 
 function Cards_components() {
 
-    // console.log(generateDate())
-
     return (
         <div className="w-full h-auto">
             <div className="flex flex-col md:flex-row gap-4 items-center w-full ">
-                <div className="flex bg-indigo-100 rounded-xl p-4 xl:p-8 text-center w-full md:w-[25%] shadow-sm">
-                    <div className=" flex flex-col gap-2 w-full ">
-                        <p className="text-lg xl:text-3xl p-1">$53,267</p>
-                        <p className="text-[8px]">Cash payout</p>
-                        <p className="text-[8px] text-gray-500">23% increase from last week</p>
+                <div className="flex flex-col bg-indigo-100 rounded-xl p-4 xl:p-8 gap-4 w-full md:w-[25%] shadow-sm">
+                    <div className="flex flex-col text-[12px] text-start">
+                        <p className="font-semibold">Current Balance</p>
+                        <p>Today</p>
                     </div>
                     <div className="">
-                        <ArrowUpRightIcon />
+                        <p className="text-xl font-semibold">
+                            $34,256
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex bg-green-50 rounded-xl p-4 xl:p-8 text-center w-full md:w-[25%] shadow-sm">
+                <div className="flex flex-col bg-[#FFEEE2] rounded-xl p-4 xl:p-8 gap-4 w-full md:w-[25%] shadow-sm">
+                    <div className="flex flex-col text-[12px] text-start">
+                        <p className="font-semibold">Previous Payout</p>
+                        <p>Today</p>
+                    </div>
+                    <div className=" flex gap-6 items-center">
+                        <p className="text-xl font-semibold">
+                            $23,444
+                        </p>
+                        <div className="text-green-400 flex items-center text-center text-[8px] p-1 bg-white rounded">
+                            <p className="">
+                                paid
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col bg-green-50  rounded-xl p-4 xl:p-8 gap-4 w-full md:w-[25%] shadow-sm">
+                    <div className="flex flex-col text-[12px] text-start">
+                        <p className="font-semibold">Previous Payout</p>
+                        <p>Today</p>
+                    </div>
+                    <div className=" flex gap-3 items-center">
+                        <p className="text-xl font-semibold">
+                            $23,444
+                        </p>
+                        <div className="text-red-400 flex items-center text-center text-[6px] p-1 bg-white rounded">
+                            <p className="">
+                                In balance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col bg-green-50  rounded-xl p-4 xl:p-8 gap-4 w-full md:w-[25%] shadow-sm">
+                    <div className="flex flex-col text-[12px] text-start">
+                        <p className="font-semibold">Earnings summary</p>
+                        <p>23 May</p>
+                    </div>
+                    <div className=" flex gap-4 items-center">
+                        <p className="text-xl font-semibold">
+                            $23,444
+                        </p>
+                    </div>
+                </div>
+
+
+
+                {/* <div className="flex bg-green-50 rounded-xl p-4 xl:p-8 text-center w-full md:w-[25%] shadow-sm">
                     <div className=" flex flex-col gap-2 w-full text-center ">
                         <p className="text-lg xl:text-3xl p-1">672</p>
                         <p className="text-[8px]">Guides completed</p>
@@ -54,7 +101,7 @@ function Cards_components() {
                     <div className="">
                         <ArrowUpRightIcon />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

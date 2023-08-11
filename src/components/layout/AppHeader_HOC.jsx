@@ -3,9 +3,9 @@ import { BsBellFill } from 'react-icons/bs'
 
 function AppHeader_HOC() {
     return (
-        <div className='p-5 z-0'>
-            <div className="flex flex-col gap-4 md:flex-row justify-between items-center">
-                <div className="w-[50%]">
+        <div className='z-10'>
+            <div className="fixed w-[92%] px-5 py-2 flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
+                <div className=" md:w-[50%]">
                     <div className='w-full'>
                         <div className="relative flex items-center w-full h-8 rounded-2xl shadow-sm bg-white overflow-hidden">
                             <div className="grid place-items-center h-full w-12 text-gray-300">
@@ -28,11 +28,11 @@ function AppHeader_HOC() {
                         <div className='p-2 bg-white rounded-full text-gray-700'>
                             <IoSettings />
                         </div>
-                        <div className='p-2 bg-white rounded-full text-gray-700'>
+                        <div className='p-2 bg-white rounded-full text- text-gray-700'>
                             <BsBellFill />
                         </div>
                         <div className=''>
-                            <img src="https://picsum.photos/200/300" alt="" className='w-6 h-6 rounded-full' />
+                            <img src="https://picsum.photos/200/300" alt="" className='w-10 h-10 rounded-full' />
                         </div>
                     </div>
                 </div>

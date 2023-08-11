@@ -4,6 +4,8 @@ import App from './App.jsx'
 import './index.css'
 import store from './redux/store/store.js'
 import { Provider } from 'react-redux'
+import './assets/fonts/Helvetica.ttf'
+import './assets/fonts/MonumentExtended-Regular.otf'
 
 
 
