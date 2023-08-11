@@ -9,7 +9,7 @@ function SignUp_views() {
 
     return (
         <div className='max-w-[1920px] bg-[#FFF1E7] mx-auto h-screen'>
-            <div className=' lg:flex gap-4 md:p-4'>
+            <div className=' lg:flex gap-4 p-2 md:p-4'>
                 <div className='hidden lg:block lg:w-[35%]'>
                     <img src={back} alt="" className='rounded-xl' />
                 </div>

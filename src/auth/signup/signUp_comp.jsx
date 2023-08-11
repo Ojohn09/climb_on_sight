@@ -73,7 +73,7 @@ function SignUpForm() {
 
     return (
         <div className='flex flex-col items-center w-full py-10 lg:py-0'>
-            <div className='font-bold text-[14px] my-5'>
+            <div className='font-semibold text-[14px] my-5 font-face-mr'>
                 CLIMBONSIGHT
             </div>
             <div className='w-full'>

@@ -41,7 +41,7 @@ function LoginField_comp() {
                 onSubmit={handleSubmit}
                 className=''>
                 <Form className='flex flex-col items-center gap-4 max-w-[320px] mx-auto'>
-                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px]'>
+                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px] font-face-mr'>
                         CLIMBONSIGHT
                     </div>
 

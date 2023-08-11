@@ -12,7 +12,7 @@ function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
 
   return (
-    <div className='app'>
+    <div className='app font-face-gm'>
       <BrowserRouter>
         <Routes>
           {/* Redirect to dashboard if user is authenticated */}

@@ -12,7 +12,7 @@ function TodayEvent_comp() {
     // ]
 
     return (
-        <div className='bg-white lg:h-[70vh] xl:h-[80vh] rounded-xl p-4 flex flex-col gap-7'>
+        <div className='bg-white lg:h-[100vh] xl:h-full rounded-xl p-4 flex flex-col gap-7'>
             <div className='flex items-center justify-between'>
                 <div className='text-xs'>
                     <p className='font-semibold'>Todays events</p>

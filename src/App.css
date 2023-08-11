@@ -16,7 +16,6 @@
 } */
 
 .menu {
-  width: 60px;
   overflow: hidden;
   transition: width 1.5s, border-radius 1.5s;
   border-radius: 50px;
@@ -52,4 +51,12 @@ input[type='number'] {
 
 ::file-selector-button {
   display: none;
+}
+
+.font-face-gm {
+  font-family: 'Helvetica';
+}
+
+.font-face-mr {
+  font-family: 'Monument Extended';
 }
