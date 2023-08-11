@@ -6,7 +6,7 @@ import { BiSolidDoorOpen } from "react-icons/bi"
 function SideNav_HOC() {
     return (
         <div className="">
-            <div className="bg-red-100 p-4  fixed border border-r min-h-[90%] menu flex flex-col justify-between gap-[150px] z-50">
+            <div className="bg-[#F4E8DF] p-4  fixed border border-r lg:min-h-[80%] xl:min-h-[90%] menu flex flex-col justify-between gap-[150px] z-50">
                 <div>
                     <Link to="/dashboard" className="font-bold text-xs ">CBO</Link>
                 </div>

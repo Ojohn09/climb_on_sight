@@ -4,8 +4,8 @@ import SideNav_HOC from "./SideNav_HOC"
 
 function AppLayout_HOC(props) {
     return (
-        <div>
-            <div className="max-w-[2000px] mx-auto bg-[#FBF7F4]">
+        <div className="w-full bg-[#FBF7F4]">
+            <div className="max-w-[1500px] mx-auto bg-[#FBF7F4]">
                 <main className="flex items-start gap-2 p-4">
                     <aside className="">
                         <SideNav_HOC />
@@ -14,7 +14,7 @@ function AppLayout_HOC(props) {
                         <header className="">
                             <AppHeader_HOC />
                         </header>
-                        <section className="p-5 mt-4">{props.children}</section>
+                        <section className="p-5">{props.children}</section>
                     </section>
                 </main>
             </div>

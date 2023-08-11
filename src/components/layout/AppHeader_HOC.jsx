@@ -5,7 +5,7 @@ function AppHeader_HOC() {
     return (
         <div className='p-5 z-0'>
             <div className="flex flex-col gap-4 md:flex-row justify-between items-center">
-                <div className="max-w-[500px] xl:w-[300px]">
+                <div className="w-[50%]">
                     <div className='w-full'>
                         <div className="relative flex items-center w-full h-8 rounded-2xl shadow-sm bg-white overflow-hidden">
                             <div className="grid place-items-center h-full w-12 text-gray-300">
