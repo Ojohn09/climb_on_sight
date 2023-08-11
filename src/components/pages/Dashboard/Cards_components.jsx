@@ -8,7 +8,7 @@ function Cards_components() {
 
     return (
         <div className="w-full h-auto">
-            <div className="flex flex-col md:flex-row gap-4 py-2 items-center w-full ">
+            <div className="flex flex-col md:flex-row gap-4 items-center w-full ">
                 <div className="flex bg-indigo-100 rounded-xl p-4 xl:p-8 text-center w-full md:w-[25%] shadow-sm">
                     <div className=" flex flex-col gap-2 w-full ">
                         <p className="text-lg xl:text-3xl p-1">$53,267</p>

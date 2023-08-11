@@ -87,7 +87,7 @@ function Calender() {
     return (
         <div className="bg-white rounded-xl pr-4 pb-8 h-auto">
             <div>
-                <p className="font-semibold mx-4 text-[12px] xl:text-[14px] my-[22px]">
+                <p className="font-semibold mx-2 my-[22px]">
                     {currentDate}
                 </p>
                 <div className="grid grid-cols-7 place-items-center">

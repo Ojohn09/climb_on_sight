@@ -1,5 +1,6 @@
 import Calender from "../../../features/calender/Calender"
 import Notification_comp from "../../../features/calender/Notification_comp"
+import NewMessages_comp from "./NewMessages_comp"
 
 
 function DateAndNotification_comp() {
