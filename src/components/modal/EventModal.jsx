@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { selectEvent, toggleModal } from "../../redux/slices/features/eventSlice"
+import { selectEvent, setClickedEvent, toggleModal } from "../../redux/slices/features/eventSlice"
 import { Link } from "react-router-dom"
 import { IoIosSend } from 'react-icons/io'
 
@@ -9,9 +9,10 @@ function EventModal() {
     const selectedEvent = useSelector((state) => state.event.selectedEvent)
     const isModalVisible = useSelector((state) => state.event.isModalVisible)
 
-    const closeModal = () => {
+    const closeModal = (event) => {
         dispatch(toggleModal());
         dispatch(selectEvent(null));
+        dispatch(setClickedEvent(event));
     };
 
     if (!isModalVisible || !selectedEvent) {
