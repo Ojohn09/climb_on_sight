@@ -3,8 +3,8 @@ import { BsBellFill } from 'react-icons/bs'
 
 function AppHeader_HOC() {
     return (
-        <div className='z-10'>
-            <div className="fixed w-[92%] px-5 py-2 flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
+        <div className='z-20'>
+            <div className="fixed w-[92vw] px-5 py-3 flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
                 <div className=" md:w-[50%]">
                     <div className='w-full'>
                         <div className="relative flex items-center w-full h-8 rounded-2xl shadow-sm bg-white overflow-hidden">

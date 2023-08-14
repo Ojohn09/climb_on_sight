@@ -19,7 +19,7 @@ function SideNav_HOC() {
                             <p className="menu-text text-black font-semibold">Home</p>
                         </div>
                     </Link>
-                    <Link to=''>
+                    <Link to='/events'>
                         <div className="menu-icon flex items-center gap-2">
                             <MegaphoneIcon />
                             <p className="menu-text flex justify-between gap-1">

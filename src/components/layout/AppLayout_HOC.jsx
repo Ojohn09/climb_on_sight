@@ -7,14 +7,14 @@ function AppLayout_HOC(props) {
         <div className="w-full bg-[#FBF7F4]">
             <div className="max-w-[1500px] mx-auto bg-[#FBF7F4]">
                 <main className="flex items-start gap-2 px-4">
-                    <aside className="">
+                    <aside className="p-5">
                         <SideNav_HOC />
                     </aside>
-                    <section className="w-[97%] min-h-[98vh] ml-[40px] lg:ml-[50px]">
+                    <section className="w-[97%] min-h-[98vh] ml-[30px] lg:ml-[40px]">
                         <header className="">
                             <AppHeader_HOC />
                         </header>
-                        <section className="p-5 mt-12">{props.children}</section>
+                        <section className="mt-24 sm:mt-16 ">{props.children}</section>
                     </section>
                 </main>
             </div>

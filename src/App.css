@@ -60,3 +60,27 @@ input[type='number'] {
 .font-face-mr {
   font-family: 'Monument Extended';
 }
+
+.wrapper_1:after {
+  content: "";
+  background-color: #00000037;
+  position: absolute;
+  width: 1px;
+  height: 80vh;
+  top: 100px;
+  left: 45%;
+  display: block;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
