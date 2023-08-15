@@ -5,6 +5,7 @@ const eventSlice = createSlice({
     initialState: {
         selectedEvent: null,
         isModalVisible: false,
+        clickedEvent: null,
     },
     reducers: {
         selectEvent: (state, action) => {
@@ -13,8 +14,11 @@ const eventSlice = createSlice({
         toggleModal: (state) => {
             state.isModalVisible = !state.isModalVisible;
         },
+        setClickedEvent: (state, action) => {
+            state.clickedEvent = action.payload;
+        },
     },
 });
 
-export const { selectEvent, toggleModal } = eventSlice.actions;
+export const { selectEvent, toggleModal, setClickedEvent } = eventSlice.actions;
 export default eventSlice.reducer;
