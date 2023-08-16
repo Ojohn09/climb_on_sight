@@ -18,7 +18,7 @@ function Notification_comp() {
                 <p>New Notification</p>
             </div>
 
-            <div className="flex flex-col gap-4 xl:gap-7 items-center">
+            <div className="flex flex-col gap-2 xl:gap-4 items-center">
                 {notificationArray.map((data) => (
                     <div key={data.id} className="flex justify-between xs:text-[10px] sm:text-[12px] lg:text-[12px] w-full xl:text-[16px] items-center ">
                         <p className="text-black bg-gray-200 p-1 md:p-2 rounded-full text-xs"><IoNotifications /></p>

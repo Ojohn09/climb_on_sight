@@ -28,7 +28,7 @@ function SideNav_HOC() {
                             </p>
                         </div>
                     </Link>
-                    <Link to=''>
+                    <Link to='/calendar'>
                         <div className=" menu-icon flex items-center gap-2">
                             <CalendarDaysIcon />
                             <p className="menu-text text-black font-semibold">Calender</p>
