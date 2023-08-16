@@ -5,7 +5,7 @@ import CalenderEvents_comp from '../../components/pages/Calender/CalenderEvents_
 function Calender_page() {
     return (
         <AppLayout_HOC>
-            <div className='flex bg-white h-[90vh] gap-5 px-2 pt-2 rounded-t-xl'>
+            <div className='flex bg-white lg:h-[88vh] xl:h-[90vh] gap-5 px-2 pt-2 rounded-t-xl'>
 
 
                 <div className="w-[25%]">

@@ -22,11 +22,21 @@ export const months = [
 ];
 
 export const time = [
-    { month: 'Select time range' },
-    { id: 0, month: '8am - 9am' },
-    { id: 1, month: '9am - 10am' },
-    { id: 2, month: '10am to 11am' },
-    { id: 3, month: '11am to 12pm' },
-    { id: 4, month: '12pm to 1pm' },
-    { id: 5, month: '1pm to 2pm' },
+    { time: 'Select time range' },
+    { id: 0, time: '8am - 9am' },
+    { id: 1, time: '9am - 10am' },
+    { id: 2, time: '10am to 11am' },
+    { id: 3, time: '11am to 12pm' },
+    { id: 4, time: '12pm to 1pm' },
+    { id: 5, time: '1pm to 2pm' },
 ];
+
+export const payoutTableData = [
+    { id: 0, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 1, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 2, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 3, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 4, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 5, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 6, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+]

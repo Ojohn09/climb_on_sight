@@ -1,23 +1,32 @@
-
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const calendarSlice = createSlice({
     name: 'calendar',
     initialState: {
-        eventDates: [], // Initial event dates here
-        currentMonth: new Date(),
+        currentDate: new Date().getTime(),
+        events: [], // Replace this with your actual events data structure
+        selectedMonth: new Date().getTime(),
+        selectedDate: new Date(),
     },
     reducers: {
-        setEventDates: (state, action) => {
-            state.eventDates = action.payload;
+        setCurrentDate: (state, action) => {
+            state.currentDate = action.payload;
         },
-        setCurrentMonth: (state, action) => {
-            state.currentMonth = action.payload;
+        addEvent: (state, action) => {
+            state.events.push(action.payload);
         },
+        removeEvent: (state, action) => {
+            state.events = state.events.filter(event => event.id !== action.payload);
+        },
+        setSelectedMonth: (state, action) => {
+            state.selectedMonth = action.payload;
+        },
+        setSelectedDate: (state, action) => {
+            state.selectedDate = action.payload
+        }
     },
 });
 
-export const { setEventDates, setCurrentMonth } = calendarSlice.actions;
+export const { setCurrentDate, addEvent, removeEvent, setSelectedMonth, setSelectedDate } = calendarSlice.actions;
 
 export default calendarSlice.reducer;
