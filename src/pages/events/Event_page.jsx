@@ -6,7 +6,7 @@ import EventModal from '../../components/modal/EventModal'
 function Event_page() {
     return (
         <AppLayout_HOC>
-            <div>
+            <div className='lg:h-[85vh] xl:h-[90vh]'>
                 <UpcomingEvent_comp />
                 <EventModal />
             </div>

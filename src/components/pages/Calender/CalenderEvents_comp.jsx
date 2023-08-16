@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
 import * as dateFns from 'date-fns'
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCurrentDate } from '../../../redux/slices/features/calendarSlice'
 
 function CalenderEvents_comp() {
 
-    const formatOfYear = "YYY"
+    const dispatch = useDispatch()
+
+    const currentDate = useSelector((state) => state.calendar.currentDate)
+
+
+
     const formatOfMonth = "MMMM"
     const formatOfWeek = 'cccc'
     const formatOfDay = 'd'
 
-    const [currentDate, setCurrentDate] = useState(new Date())
+    const today = new Date()
 
     // find first day of currentDate 
     const firstDay = dateFns.startOfMonth(currentDate)
@@ -26,9 +33,20 @@ function CalenderEvents_comp() {
     //render all days
     const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate })
 
+
     // Format previous and next month names
     const prevMonth = dateFns.format(dateFns.subMonths(currentDate, 1), formatOfMonth);
     const nextMonth = dateFns.format(dateFns.addMonths(currentDate, 1), formatOfMonth);
+
+    //handle for previous and next month buttons
+    const handlePrevMonthClick = () => {
+        dispatch(setCurrentDate(dateFns.subMonths(currentDate, 1)));
+    };
+    const handleNextMonthClick = () => {
+        dispatch(setCurrentDate(dateFns.addMonths(currentDate, 1)));
+    };
+
+    const isToday = (day) => day === today
 
 
     const weeks = ((date) => {
@@ -49,21 +67,21 @@ function CalenderEvents_comp() {
                         {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
                     </div>
                     <div className='grid grid-cols-7 gap-1 text-end mt-4 text-[10px] xl:text-sm'>
-                        {weeks[0].map((week) => (
-                            <span>{dateFns.format(week, formatOfWeek)}</span>
+                        {weeks[0].map((week, i) => (
+                            <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}
                     </div>
-                    <div className={`grid grid-cols-7 w-full h-[70%] divide-x divide-y divide-gray-100 text-[10px] xl:text-sm`}>
-                        {totalDate.map((date) => (
-                            <div className={`flex items-end justify-end p-1 ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
+                    <div className={`grid grid-cols-7 w-full h-[60%] divide-x divide-y divide-gray-100 text-[10px] xl:text-sm`}>
+                        {totalDate.map((date, i) => (
+                            <div key={i} className={`flex items-end justify-end p-1  ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
                         ))}
                     </div>
                     <div className='justify-between flex mt-4 xl:mt-8 px-4'>
-                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={() => setCurrentDate(dateFns.subMonths(currentDate, 1))}>
+                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={handlePrevMonthClick}>
                             <span className='text-[14px]'><BiLeftArrowAlt /></span>
                             <span className='text-[10px] xl:text-sm'>{prevMonth}</span>
                         </button>
-                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={() => setCurrentDate(dateFns.addMonths(currentDate, 1))}>
+                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={handleNextMonthClick}>
                             <span className='text-[10px] xl:text-sm'>{nextMonth}</span>
                             <span className='text-[14px]'><BiRightArrowAlt /></span>
                         </button>
@@ -71,49 +89,49 @@ function CalenderEvents_comp() {
                 </div>
                 <div className='w-[30%]'>
                     <div className='flex flex-col gap-5 mt-12 xl:mt-12'>
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[14px]'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl font-bold p-1'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px]'>Event one</span>
                             </p>
-                            <p className='text-[10px] xl:text-[16px]'>Wednesday,10th, 2023</p>
-                            <p className='flex gap-3 text-gray-500'>
+                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[14px]'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl font-bold p-1'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px]'>Event one</span>
                             </p>
-                            <p className='text-[10px] xl:text-[16px]'>Wednesday,10th, 2023</p>
-                            <p className='flex gap-3 text-gray-500'>
+                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[14px]'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl font-bold p-1'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px]'>Event one</span>
                             </p>
-                            <p className='text-[10px] xl:text-[16px]'>Wednesday,10th, 2023</p>
-                            <p className='flex gap-3 text-gray-500'>
+                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[14px]'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl font-bold p-1'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px]'>Event one</span>
                             </p>
-                            <p className='text-[10px] xl:text-[16px]'>Wednesday,10th, 2023</p>
-                            <p className='flex gap-3 text-gray-500'>
+                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>

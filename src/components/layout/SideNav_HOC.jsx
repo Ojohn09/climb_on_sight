@@ -34,7 +34,7 @@ function SideNav_HOC() {
                             <p className="menu-text text-black font-semibold">Calender</p>
                         </div>
                     </Link>
-                    <Link to=''>
+                    <Link to='/payout'>
                         <div className="menu-icon flex items-center gap-2">
                             <WalletIcon />
                             <p className="menu-text text-black font-semibold">Payout</p> </div>

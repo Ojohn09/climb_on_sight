@@ -31,7 +31,7 @@ function UpcomingEvent_comp() {
         <div>
             <div className='w-full flex gap-10 h-[85vh] overflow-y-hidden'>
                 <div className='w-[50%] h-[90vh] scrollbar-hide overflow-y-auto'>
-                    <div className='fixed h-[60px] bg-[#FBF7F4] w-[45%] xl:w-[40%] p-3 z-10'>
+                    <div className='fixed h-[60px] bg-[#FBF7F4] w-[45%] xl:w-[45%] p-3 z-10'>
                         <p className='text-[24px] font-semibold '>All upcoming events</p>
                     </div>
                     <div className='grid grid-cols-2 gap-6 py-28 p-3'>

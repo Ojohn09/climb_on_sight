@@ -84,3 +84,15 @@ input[type='number'] {
   scrollbar-width: none;
   /* Firefox */
 }
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}

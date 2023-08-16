@@ -45,7 +45,7 @@ function EventModal() {
                         <div className="w-[50%]">
                             <img src={selectedEvent.image} alt="" className="w-full rounded-2xl py-2" />
                             <p className="font-semibold">Climb off</p>
-                            <div className="flex flex-col text-[10px] xl:text-[12px] xl:gap-2 gap-1 font-medium">
+                            <div className="flex flex-col text-[10px] xl:text-[12px] gap-1 font-medium">
                                 <p className="text-xs text-gray-500">Event details</p>
                                 <p>
                                     It sportsman earnestly ye preserved an on. Moment led family sooner cannot her window pulled any.
@@ -64,10 +64,10 @@ function EventModal() {
                         </div>
                         <div className="w-[50%] xl:w-[40%] ">
                             <p className="text-xs text-end">Registered climbers</p>
-                            <div className="grid grid-cols-2 gap-3 scrollbar-hide overflow-y-auto h-[64vh] xl:h-[65vh] mt-4">
+                            <div className="grid grid-cols-2 gap-3 scrollbar-hide overflow-y-auto h-[64vh] xl:h-[68vh] mt-4">
                                 {climbers.map((data) => (
                                     <div key={data.id} style={{ backgroundImage: `url(${data.image})` }} className="w-[100%] xl:h-36 relative h-28 rounded-xl">
-                                        <div className="flex justify-between items-center absolute bottom-0 bg-slate-100 w-full rounded-t-lg p-2">
+                                        <div className="flex justify-between items-center absolute bottom-0 bg-gray-300 bg-opacity-60 backdrop-blur w-full rounded-xl p-2">
                                             <div>
                                                 <p className="text-[9px]">{data.name}</p>
                                                 <p className="text-[7px]">
