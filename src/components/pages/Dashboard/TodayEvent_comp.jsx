@@ -12,7 +12,7 @@ function TodayEvent_comp() {
     // ]
 
     return (
-        <div className='bg-white lg:h-[100vh] xl:h-full rounded-xl p-4 flex flex-col gap-7'>
+        <div className='bg-white h-fit xl:h-full rounded-xl p-4 flex flex-col gap-3'>
             <div className='flex items-center justify-between'>
                 <div className='text-xs'>
                     <p className='font-semibold'>Todays events</p>
@@ -48,8 +48,8 @@ function TodayEvent_comp() {
                 </div>
             </div>
 
-            <div className='flex flex-col'>
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+            <div className='flex flex-col gap-1'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 
@@ -66,7 +66,7 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 
@@ -83,7 +83,7 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 
@@ -100,7 +100,7 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 
@@ -117,7 +117,7 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 
@@ -134,7 +134,7 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className='py-1 flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[14px] items-center'>
                     <div className='flex gap-2 items-center'>
                         <div className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-14 xl:w-14 bg-gray-300 rounded-full '>
 

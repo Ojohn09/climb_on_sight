@@ -33,49 +33,56 @@ function EventModal() {
     ]
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-10 z-20">
+        <div className="fixed inset-0 bg-black bg-opacity-10 h-screen z-10 ">
             <div className="w-screen flex items-end justify-end ">
-                <button onClick={closeModal} className=" bg-white text-black  px-2 rounded-full mt-16 mr-16">
+                <button onClick={closeModal} className=" bg-white text-black  px-2 rounded-full mt-16 mr-6">
                     x
                 </button>
             </div>
-            <div className="bg-white p-6 rounded-lg absolute top-[65%] left-[72%] w-[50%] transform  -translate-x-1/2 -translate-y-1/2">
-                <div className="flex items-start">
-                    <div className="w-[60%]">
-                        <img src={selectedEvent.image} alt="" className="w-full rounded-xl py-2" />
-                        <p className="font-semibold">Climb off</p>
-                        <div className="flex flex-col gap-2 text-[10px]">
-                            <p className="text-xs text-gray-500">Event details</p>
-                            <p>
-                                It sportsman earnestly ye preserved an on. Moment led family sooner cannot her window pulled any.
-                                Or raillery if improved landlord to speaking hastened differed he. Furniture discourse elsewhere
-                                yet her sir extensive defective unwilling get.
-                            </p>
-                            <p className="text-gray-500">Event pricing</p>
-                            <p>{selectedEvent.amount}</p>
-                            <p className="text-gray-500"> Date </p>
-                            <p>{selectedEvent.date}</p>
-                            <p className="text-gray-500">Event location</p>
-                            <p>{selectedEvent.location}</p>
-                            <p className="text-gray-500">Time</p>
-                            <p>{selectedEvent.time}</p>
+            <div className="max-w-[1500px] mx-auto flex items-end justify-end fixed">
+                <div className="bg-white p-4 rounded-lg w-[45%] mr-5 mt-8">
+                    <div className="flex items-start justify-between gap-7">
+                        <div className="w-[50%]">
+                            <img src={selectedEvent.image} alt="" className="w-full rounded-2xl py-2" />
+                            <p className="font-semibold">Climb off</p>
+                            <div className="flex flex-col text-[10px] xl:text-[12px] xl:gap-2 gap-1 font-medium">
+                                <p className="text-xs text-gray-500">Event details</p>
+                                <p>
+                                    It sportsman earnestly ye preserved an on. Moment led family sooner cannot her window pulled any.
+                                    Or raillery if improved landlord to speaking hastened differed he. Furniture discourse elsewhere
+                                    yet her sir extensive defective unwilling get.
+                                </p>
+                                <p className="text-gray-500">Event pricing</p>
+                                <p>{selectedEvent.amount}</p>
+                                <p className="text-gray-500"> Date </p>
+                                <p>{selectedEvent.date}</p>
+                                <p className="text-gray-500">Event location</p>
+                                <p>{selectedEvent.location}</p>
+                                <p className="text-gray-500">Time</p>
+                                <p>{selectedEvent.time}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="w-[40%]">
-                        <p className="text-xs text-end">Registered climbers</p>
-                        <div className="grid grid-cols-2">
-                            <div style={{ backgroundImage: `url('https://source.unsplash.com/random/300x200?sig=3')` }} className="relative">
-                                <div className="flex absolute">
-                                    <div>
-                                        <p className="text-[10px]">Alex Madov</p>
-                                        <Link className="text-[8px]">View profile</Link>
+                        <div className="w-[50%] xl:w-[40%] ">
+                            <p className="text-xs text-end">Registered climbers</p>
+                            <div className="grid grid-cols-2 gap-3 scrollbar-hide overflow-y-auto h-[64vh] xl:h-[65vh] mt-4">
+                                {climbers.map((data) => (
+                                    <div key={data.id} style={{ backgroundImage: `url(${data.image})` }} className="w-[100%] xl:h-36 relative h-28 rounded-xl">
+                                        <div className="flex justify-between items-center absolute bottom-0 bg-slate-100 w-full rounded-t-lg p-2">
+                                            <div>
+                                                <p className="text-[9px]">{data.name}</p>
+                                                <p className="text-[7px]">
+                                                    <Link>View profile </Link>
+                                                </p>
+                                            </div>
+                                            <div className="text-white bg-black rounded-full p-1">
+                                                <p className="text-[10px] xl:text-[12px]">
+                                                    <IoIosSend />
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p>
-                                            <IoIosSend />
-                                        </p>
-                                    </div>
-                                </div>
+                                ))}
+
                             </div>
                         </div>
                     </div>

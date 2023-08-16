@@ -7,6 +7,7 @@ import Dashboard_page from './pages/dashboard/Dashboard_page'
 import { useSelector } from 'react-redux'
 import SuccessPage_comp from './auth/signup/SuccessPage_comp'
 import Event_page from './pages/events/Event_page'
+import Calender_page from './pages/calendar/Calender_page'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard_page />} />
           <Route path='/events' element={<Event_page />} />
           <Route path='/success-page' element={<SuccessPage_comp />} />
+          <Route path='/calendar' element={<Calender_page />} />
 
         </Routes>
       </BrowserRouter>

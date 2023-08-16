@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
-import { selectEvent, toggleModal } from "../../../redux/slices/features/eventSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectEvent, toggleModal, setClickedEvent } from "../../../redux/slices/features/eventSlice";
 import EventModal from "../../modal/EventModal";
 
 function UpcomingEvent_comp() {
@@ -15,6 +15,8 @@ function UpcomingEvent_comp() {
     ]
 
     const dispatch = useDispatch();
+    const selectedEvent = useSelector((state) => state.event.selectedEvent);
+    const isModalVisible = useSelector((state) => state.event.isModalVisible);
 
     const handleEventClick = (event) => {
         dispatch(selectEvent(event));
@@ -27,18 +29,19 @@ function UpcomingEvent_comp() {
 
 
         <div>
-            <div className='w-full flex gap-10 h-[90vh] overflow-y-hidden'>
-                <div className='w-[40%] wrapper_1 h-[100vh] scrollbar-hide overflow-y-auto'>
-                    <div className='fixed h-[60px] bg-[#FBF7F4] w-[45%] p-3'>
+            <div className='w-full flex gap-10 h-[85vh] overflow-y-hidden'>
+                <div className='w-[50%] h-[90vh] scrollbar-hide overflow-y-auto'>
+                    <div className='fixed h-[60px] bg-[#FBF7F4] w-[45%] xl:w-[40%] p-3 z-10'>
                         <p className='text-[24px] font-semibold '>All upcoming events</p>
                     </div>
-                    <div className='grid grid-cols-2 gap-6  py-28 p-3'>
+                    <div className='grid grid-cols-2 gap-6 py-28 p-3'>
                         {
                             eventData.map((data) => (
                                 <div
                                     key={data.id}
                                     onClick={() => handleEventClick(data)}
-                                    className='bg-white rounded-xl shadow-xl p-3 w-fit cursor-pointer'>
+                                    className={`bg-white rounded-xl shadow-xl p-3 w-fit cursor-pointer ${selectedEvent?.id === data.id ? 'z-[25]' : 'z-0'
+                                        }`}>
                                     <div>
                                         <img src={data.image} alt="" className='w-full rounded-xl' />
 
@@ -67,8 +70,8 @@ function UpcomingEvent_comp() {
 
                     </div>
                 </div>
-                <div className='w-[50%] h-[80vh] relative'>
-                    <div className='fixed p-3'>
+                <div className='w-[55%] h-[80vh] relative border-l'>
+                    <div className='fixed p-5'>
                         <p>Selected events</p>
                     </div>
                 </div>
