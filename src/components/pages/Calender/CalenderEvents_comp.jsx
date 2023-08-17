@@ -60,7 +60,7 @@ function CalenderEvents_comp() {
 
     return (
         <div className='w-full h-full'>
-            <div className="flex w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-8 px-3">
+            <div className="flex w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-7 px-3">
                 <div className='w-[70%]'>
 
                     <div className='text-lg p-2 xl:text-xl mt-2 font-semibold'>
@@ -88,7 +88,7 @@ function CalenderEvents_comp() {
                     </div>
                 </div>
                 <div className='w-[30%]'>
-                    <div className='flex flex-col gap-5 mt-12 xl:mt-12'>
+                    <div className='flex flex-col gap-5 mt-12'>
                         <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl font-bold p-1'>9</span>

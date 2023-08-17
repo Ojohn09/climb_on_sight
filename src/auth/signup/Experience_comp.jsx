@@ -19,9 +19,9 @@ function Experience_comp() {
                     }}
                 >
                     {({ values, handleChange, handleBlur }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
-                            <div className='my-[40px]'>
-                                <h1 className='text-[24px] font-semibold'>Your Experiences</h1>
+                        <Form className='flex flex-col items-center gap-5 lg:max-w-[380px] xl:max-w-[440px] mx-auto text-xs'>
+                            <div className='my-2 xl:my-[20px]'>
+                                <h1 className='text-18px] font-semibold'>Your Experiences</h1>
                             </div>
                             <div className='w-full'>
                                 <input

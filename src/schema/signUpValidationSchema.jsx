@@ -22,10 +22,12 @@ export const personalInformationSchema = Yup.object().shape({
 export const accountSettingsSchema = Yup.object().shape({
     userName: Yup.string().required('Username is required'),
     password: Yup.string().required('Password is required')
-        .min(8, 'Password must be 8 characters long')
+        .required('No password provided.')
+        .min(8, 'Password is too short - should be 8 chars minimum.')
         .matches(/[0-9]/, 'Password requires a number')
         .matches(/[a-z]/, 'Password requires a lowercase letter')
-        .matches(/[A-Z]/, 'Password requires an uppercase letter'),
+        .matches(/[A-Z]/, 'Password requires an uppercase letter')
+        .matches(/[^\w]/, 'Password requires a symbol'),
     confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Confirm password is required'),

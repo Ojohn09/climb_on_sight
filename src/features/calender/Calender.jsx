@@ -66,7 +66,7 @@ function Calender_comp() {
                     <div className='text-lg p-2 xl:text-xl mt-2 font-semibold'>
                         {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
                     </div>
-                    <div className='grid grid-cols-7 gap-1 text-end mt-4 text-[10px] xl:text-sm'>
+                    <div className='grid grid-cols-7 gap-1 text-end mt-2 text-[10px] xl:text-sm'>
                         {weeks[0].map((week, i) => (
                             <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}

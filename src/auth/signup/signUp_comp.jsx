@@ -48,8 +48,8 @@ function SignUpForm() {
     const [currentStep, setCurrentStep] = useState(0);
     const totalSteps = steps.length - 1;
 
-    const handleNextStep = (isValid) => {
-        if (isValid && currentStep < totalSteps) {
+    const handleNextStep = () => {
+        if (currentStep < totalSteps) {
             setCurrentStep((prevStep) => prevStep + 1);
         }
     };
@@ -79,7 +79,7 @@ function SignUpForm() {
             <div className='w-full'>
                 <FormStepper steps={steps} currentStep={currentStep} />
             </div>
-            <div className='w-full mt-10'>
+            <div className='w-full mt-6 xl:mt-10'>
                 <div className='w-full'>
                     <Formik
                         initialValues={{
@@ -140,10 +140,10 @@ function SignUpForm() {
                                 {currentStep === 4 && <Experience_comp />}
                                 {currentStep === 5 && <GuideReference_comp />}
 
-                                <div className='w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto mt-4'>
+                                <div className='w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto mt-4 text-xs'>
                                     {currentStep < totalSteps ? (
                                         <button
-                                            onClick={() => handleNextStep(isValid)}
+                                            onClick={() => handleNextStep()}
                                             type="submit"
                                             className="bg-black text-white font-semibold py-3 px-4 rounded-xl w-full"
                                             disabled={isSubmitting}
