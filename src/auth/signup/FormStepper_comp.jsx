@@ -12,7 +12,7 @@ const FormStepper = ({ steps, currentStep }) => {
                     >
                         <div className='flex flex-col items-center w-[90%]'>
                             <p className={`${index <= currentStep ? 'bg-black text-white' : 'text-black'} p-2 rounded-full text-12px`}>{steps.icon}</p>
-                            < p className='text-[10px] text-center w-fit'>{steps.text}</p>
+                            < p className='text-[7px] sm:text-[10px] text-center w-fit'>{steps.text}</p>
                         </div>
                     </div>
                 ))}

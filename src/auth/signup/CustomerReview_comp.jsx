@@ -1,9 +1,6 @@
 import React from 'react';
 import { LinkIcon } from '../../utils/icons';
-import { Formik, Form, FieldArray, ErrorMessage } from 'formik';
-import { useDispatch } from 'react-redux';
-import { updateCustomerReview } from '../../redux/slices/auth/signUpFormSlice';
-import { reviewSchema } from '../../schema/signUpValidationSchema';
+import { Formik, Form, FieldArray } from 'formik';
 
 function CustomerReview_comp() {
 
@@ -22,7 +19,7 @@ function CustomerReview_comp() {
                 >
                     {({ values }) => (
                         <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
-                            <div className='my-[20px]'>
+                            <div className='my-2 xl:my-[20px]'>
                                 <h1 className='text-[18px] font-semibold'>Links to reviews</h1>
                             </div>
                             <FieldArray name='links'>

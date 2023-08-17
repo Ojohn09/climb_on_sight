@@ -59,6 +59,7 @@ input[type='number'] {
 
 .font-face-mr {
   font-family: 'Monument Extended';
+  font-weight: 400;
 }
 
 .wrapper_1:after {
@@ -95,4 +96,10 @@ select {
 /* For IE10 */
 select::-ms-expand {
   display: none;
+}
+
+.paytable {
+  height: 230px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

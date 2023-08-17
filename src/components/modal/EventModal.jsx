@@ -34,14 +34,14 @@ function EventModal() {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-10 h-screen z-10 ">
-            <div className="w-screen flex items-end justify-end ">
+            <div className="max-w-[1500px] mx-auto flex items-end justify-end ">
                 <button onClick={closeModal} className=" bg-white text-black  px-2 rounded-full mt-16 mr-6">
                     x
                 </button>
             </div>
-            <div className="max-w-[1500px] mx-auto flex items-end justify-end fixed">
-                <div className="bg-white p-4 rounded-lg w-[45%] mr-5 mt-8">
-                    <div className="flex items-start justify-between gap-7">
+            <div className="max-w-[1500px] mx-auto flex items-end justify-end">
+                <div className="bg-white p-3 rounded-xl w-[45%] mr-3 mt-8">
+                    <div className="flex items-start justify-between gap-5">
                         <div className="w-[50%]">
                             <img src={selectedEvent.image} alt="" className="w-full rounded-2xl py-2" />
                             <p className="font-semibold">Climb off</p>

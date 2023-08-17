@@ -14,8 +14,8 @@ function AccountSettings_comp() {
                     }}
                 >
                     {({ values, handleChange, handleBlur }) => (
-                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
-                            <div className='my-[20px]'>
+                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto text-xs'>
+                            <div className='my-2 xl:my-[20px]'>
                                 <h1 className='text-[18px] font-semibold'>Account Settings</h1>
                             </div>
                             <div className='w-full'>
