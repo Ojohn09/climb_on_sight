@@ -60,8 +60,8 @@ function CalenderEvents_comp() {
 
     return (
         <div className='w-full h-full'>
-            <div className="flex w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-7 px-3">
-                <div className='w-[70%]'>
+            <div className="flex flex-col lg:flex-row w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-7 px-3">
+                <div className='lg:w-[70%]'>
 
                     <div className='text-lg p-2 xl:text-xl mt-2 font-semibold'>
                         {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
@@ -71,7 +71,7 @@ function CalenderEvents_comp() {
                             <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}
                     </div>
-                    <div className={`grid grid-cols-7 w-full h-[60%] divide-x divide-y divide-gray-100 text-[10px] xl:text-sm`}>
+                    <div className={`grid grid-cols-7 w-full h-full lg:h-[60%] divide-x divide-y divide-gray-100 text-[10px] xl:text-sm`}>
                         {totalDate.map((date, i) => (
                             <div key={i} className={`flex items-end justify-end p-1  ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
                         ))}
@@ -87,7 +87,7 @@ function CalenderEvents_comp() {
                         </button>
                     </div>
                 </div>
-                <div className='w-[30%]'>
+                <div className='lg:w-[30%]'>
                     <div className='flex flex-col gap-5 mt-12'>
                         <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px]'>
                             <p className='flex items-center gap-1'>

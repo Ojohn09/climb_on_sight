@@ -5,13 +5,13 @@ import CalenderEvents_comp from '../../components/pages/Calender/CalenderEvents_
 function Calender_page() {
     return (
         <AppLayout_HOC>
-            <div className='flex bg-white lg:h-[85vh] xl:h-[88vh] gap-5 px-2 pt-2 rounded-t-xl'>
+            <div className='flex flex-col lg:flex-row bg-white gap-5 px-2 pt-2 rounded-t-xl'>
 
 
-                <div className="w-[25%]">
+                <div className="lg:w-[25%]">
                     <AddEventCalender_comp />
                 </div>
-                <div className="w-[75%]">
+                <div className="lg:w-[75%]">
                     <CalenderEvents_comp />
                 </div>
             </div>
