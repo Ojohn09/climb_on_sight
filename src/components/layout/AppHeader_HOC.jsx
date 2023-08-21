@@ -47,7 +47,7 @@ function AppHeader_HOC() {
                     <div className="flex items-center justify-end w-full gap-4">
                         <div className='relative'>
                             <div onClick={handleModalToggle} className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer  ${modalOpen ? 'z-30' : 'z-20'}`}>
-                                Settings
+                                <IoSettings />
                             </div>
                             <ModalModal>
                                 <div className='p-5 bg-white absolute top-16 right-[150px] rounded-xl'>
