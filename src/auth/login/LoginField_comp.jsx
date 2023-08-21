@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { validationSchema } from "../../schema/loginValidationSchema"
 import { Link, useNavigate } from 'react-router-dom';
 import { openModal } from "../../redux/slices/features/modalSlice";
-import Modal from "../../components/modal/modal";
+import Modal from "../../components/modal/Modal";
 
 
 function LoginField_comp() {
