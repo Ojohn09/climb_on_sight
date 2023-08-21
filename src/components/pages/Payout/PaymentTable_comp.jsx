@@ -18,7 +18,7 @@ function PaymentTable_comp() {
     return (
         <div>
             <div>
-                <div className="mt-6">
+                <div className="mt-4">
                     <p>Payments</p>
                 </div>
 
@@ -29,7 +29,7 @@ function PaymentTable_comp() {
                     </ul>
                 </div>
 
-                <div className='mt-4 xl:mt-8'>
+                <div className='mt-4 xl:mt-6'>
                     {activeTab === "tab1" ? <RecentPaymentTab_comp /> : <AllPaymentTab_comp />}
                 </div>
             </div>

@@ -6,9 +6,9 @@ function RecentPaymentTab_comp() {
     return (
         <div className=''>
             <div >
-                <div className=''>
-                    <div >
-                        <div id="table" className=" w-full mt-4 overflow-x-hidden  text-[12px] scrollbar-hide p-2">
+                <div className='overflow-x-scroll md:overflow-x-hidden'>
+                    <div className=''>
+                        <div id="table" className=" w-full mt-4  text-[12px] scrollbar-hide p-2">
                             <div id="table-header" className=" ">
                                 <ul className="w-full flex justify-between font-bold">
                                     <li className=" basis-0 flex-1 p-2">Name</li>
@@ -17,7 +17,7 @@ function RecentPaymentTab_comp() {
                                     <li className=" basis-0 flex-1 p-2">Date</li>
                                 </ul>
                             </div>
-                            <div id="table-body" className='paytable overflow-x-hidden scrollbar-hide'>
+                            <div id="table-body" className='paytable overflow-x-auto scrollbar-hide'>
                                 {
                                     payoutTableData.map((data) => (
                                         <ul key={data.id} className=" flex justify-between items-center py-1 bg-white mb-4 rounded-full text-[10px] font-semibold">

@@ -101,5 +101,4 @@ select::-ms-expand {
 .paytable {
   height: 230px;
   overflow-y: scroll;
-  overflow-x: hidden;
 }

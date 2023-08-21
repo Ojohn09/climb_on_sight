@@ -32,12 +32,12 @@ function TodayEvent_comp() {
 
             <div className=''>
                 <div className='flex items-center justify-between'>
-                    <div className="w-28 h-11 relative mt-1">
-                        <img className="w-8 h-8 left-0 top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
-                        <img className="w-8 h-8 left-[20px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
-                        <img className="w-8 h-8 left-[40px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
-                        <img className="w-8 h-8 left-[60px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
-                        <img className="w-8 h-8 left-[80px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
+                    <div className="w-28 h-9 sm:h-11 relative mt-1">
+                        <img className=" sm:w-8 sm:h-8 w-6 h-6 left-0 sm:left-0 top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
+                        <img className=" sm:w-8 sm:h-8 w-6 h-6 left-[10px] sm:left-[20px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
+                        <img className=" sm:w-8 sm:h-8 w-6 h-6 left-[20px] sm:left-[40px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
+                        <img className=" sm:w-8 sm:h-8 w-6 h-6 left-[30px] sm:left-[60px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
+                        <img className=" sm:w-8 sm:h-8 w-6 h-6 left-[40px] sm:left-[80px] top-0 absolute rounded-full border border-white" src="https://picsum.photos/200/300" />
                     </div>
 
                     <div className='text-[8px] sm:text-[10px] xl:text-xs border-l pl-2'>

@@ -40,9 +40,9 @@ function EventModal() {
                 </button>
             </div>
             <div className="max-w-[1500px] mx-auto flex items-end justify-end">
-                <div className="bg-white p-3 rounded-xl w-[45%] mr-3 mt-8">
-                    <div className="flex items-start justify-between gap-5">
-                        <div className="w-[50%]">
+                <div className="bg-white p-3 rounded-xl w-[65%] lg:w-[45%] mr-3 mt-8">
+                    <div className="flex flex-col sm:flex-row  items-start justify-between gap-5">
+                        <div className="sm:w-[50%]">
                             <img src={selectedEvent.image} alt="" className="w-full rounded-2xl py-2" />
                             <p className="font-semibold">Climb off</p>
                             <div className="flex flex-col text-[10px] xl:text-[12px] gap-1 font-medium">
@@ -62,7 +62,7 @@ function EventModal() {
                                 <p>{selectedEvent.time}</p>
                             </div>
                         </div>
-                        <div className="w-[50%] xl:w-[40%] ">
+                        <div className="w-full sm:w-[50%]">
                             <p className="text-xs text-end">Registered climbers</p>
                             <div className="grid grid-cols-2 gap-3 scrollbar-hide overflow-y-auto h-[64vh] xl:h-[68vh] mt-4">
                                 {climbers.map((data) => (

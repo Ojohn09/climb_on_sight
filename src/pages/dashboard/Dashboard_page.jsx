@@ -8,7 +8,7 @@ import TodayEvent_comp from "../../components/pages/Dashboard/TodayEvent_comp"
 function Dashboard_page() {
     return (
         <AppLayout_HOC>
-            <div className="flex flex-col lg:flex-row gap-4 h-[85vh] xl:h-fit">
+            <div className="flex flex-col lg:flex-row gap-4 xl:h-fit">
                 <div className="lg:w-[70%]">
                     <Cards_components />
                     <DateAndNotification_comp />

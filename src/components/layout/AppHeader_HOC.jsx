@@ -1,7 +1,27 @@
 import { IoSettings } from 'react-icons/io5'
 import { BsBellFill } from 'react-icons/bs'
+import ModalModal from '../modal/ModalModal'
+import { openModal } from '../../redux/slices/features/modalSlice'
+import { closeModal } from '../../redux/slices/features/modalSlice';
+import { useDispatch, useSelector } from 'react-redux'
+import { UserIcon } from '../../utils/icons'
+import Lock from '../../assets/icons/Lock.svg'
+
 
 function AppHeader_HOC() {
+
+    const dispatch = useDispatch()
+    const modalOpen = useSelector((state) => state.modal.isOpen)
+    const selectEvent = useSelector((state) => state.event.selectedEvent)
+
+    const handleModalToggle = () => {
+        if (modalOpen) {
+            dispatch(closeModal());
+        } else {
+            dispatch(openModal());
+        }
+    };
+
     return (
         <div className='z-30'>
             <div className="py-3 flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
@@ -25,11 +45,35 @@ function AppHeader_HOC() {
 
                 <div className='w-full flex items-end'>
                     <div className="flex items-center justify-end w-full gap-4">
-                        <div className='p-2 bg-white rounded-full text-gray-700'>
-                            <IoSettings />
+                        <div className='relative'>
+                            <div onClick={handleModalToggle} className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer  ${modalOpen ? 'z-30' : 'z-20'}`}>
+                                Settings
+                            </div>
+                            <ModalModal>
+                                <div className='p-5 bg-white absolute top-16 right-[150px] rounded-xl'>
+                                    <p className='mb-2'>Settings</p>
+                                    <div className="flex flex-col gap-2">
+                                        <div className='w-[200px] border rounded-lg p-2 flex items-center justify-between text-xs bg-gray-100'>
+                                            <p>Edit profile</p>
+                                            <p><UserIcon /></p>
+                                        </div>
+
+                                        <div className='w-[200px] border rounded-lg p-2 flex items-center justify-between text-xs bg-gray-100'>
+                                            <p>Password reset</p>
+                                            <img src={Lock} alt="" className='w-4 h-4' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </ModalModal>
+
                         </div>
-                        <div className='p-2 bg-white rounded-full text- text-gray-700'>
-                            <BsBellFill />
+                        <div className='relative'>
+                            <div className='p-2 bg-white rounded-full text- text-gray-700'>
+                                <BsBellFill />
+                            </div>
+                            <div className='absolute'>
+
+                            </div>
                         </div>
                         <div className=''>
                             <img src="https://picsum.photos/200/300" alt="" className='w-10 h-10 rounded-full' />
