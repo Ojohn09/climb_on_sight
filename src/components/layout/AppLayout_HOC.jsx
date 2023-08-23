@@ -4,22 +4,23 @@ import SideNav_HOC from "./SideNav_HOC"
 
 function AppLayout_HOC(props) {
     return (
-        <div className="w-full  bg-[#FBF7F4]">
-            <div className="w-[95%]  h-screen mx-auto bg-[#FBF7F4]">
-                <main className="flex items-start gap-4 px-4">
-                    <aside className="">
-                        <SideNav_HOC />
-                    </aside>
+        <main className="h-screen w-full flex items-start gap-12 px-4 py-2 bg-[#FBF7F4]">
+            <aside className="">
+                <SideNav_HOC />
+            </aside>
 
-                    <section className="bg-[#FBF7F4] w-[97%] ml-[30px] lg:ml-[40px] p-2">
-                        <header className="h-[10%]">
-                            <AppHeader_HOC />
-                        </header>
-                        <section className=''>{props.children}</section>
-                    </section>
-                </main>
+            <div className="h-full w-full ml-[20px]">
+
+                <header className="h-[10%] w-full">
+                    <AppHeader_HOC />
+                </header>
+
+                <div className='h-[90%] w-full'>
+                    {props.children}
+                </div>
             </div>
-        </div>
+        </main>
+
     )
 }
 

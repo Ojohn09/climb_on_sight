@@ -59,26 +59,25 @@ function Calender_comp() {
 
 
     return (
-        <div className='w-full h-full overflow-hidden'>
-            <div className="flex w-full h-full bg-white rounded-xl gap-4 xl:gap-8 py-2">
-                <div className='w-full h-full'>
-                    <div className=' w-full p-2 text-sm xl:text-lg font-semibold'>
-                        {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
-                    </div>
-                    <div className='grid grid-cols-7 w-full gap-1 text-end text-[10px] lg:text-[8px] xl:text-sm'>
 
-                        {weeks[0].map((week, i) => (
-                            <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
-                        ))}
-                    </div>
-                    <div className={`grid grid-cols-7 h-[79%]  border-collapse text-[6px] border-t border-gray-300`}>
-                        {totalDate.map((date, i) => (
-                            <div key={i} className={`flex items-end justify-end p-1 border-gray-300   ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-100 opacity-50 border-0' : ''} ${i % 1 === 5 ? '' : 'border-r '} ${i < totalDate.length - 7 ? 'border-b' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
-                        ))}
-                    </div>
-                </div>
+
+        <div className='w-full h-[100%] bg-white rounded-xl gap-4 xl:gap-8 py-4 overflow-hidden'>
+            <div className=' w-full p-2 text-sm xl:text-lg font-semibold'>
+                {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
+            </div>
+            <div className='grid grid-cols-7 w-full gap-1 text-center text-[10px] lg:text-[8px] xl:text-sm'>
+
+                {weeks[0].map((week, i) => (
+                    <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
+                ))}
+            </div>
+            <div className={`grid grid-cols-7 h-[80%] border-collapse text-[6px] border-t border-gray-300`}>
+                {totalDate.map((date, i) => (
+                    <div key={i} className={`flex items-end justify-end p-1 border-gray-300   ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-100 opacity-50 border-0' : ''} ${i % 1 === 5 ? '' : 'border-r '} ${i < totalDate.length - 7 ? 'border-b' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
+                ))}
             </div>
         </div>
+
     )
 }
 
