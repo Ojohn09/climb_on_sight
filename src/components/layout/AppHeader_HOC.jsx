@@ -6,21 +6,12 @@ import { closeModal } from '../../redux/slices/features/modalSlice';
 import { useDispatch, useSelector } from 'react-redux'
 import { UserIcon } from '../../utils/icons'
 import Lock from '../../assets/icons/Lock.svg'
+import { MdClose } from 'react-icons/md'
 
 
 function AppHeader_HOC() {
 
     const dispatch = useDispatch()
-    const modalOpen = useSelector((state) => state.modal.isOpen)
-    const selectEvent = useSelector((state) => state.event.selectedEvent)
-
-    const handleModalToggle = () => {
-        if (modalOpen) {
-            dispatch(closeModal());
-        } else {
-            dispatch(openModal());
-        }
-    };
 
     return (
         <div className=''>
@@ -46,12 +37,17 @@ function AppHeader_HOC() {
                 <div className='w-full flex items-end'>
                     <div className="flex items-center justify-end w-full gap-4">
                         <div className='relative'>
-                            <div onClick={handleModalToggle} className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer  ${modalOpen ? 'z-30' : 'z-20'}`}>
+                            <div onClick={() => dispatch(openModal())} className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer`}>
                                 <IoSettings />
                             </div>
                             <ModalModal>
                                 <div className='p-5 bg-white absolute top-16 right-[150px] rounded-xl'>
-                                    <p className='mb-2'>Settings</p>
+                                    <div className='flex justify-between py-1 items-center'>
+                                        <p className='mb-2'>Settings</p>
+                                        <p
+                                            onClick={() => dispatch(closeModal())}
+                                            className=' border border-black rounded-full cursor-pointer'><MdClose /></p>
+                                    </div>
                                     <div className="flex flex-col gap-2">
                                         <div className='w-[200px] border rounded-lg p-2 flex items-center justify-between text-xs bg-gray-100'>
                                             <p>Edit profile</p>

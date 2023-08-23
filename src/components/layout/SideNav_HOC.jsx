@@ -10,7 +10,7 @@ function SideNav_HOC() {
 
 
     return (
-        <div className="max-h-[100%] p-3">
+        <div className="h-screen p-3">
             <div className="bg-[#F4E8DF] fixed border border-r menu flex flex-col justify-between gap-[150px] z-50 p-3 w-[50px]">
                 <div>
                     <Link to="/dashboard" className="text-[10px] font-face-mr ">CBO</Link>
