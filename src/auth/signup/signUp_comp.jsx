@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PersonalInformation_comp from './PersonalInformation_comp';
 import Experience_comp from './Experience_comp';
 import GuideReference_comp from './GuideReference_comp';
-import Guidience_comp from './guidience_comp';
+import Guidience_comp from './Guidience_comp';
 import CustomerReview_comp from './CustomerReview_comp';
 import FormStepper from './FormStepper_comp';
 import { DocumentIcon, FingerPrintIcon, HashtagIcon, StarIcon, UserGroupIcon, UserIcon } from '../../utils/icons';
