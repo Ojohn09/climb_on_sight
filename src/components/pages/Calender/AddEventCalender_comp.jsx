@@ -72,10 +72,10 @@ function AddEventCalender_comp() {
     }
 
     return (
-        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl">
-            <p className="w-full text-center font-semibold mt-4">Add to your calendar</p>
-            <div className='flex flex-col gap-4 xl:gap-6 text-xs mt-2'>
-                <div>
+        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-6">
+            <p className="w-full text-center font-semibold mt-4 2xl:text-3xl">Add to your calendar</p>
+            <div className='mt-2 xl:mt-4 text-[8px] xl:h-full'>
+                <div className="3xl:text-2xl">
                     <p>Add month</p>
                     <select name="" id="" className="p-2 rounded-lg w-full" onChange={handleMonthSelect}>
                         {months.map((data, i) => (
@@ -84,15 +84,15 @@ function AddEventCalender_comp() {
                     </select>
                 </div>
 
-                <div>
-                    <p>Add day</p>
-                    <div className="bg-white text-[10px] p-2 rounded-lg">
+                <div className="xl:mt-4 text-[8px] 3xl:mt-8 3xl:text-2xl my-5 xl:h-[50%]">
+                    <p className="">Add day</p>
+                    <div className="bg-white text-[10px] 3xl:text-xl rounded-lg xl:h-[90%] py-5">
                         <div className='grid grid-cols-7 gap-1 text-center'>
                             {selectedMonthWeeks[0].map((week, i) => (
                                 <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                             ))}
                         </div>
-                        <div className={`grid grid-cols-7 w-full h-[70%] gap-1 mt-1`}>
+                        <div className={`grid grid-cols-7 w-full h-[90%] gap-1 mt-1`}>
                             {selectedMonthTotalDate.map((date, i) => (
                                 <p key={i} className={`flex items-center justify-center py-1 ${isToday(date) ? 'bg-black text-white rounded-full' : ''} `}>{dateFns.format(date, formatOfDay)}</p>
                             ))}
@@ -100,7 +100,7 @@ function AddEventCalender_comp() {
                     </div>
                 </div>
 
-                <div>
+                <div className="xl:mt-4 text-[8px] 3xl:mt-8 3xl:text-2xl">
                     <p>Start time</p>
                     <select name="" id="" className="p-2 rounded-lg w-full flex gap-2 outline-none">
                         {time.map((data, i) => (
@@ -109,7 +109,7 @@ function AddEventCalender_comp() {
                     </select>
                 </div>
 
-                <div>
+                <div className="xl:mt-4 text-[8px] 3xl:mt-8 3xl:text-2xl">
                     <p>End time</p>
                     <select name="" id="" className="p-2 rounded-lg w-full flex gap-2 outline-none">
                         {time.map((data, i) => (
@@ -119,7 +119,7 @@ function AddEventCalender_comp() {
                 </div>
 
 
-                <button className="w-full rounded-lg bg-black text-white p-2">Next</button>
+                <button className="w-full mt-4 3xl:mt-8 rounded-lg bg-black text-white p-2">Next</button>
 
             </div>
         </div>

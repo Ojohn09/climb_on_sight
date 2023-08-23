@@ -5,10 +5,10 @@ import CalenderEvents_comp from '../../components/pages/Calender/CalenderEvents_
 function Calender_page() {
     return (
         <AppLayout_HOC>
-            <div className='flex flex-col lg:flex-row bg-white gap-5 px-2 pt-2 rounded-t-xl'>
+            <div className='flex h-full flex-col lg:flex-row bg-white gap-5 px-2 pt-2 rounded-t-xl'>
 
 
-                <div className="lg:w-[25%]">
+                <div className="lg:w-[25%] h-full">
                     <AddEventCalender_comp />
                 </div>
                 <div className="lg:w-[75%]">

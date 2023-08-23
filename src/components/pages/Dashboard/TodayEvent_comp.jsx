@@ -15,7 +15,7 @@ function TodayEvent_comp() {
     return (
         <div className='bg-white h-full   rounded-xl p-4 xl:p-8 flex flex-col gap-3'>
             <div className='flex items-center justify-between'>
-                <div className='text-xs 2xl:text-lg'>
+                <div className='text-xs 2xl:text-lg 3xl:text-2xl'>
                     <p className='font-semibold'>Todays events</p>
                     <p>{formattedDate}</p>
                 </div>
@@ -25,7 +25,7 @@ function TodayEvent_comp() {
                 </div>
             </div>
 
-            <div className='w-[60%] xl:w-[50%] 2xl:w-[70%] lg:text-[11px] xl:mt-0 xl:text-sm 3xl:text-lg 3xl:mt-4 font-bold'>
+            <div className='w-[60%] xl:w-[50%] 2xl:w-[70%] lg:text-[11px] xl:mt-0 xl:text-sm 3xl:text-3xl 3xl:mt-4 font-bold'>
                 <p>
                     All booked trips coming up this week
                 </p>
@@ -49,11 +49,11 @@ function TodayEvent_comp() {
             </div>
 
 
-            <div className='flex flex-col gap-1 2xl:gap-5 2xl:mt-4 3xl:gap-4'>
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+            <div className='flex flex-col gap-1 2xl:gap-5 2xl:mt-4 3xl:gap-10'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
@@ -67,10 +67,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
@@ -84,10 +84,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
@@ -101,10 +101,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
@@ -118,10 +118,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
@@ -135,10 +135,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-base 3xl:text-lg items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-3xl items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 xl:h-12 xl:w-12 2xl:w-16 2xl:h-16 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-10 lg:h-10 2xl:w-14 2xl:h-14 3xl:w-28 3xl:h-28 rounded-full ' />
 
                         <div className='flex flex-col'>
                             <p className='font-bold'>Sarah martins</p>
