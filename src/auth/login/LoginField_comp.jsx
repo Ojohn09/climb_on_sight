@@ -2,12 +2,6 @@ import { Formik, Form } from "formik"
 
 function LoginField_comp() {
     return (
-<<<<<<< Updated upstream
-        <div className="w-full">
-            <Formik className=''>
-                <Form className='flex flex-col items-center gap-4 max-w-[320px] mx-auto'>
-                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px]'>
-=======
         <div className="bg-white rounded-xl flex w-full h-full">
             <Formik
                 initialValues={initialValues}
@@ -16,7 +10,6 @@ function LoginField_comp() {
                 className=''>
                 <Form className='flex flex-col items-center justify-center gap-4 w-[40%] mx-auto'>
                     <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px] xl:text- font-face-mr'>
->>>>>>> Stashed changes
                         CLIMBONSIGHT
                     </div>
 

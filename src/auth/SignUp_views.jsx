@@ -8,21 +8,9 @@ function SignUp_views() {
 
 
     return (
-<<<<<<< Updated upstream
-        <div className='max-w-[1920px] bg-[#FFF1E7] mx-auto h-full'>
-            <div className=' lg:flex gap-4 lg:p-9'>
-                <div className='lg:w-[35%]'>
-                    <img src={back} alt="" className='rounded-xl' />
-                </div>
-                <div className='bg-white lg:w-[65%] min-h-[70vh] p-2 rounded-xl flex flex-col items-center'>
-                    <SignUpForm />
-                </div>
-
-=======
         <div className='bg-[#FFF1E7] w-screen h-screen items-center flex gap-5 p-5'>
             <div className='lg:w-[40%] h-full bg-cover bg-center bg-no-repeat rounded-xl' style={{ backgroundImage: `url(${back})` }}>
                 {/* <img src={back} alt="" className='rounded-xl h-full w-full' /> */}
->>>>>>> Stashed changes
             </div>
             <SignUpForm />
         </div>
