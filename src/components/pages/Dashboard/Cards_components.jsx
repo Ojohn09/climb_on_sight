@@ -7,63 +7,80 @@ function Cards_components() {
     return (
         <div className="w-full">
             <div className="flex flex-col md:flex-row gap-8 lg:gap-4 xl:gap-8 items-center w-full ">
-                <div className="flex flex-col bg-indigo-100 rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
-                    <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
-                        <p className="font-semibold">Current Balance</p>
-                        <p>Today</p>
-                    </div>
-                    <div className="">
-                        <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $34,256
+            
+
+                <div className="flex flex-col bg-violet-100 rounded-xl p-4 gap-1 w-full md:w-[25%] shadow-sm">
+                   
+                <div className="">
+                        <p className="lg:text-xl text-xl xl:text-2xl font-normal text-black  font-normal text-center  ">
+                            $54,257
                         </p>
                     </div>
+                   
+                    <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-center">
+                        <p className="font-semibold ">Cash Payout</p>
+                        <p >23% increase from last week</p>
+                    </div>
+                   
                 </div>
 
-                <div className="flex flex-col bg-[#FFEEE2] rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
-                    <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
-                        <p className="font-semibold">Previous Payout</p>
-                        <p>Today</p>
-                    </div>
-                    <div className=" flex gap-6 items-center">
-                        <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
-                        </p>
-                        <div className="text-green-400 flex items-center text-center text-[8px] p-1 bg-white rounded">
-                            <p className="">
-                                paid
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="flex flex-col bg-green-50  rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
-                    <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
-                        <p className="font-semibold">Previous Payout</p>
-                        <p>Today</p>
-                    </div>
-                    <div className=" flex gap-3 items-center">
-                        <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
-                        </p>
-                        <div className="text-red-400 flex items-center text-center text-[6px] p-1 bg-white rounded">
-                            <p className="">
-                                In balance
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div className="flex flex-col bg-green-50 rounded-xl p-4 gap-1 w-full md:w-[25%] shadow-sm">
+                   
+                   <div className="">
+                           <p className="lg:text-xl text-xl xl:text-2xl font-normal text-black  font-normal text-center ">
+                               672
+                           </p>
+                       </div>
+                      
+                       <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-center">
+                           <p className="font-semibold ">Number of trips listed in june</p>
+                           <p >23% increase from last month</p>
+                       </div>
+                      
+                   </div>
 
-                <div className="flex flex-col bg-green-50  rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
-                    <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
-                        <p className="font-semibold">Earnings summary</p>
-                        <p>23 May</p>
-                    </div>
-                    <div className=" flex gap-4 items-center">
-                        <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
-                        </p>
-                    </div>
-                </div>
+
+
+                   <div className="flex flex-col bg-sky-100 rounded-xl p-4 gap-1 w-full md:w-[25%] shadow-sm">
+                   
+                   <div className="">
+                           <p className="lg:text-xl text-xl xl:text-2xl font-normal text-black  font-normal text-center  ">
+                               324
+                           </p>
+                       </div>
+                      
+                       <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-center">
+                           <p className="font-semibold ">Number of trips booked in june</p>
+                           <p >23% decrease from last month</p>
+                       </div>
+                      
+                   </div>
+
+
+
+                   <div className="flex flex-col bg-rose-100 rounded-xl p-4 gap-1 w-full md:w-[25%] shadow-sm">
+                   
+                   <div className="">
+                           <p className="lg:text-xl text-xl xl:text-2xl font-normal text-black  font-normal text-center  ">
+                               4534
+                           </p>
+                       </div>
+                      
+                       <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-center">
+                           <p className="font-semibold ">Number of climbers booked</p>
+                           <p >19% increase from last week</p>
+                       </div>
+                      
+                   </div>
+
+
+
+
+                
+
+             
+
 
 
 
