@@ -23,7 +23,7 @@ function AppHeader_HOC() {
     };
 
     return (
-        <div className='z-30'>
+        <div className=''>
             <div className="py-3 flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
                 <div className=" md:w-[50%]">
                     <div className='w-full'>

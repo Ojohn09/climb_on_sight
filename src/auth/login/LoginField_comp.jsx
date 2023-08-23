@@ -40,16 +40,16 @@ function LoginField_comp() {
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
                 className=''>
-                <Form className='flex flex-col items-center gap-4 max-w-[320px] mx-auto'>
-                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px] font-face-mr'>
+                <Form className='flex flex-col items-center gap-4 w-[40%] mx-auto'>
+                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px] xl:text- font-face-mr'>
                         CLIMBONSIGHT
                     </div>
 
                     <div className='my-[20px] text-center'>
                         <h1 className='xl:text-[50px] lg:text-[30px] mb-4 font-bold '>Welcome</h1>
-                        <h1 className='xl:text-[24px] font-semibold '>Log in to climb on sight</h1>
+                        <h1 className='xl:text-[24px] font-semibold'>Log in to climb on sight</h1>
                     </div>
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="w-full flex flex-col gap-4 xl:gap-8">
                         <div className='w-full'>
                             <Field
                                 type='email'
