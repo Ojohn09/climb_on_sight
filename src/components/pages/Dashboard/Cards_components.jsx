@@ -5,7 +5,7 @@ import { ArrowUpRightIcon } from "../../../utils/icons"
 function Cards_components() {
 
     return (
-        <div className="w-full h-auto">
+        <div className="w-full">
             <div className="flex flex-col md:flex-row gap-8 lg:gap-4 xl:gap-8 items-center w-full ">
             
 

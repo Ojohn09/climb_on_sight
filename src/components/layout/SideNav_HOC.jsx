@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom"
 import { CalendarDaysIcon, ChatBubbleLeftIcon, HomeIcon, MegaphoneIcon, WalletIcon } from "../../utils/icons"
 import { BiSolidDoorOpen } from "react-icons/bi"
+import { logout } from "../../redux/slices/auth/loginSlice"
 
 
 function SideNav_HOC() {
+
+
+
+
     return (
-        <div className="">
-            <div className="bg-[#F4E8DF] fixed border border-r lg:min-h-[80%] xl:min-h-[90%] menu flex flex-col justify-between gap-[150px] z-50 p-3 w-[50px]">
+        <div className="max-h-[100%] p-3">
+            <div className="bg-[#F4E8DF] fixed border border-r menu flex flex-col justify-between gap-[150px] z-50 p-3 w-[50px]">
                 <div>
                     <Link to="/dashboard" className="text-[10px] font-face-mr ">CBO</Link>
                 </div>

@@ -38,11 +38,17 @@ function AddEventCalender_comp() {
     const selectedMonthTotalDate = dateFns.eachDayOfInterval({ start: selectedMonthStartDate, end: selectedMonthEndDate });
 
 
+    console.log("selectedMonthStartDate:", selectedMonthStartDate);
+    console.log("selectedMonthEndDate:", selectedMonthEndDate);
+    console.log("selectedMonthTotalDate:", selectedMonthTotalDate);
+
+
     // Handler for month selection
     const handleMonthSelect = (event) => {
         const selectedMonthIndex = parseInt(event.target.value);
         const selectedMonthDate = new Date(currentDate, selectedMonthIndex, 1);
-        dispatch(setSelectedMonth(selectedMonthDate.getTime())); // Dispatch the selected month
+        const selectedMonthTimestamp = selectedMonthDate.getTime()
+        dispatch(setSelectedMonth(selectedMonthTimestamp)); // Dispatch the selected month
     };
 
 

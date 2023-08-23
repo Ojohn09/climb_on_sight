@@ -5,7 +5,7 @@ const calendarSlice = createSlice({
     initialState: {
         currentDate: new Date().getTime(),
         events: [], // Replace this with your actual events data structure
-        selectedMonth: new Date().getTime(),
+        selectedMonth: new Date(),
         selectedDate: new Date(),
     },
     reducers: {
