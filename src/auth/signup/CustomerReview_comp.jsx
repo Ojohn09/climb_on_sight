@@ -29,9 +29,9 @@ function CustomerReview_comp() {
                                             <div key={index} className='w-full flex  gap-4 mt-4 items-center'>
                                                 <div className='lg:w-[440px]'>
                                                     <label htmlFor='' className='text-[14px] text-gray-400'>
-                                                        {index === 0 ? 'If applicable' : ' '}
+                                                        {index === 0 ? 'Optional' : ' '}
                                                     </label>
-                                                    <div className='border-gray-300 border p-2 rounded-xl items-center flex justify-between gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto'>
+                                                    <div className='border-gray-300 border p-2 rounded-xl items-center flex justify-between gap-4 lg:max-w-[380px] xl:max-w-[440px] mr-auto'>
                                                         <input
                                                             type='text'
                                                             name={`links.${index}`}
