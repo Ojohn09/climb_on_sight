@@ -47,8 +47,13 @@ function SignUpForm() {
     };
 
     return (
+<<<<<<< Updated upstream
         <div className='flex flex-col items-center w-full'>
             <div className='font-bold mt-16 mb-8'>
+=======
+        <div className='bg-white w-full h-full flex flex-col justify-center items-center py-10 lg:py-0'>
+            <div className='font-semibold text-[14px] my-5 font-face-mr'>
+>>>>>>> Stashed changes
                 CLIMBONSIGHT
             </div>
             <FormStepper steps={steps} currentStep={currentStep} />
