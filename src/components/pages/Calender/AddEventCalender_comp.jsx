@@ -72,8 +72,8 @@ function AddEventCalender_comp() {
     }
 
     return (
-        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-6">
-            <p className="w-full text-center font-semibold mt-4 2xl:text-3xl">Add to your calendar</p>
+        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-3">
+            <p className="w-full text-center font-semibold mt-4 3xl:text-2xl">Add to your calendar</p>
             <div className='mt-2 xl:mt-4 text-[8px] xl:h-full'>
                 <div className="3xl:text-2xl">
                     <p>Add month</p>
@@ -119,7 +119,7 @@ function AddEventCalender_comp() {
                 </div>
 
 
-                <button className="w-full mt-4 3xl:mt-8 rounded-lg bg-black text-white p-2">Next</button>
+                <button className="w-full mt-4 3xl:mt-8 rounded-lg bg-black 2xl:text-xl text-white p-2">Next</button>
 
             </div>
         </div>

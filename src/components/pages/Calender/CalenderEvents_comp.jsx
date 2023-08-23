@@ -88,7 +88,7 @@ function CalenderEvents_comp() {
                     </div>
                 </div>
                 <div className='lg:w-[30%] h-full'>
-                    <div className='flex flex-col gap-5 mt-12'>
+                    <div className='flex flex-col gap-3 mt-12'>
                         <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
