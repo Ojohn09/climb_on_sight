@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./assets/fonts/Helvetica.ttf');
+}
+
+@font-face {
+    font-family: 'Monument Extended';
+    src: url("./assets/fonts/MonumentExtended-Ultrabold.otf");
+}
+
+@layer utilities {
+    @variants responsive {
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}

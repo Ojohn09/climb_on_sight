@@ -1,5 +1,4 @@
 import { Formik, Form, ErrorMessage } from 'formik';
-import { accountSettingsSchema } from '../../schema/signUpValidationSchema';
 
 
 function AccountSettings_comp() {
@@ -13,12 +12,11 @@ function AccountSettings_comp() {
                         password: '',
                         confirmPassword: '',
                     }}
-                    validationSchema={accountSettingsSchema}
                 >
-                    {({ values, handleChange, handleBlur, handleSubmit, errors, touched }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
-                            <div className='my-[40px]'>
-                                <h1 className='text-[24px] font-semibold'>Account Settings</h1>
+                    {({ values, handleChange, handleBlur }) => (
+                        <Form className='flex flex-col items-center gap-4 lg:max-w-[380px] xl:max-w-[440px] mx-auto text-xs'>
+                            <div className='my-2 xl:my-[20px]'>
+                                <h1 className='text-[18px] font-semibold'>Account Settings</h1>
                             </div>
                             <div className='w-full'>
                                 <input

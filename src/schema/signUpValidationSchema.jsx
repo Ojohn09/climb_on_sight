@@ -1,6 +1,15 @@
 
 import * as Yup from 'yup';
 
+const FILE_SIZE = 160 * 1024;
+const SUPPORTED_FORMATS = [
+    "image/jpg",
+    "image/jpeg",
+    "image/gif",
+    "image/png",
+    "application/pdf"
+];
+
 export const personalInformationSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
@@ -13,20 +22,42 @@ export const personalInformationSchema = Yup.object().shape({
 export const accountSettingsSchema = Yup.object().shape({
     userName: Yup.string().required('Username is required'),
     password: Yup.string().required('Password is required')
-        .min(8, 'Password must be at least 8 characters long.')
-        .matches(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-            'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.'
-        )
-        .required('Password is required.'),
+        .required('No password provided.')
+        .min(8, 'Password is too short - should be 8 chars minimum.')
+        .matches(/[0-9]/, 'Password requires a number')
+        .matches(/[a-z]/, 'Password requires a lowercase letter')
+        .matches(/[A-Z]/, 'Password requires an uppercase letter')
+        .matches(/[^\w]/, 'Password requires a symbol'),
     confirmPassword: Yup.string()
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Confirm password is required'),
 });
 
 export const guidienceSchema = Yup.object().shape({
-    guidingInsurance: Yup.string().required('Proof of guiding insurance is required'),
-    guidingCertificate: Yup.string(),
+    guidingInsurance: Yup.mixed()
+        .required("A file is required")
+        .test(
+            "fileSize",
+            "File too large",
+            value => value && value.size <= FILE_SIZE
+        )
+        .test(
+            "fileFormat",
+            "Unsupported Format",
+            value => value && SUPPORTED_FORMATS.includes(value.type)
+        ),
+    guidingCertificate: Yup.mixed()
+        .required("A file is required")
+        .test(
+            "fileSize",
+            "File too large",
+            value => value && value.size <= FILE_SIZE
+        )
+        .test(
+            "fileFormat",
+            "Unsupported Format",
+            value => value && SUPPORTED_FORMATS.includes(value.type)
+        )
 });
 
 export const reviewSchema = Yup.object().shape({
@@ -60,9 +91,10 @@ export const guideReferenceSchema = Yup.object().shape({
 // Combine all the schemas into one comprehensive schema
 export const signUpFormSchema = Yup.object().shape({
     personalInformation: personalInformationSchema,
+    accountSettings: accountSettingsSchema,
     guidience: guidienceSchema,
     customerReview: reviewSchema,
     experience: experienceSchema,
     guideReference: guideReferenceSchema,
-    accountSettings: accountSettingsSchema,
+
 });

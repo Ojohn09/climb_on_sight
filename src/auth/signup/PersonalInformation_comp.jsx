@@ -1,7 +1,6 @@
 import React from 'react'
 import { Formik, Form, ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
-import { personalInformationSchema } from '../../schema/signUpValidationSchema';
 
 
 function PersonalInformation_comp() {
@@ -17,12 +16,12 @@ function PersonalInformation_comp() {
                         email: '',
                         phoneNumber: '',
                     }}
-                    validationSchema={personalInformationSchema}
+
                 >
-                    {({ values, handleChange, handleBlur, handleSubmit, errors, touched }) => (
-                        <Form className='flex flex-col items-center gap-5 max-w-[440px] mx-auto'>
-                            <div className='my-[40px]'>
-                                <h1 className='text-[24px] font-semibold'>Fill the forms below</h1>
+                    {({ values, handleChange, handleBlur }) => (
+                        <Form className='flex flex-col items-center gap-4 w-[80%] lg:max-w-[380px] xl:max-w-[440px] mx-auto text-xs'>
+                            <div className='my-2 xl:my-[20px]'>
+                                <h1 className='text-[18px] font-semibold'>Fill the forms below</h1>
                             </div>
                             <div className='w-full'>
                                 <input
@@ -31,7 +30,7 @@ function PersonalInformation_comp() {
                                     value={values.name}
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    className='rounded-xl p-3 border-gray-300 border outline-none w-full'
+                                    className='rounded-xl p-2 border-gray-300 border outline-none w-full'
                                     placeholder='Name'
                                     required
                                 />
@@ -45,7 +44,7 @@ function PersonalInformation_comp() {
                                     value={values.email}
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    className='rounded-xl p-3 border-gray-300 border outline-none w-full'
+                                    className='rounded-xl p-2 border-gray-300 border outline-none w-full'
                                     placeholder='Email'
                                     required
                                 />
@@ -59,7 +58,7 @@ function PersonalInformation_comp() {
                                     value={values.phoneNumber}
                                     onChange={handleChange}
                                     onBlur={handleBlur}
-                                    className='rounded-xl p-3 border-gray-300 border outline-none w-full'
+                                    className='rounded-xl p-2 border-gray-300 border outline-none w-full'
                                     placeholder='Phone Number'
                                     required
                                 />
