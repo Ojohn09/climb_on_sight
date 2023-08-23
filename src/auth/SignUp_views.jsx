@@ -13,7 +13,7 @@ function SignUp_views() {
                 <div className='hidden lg:block lg:w-[35%]'>
                     <img src={back} alt="" className='rounded-xl' />
                 </div>
-                <div className='p-4 md:p-2 bg-white lg:w-[65%] h-auto flex justify-center lg:max-h-[90vh] rounded-xl items-center'>
+                <div className='p-4 md:p-2 bg-white lg:w-[65%] flex justify-center lg:max-h-[90vh] rounded-xl items-center'>
                     <SignUpForm />
                 </div>
 

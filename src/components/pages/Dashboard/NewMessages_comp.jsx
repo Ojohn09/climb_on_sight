@@ -7,47 +7,47 @@ function NewMessages_comp() {
                 <div>
                     <p className="">New messages</p>
                     <div className="flex flex-col  sm:grid grid-cols-2 bg-white rounded-xl text-[8px] p-2 gap-2">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-3">
 
-                            <p className="w-5 h-5 bg-gray-600 rounded-full"></p>
+                            <img src="https://picsum.photos/200/300" alt="" className="w-5 h-5 rounded-full" />
                             <div className="w-[70%]">
                                 <p>Andrey Finn</p>
                                 <p className="text-gray-500 text-[7px]">Hello, Good day i would love to make an enquiry as regards your timing... </p>
                             </div>
-                            <p className="w-4 h-4 text-white text-center bg-black rounded-full">
+                            <p className="p-1 px-2 text-white bg-black rounded-full flex">
                                 3
                             </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-3">
 
-                            <p className="w-5 h-5 bg-gray-600 rounded-full"></p>
+                            <img src="https://picsum.photos/200/300" alt="" className="w-5 h-5 rounded-full" />
                             <div className="w-[70%]">
                                 <p>Andrey Finn</p>
                                 <p className="text-gray-500 text-[7px]">Hello, Good day i would love to make an enquiry as regards your timing... </p>
                             </div>
-                            <p className="w-4 h-4 text-white text-center bg-black rounded-full">
+                            <p className="p-1 px-2 text-white bg-black rounded-full flex">
                                 3
                             </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-3">
 
-                            <p className="w-5 h-5 bg-gray-600 rounded-full"></p>
+                            <img src="https://picsum.photos/200/300" alt="" className="w-5 h-5 rounded-full" />
                             <div className="w-[70%]">
                                 <p>Andrey Finn</p>
                                 <p className="text-gray-500 text-[7px]">Hello, Good day i would love to make an enquiry as regards your timing... </p>
                             </div>
-                            <p className="w-4 h-4 text-white text-center bg-black rounded-full">
+                            <p className="p-1 px-2 text-white bg-black rounded-full flex">
                                 3
                             </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-3">
 
-                            <p className="w-5 h-5 bg-gray-600 rounded-full"></p>
+                            <img src="https://picsum.photos/200/300" alt="" className="w-5 h-5 rounded-full" />
                             <div className="w-[70%]">
                                 <p>Andrey Finn</p>
                                 <p className="text-gray-500 text-[7px]">Hello, Good day i would love to make an enquiry as regards your timing... </p>
                             </div>
-                            <p className="w-4 h-4 text-white text-center bg-black rounded-full">
+                            <p className="p-1 px-2 text-white bg-black rounded-full flex">
                                 3
                             </p>
                         </div>

@@ -41,8 +41,8 @@ function LoginField_comp() {
                 onSubmit={handleSubmit}
                 className=''>
                 <Form className='flex flex-col items-center gap-4 w-[40%] mx-auto'>
-                    <div className='font-bold lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px] xl:text- font-face-mr'>
-                        CLIMBONSIGHT
+                    <div className='lg:mt-10 xl:mt-16 xl:mb-8 xl:text-base text-[12px]  font-face-mr'>
+                        CLIMB ONSIGHT
                     </div>
 
                     <div className='my-[20px] text-center'>
@@ -58,6 +58,7 @@ function LoginField_comp() {
                                 margin="normal"
                                 className='rounded-xl p-3 border-gray-300 border outline-none w-full'
                                 placeholder='Email'
+                                required
                             />
                             <ErrorMessage name="email" component="div" className="text-[10px] text-red-700" />
                         </div>
@@ -69,6 +70,7 @@ function LoginField_comp() {
                                 margin="normal"
                                 className='rounded-xl p-3 border-gray-300 border outline-none w-full'
                                 placeholder='Password'
+                                required
                             />
                             <ErrorMessage name="password" component="div" className="text-[10px] text-red-700" />
                         </div>
