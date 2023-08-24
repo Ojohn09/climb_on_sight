@@ -101,7 +101,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#ECF6F7] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -113,7 +113,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#FFEEE2] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -125,7 +125,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#EEE8FC] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>

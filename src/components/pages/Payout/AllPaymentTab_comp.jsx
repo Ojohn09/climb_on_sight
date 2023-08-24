@@ -18,7 +18,7 @@ function AllPaymentTab_comp() {
                     <div id="table-body" className='paytable scrollbar-hide'>
                         {
                             payoutTableData.map((data) => (
-                                <ul key={data.id} className=" flex justify-between items-center p-3  bg-white mb-5 rounded-full font-semibold">
+                                <ul key={data.id} className=" flex justify-between items-center p-3  bg-white mb-5 rounded-full">
                                     <li className=" basis-0 flex-1 p-1 capitalize flex gap-[10px] items-center">
                                         <span>
                                             <img src="https://picsum.photos/200/300" alt="" className='w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 rounded-full' />

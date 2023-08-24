@@ -12,7 +12,7 @@ function PayoutMenu_comp() {
 
 
                 <div className="flex flex-col gap-2 xl:gap-6 3xl:gap-10 mt-6">
-                    <div className="flex justify-between capitalize p-2 bg-gray-200 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
+                    <div className="flex justify-between capitalize p-2 bg-gray-100 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
                         <div className="flex-col flex gap-2">
                             <p>Jacob aubrey</p>
                             <p>Greenstone bank</p>
@@ -23,7 +23,7 @@ function PayoutMenu_comp() {
                         </div>
                     </div>
 
-                    <div className="flex justify-between capitalize p-2 bg-gray-200 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
+                    <div className="flex justify-between capitalize p-2 bg-gray-100 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
                         <div className="flex-col flex gap-2">
                             <p>Jacob aubrey</p>
                             <p>Greenstone bank</p>
@@ -34,7 +34,7 @@ function PayoutMenu_comp() {
                         </div>
                     </div>
 
-                    <div className="flex justify-between capitalize p-2 bg-gray-200 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
+                    <div className="flex justify-between capitalize p-2 bg-gray-100 rounded-xl items-center text-[10px] xl:text-base 2xl:text-xl 3xl:text-[22px]">
                         <div className="flex-col flex gap-2">
                             <p>Jacob aubrey</p>
                             <p>Greenstone bank</p>
