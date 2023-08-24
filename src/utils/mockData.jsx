@@ -39,4 +39,9 @@ export const payoutTableData = [
     { id: 4, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
     { id: 5, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
     { id: 6, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 7, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 8, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 9, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 10, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
+    { id: 11, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
 ]
