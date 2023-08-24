@@ -37,7 +37,7 @@ function Notification_comp() {
 
             <div className="flex flex-col gap-2 xl:gap-4 3xl:gap-8 3xl:mt-6 items-center ">
                 {notificationArray.map((data) => (
-                    <div key={data.id} className="flex justify-between xs:text-[10px] sm:text-[12px] lg:text-[14px] w-full xl:text-base 3xl:text-3xl items-center ">
+                    <div key={data.id} className="flex justify-between xs:text-[10px] sm:text-[12px] w-full xl:text-[14px] 2xl:text-xl 3xl:text-3xl items-center ">
                         <p className="text-black bg-gray-200 p-1 md:p-2 rounded-full"><IoNotifications /></p>
                         <p className="">{data.notiText}</p>
                         <p onClick={handleModalOpen} className="bg-[#C69776] text-black p-1.5 px-2 rounded-2xl cursor-pointer">View</p>
