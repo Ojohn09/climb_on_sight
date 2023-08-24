@@ -61,17 +61,17 @@ function Calender_comp() {
     return (
 
 
-        <div className='w-full h-[100%] bg-white rounded-xl gap-4 xl:gap-8 py-4 overflow-hidden'>
-            <div className=' w-full p-2 text-sm xl:text-lg 2xl:text-3xl py-2 font-semibold'>
+        <div className='w-full h-[100%] bg-white rounded-xl gap-4 xl:gap-8 py-3 overflow-hidden'>
+            <div className=' w-full p-1 text-sm xl:text-lg 2xl:text-3xl font-semibold'>
                 {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
             </div>
-            <div className='grid grid-cols-7 w-full gap-1 text-center text-[10px] lg:text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>
+            <div className='grid grid-cols-7 w-full gap-1 text-center text-[10px] lg:text-[8px] xl:text-xs 2xl:text-sm 3xl:text-lg'>
 
                 {weeks[0].map((week, i) => (
                     <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                 ))}
             </div>
-            <div className={`grid grid-cols-7 h-[80%] border-collapse text-[6px] lg:text-[10px] xl:text-base border-t border-gray-300`}>
+            <div className={`grid grid-cols-7 h-[80%] border-collapse text-[6px] lg:text-[10px] 2xl:text-sm border-t border-gray-300`}>
                 {totalDate.map((date, i) => (
                     <div key={i} className={`flex items-end justify-end p-1 border-gray-300 3xl:text-2xl  ${dateFns.isWeekend(date) ? 'text-gray-300 bg-gray-50 opacity-70 border-0' : ''} ${i % 1 === 5 ? '' : 'border-r '} ${i < totalDate.length - 7 ? 'border-b' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
                 ))}

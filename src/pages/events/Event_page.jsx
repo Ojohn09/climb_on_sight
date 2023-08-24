@@ -6,7 +6,7 @@ import EventModal from '../../components/modal/EventModal'
 function Event_page() {
     return (
         <AppLayout_HOC>
-            <div className='h-full'>
+            <div className='h-full scrollbar-hide'>
                 <UpcomingEvent_comp />
                 <EventModal />
             </div>

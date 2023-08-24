@@ -72,7 +72,7 @@ function AddEventCalender_comp() {
     }
 
     return (
-        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-3">
+        <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-2">
             <p className="w-full text-center font-semibold mt-4 xl:text-xl 3xl:text-2xl h-fit overflow-hidden">Add to your calendar</p>
             <div className='mt-2 xl:mt-4 text-[8px] xl:h-full'>
                 <div className="xl:text-sm 3xl:text-2xl">
@@ -100,7 +100,7 @@ function AddEventCalender_comp() {
                     </div>
                 </div>
 
-                <div className="xl:mt-4 text-[8px] 2xl:text-sm 3xl:mt-8 3xl:text-2xl">
+                <div className="xl:mt-4 text-[8px] 2xl:text-sm 3xl:mt-4 4xl:mt-6 3xl:text-2xl">
                     <p>Start time</p>
                     <select name="" id="" className="p-2 rounded-lg w-full flex gap-2 outline-none">
                         {time.map((data, i) => (

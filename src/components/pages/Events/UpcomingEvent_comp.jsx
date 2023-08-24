@@ -29,10 +29,10 @@ function UpcomingEvent_comp() {
 
 
 
-        <div>
-            <div className='w-full flex gap-10 z-10 h-full'>
-                <div className='lg:w-[50%] overflow-hidden'>
-                    <div className=' p-3 z-10 bg-[#FBF7F4] fixed w-[45%] 3xl:w-[47%]'>
+        <div className="scrollbar-hide">
+            <div className='w-full flex gap-10 z-10 h-full scrollbar-hide'>
+                <div className='lg:w-[50%] overflow-hidden scrollbar-hide'>
+                    <div className=' p-3 z-10 bg-[#FBF7F4] fixed w-[45%] 3xl:w-[47%] scrollbar-hide'>
                         <p className='text-[20px] 2xl:text-4xl h-full overflow-hidden'>All upcoming trips</p>
                     </div>
                     <div className=''>
@@ -53,16 +53,16 @@ function UpcomingEvent_comp() {
                                                 <p>Climb off</p>
                                                 <p>{data.amount}</p>
                                             </div>
-                                            <div className='flex text-[8px] gap-3 mt-2 xl:text-xs 3xl:text-sm'>
-                                                <div>
+                                            <div className='flex text-[8px] gap-3 mt-2 xl:text-xs 3xl:text-[12px]'>
+                                                <div className="flex flex-col gap-1">
                                                     <p className='text-gray-400'>Date</p>
                                                     <p>{data.date}</p>
                                                 </div>
-                                                <div>
+                                                <div className="flex flex-col gap-1">
                                                     <p className='text-gray-400'>Time</p>
                                                     <p>{data.time}</p>
                                                 </div>
-                                                <div>
+                                                <div className="flex flex-col gap-1">
                                                     <p className='text-gray-400'>Location</p>
                                                     <p>{data.location}</p>
                                                 </div>

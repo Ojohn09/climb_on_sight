@@ -106,16 +106,17 @@ input[type='number'] {
   overflow-y: scroll;
 }
 
+
 @media screen and (min-width: 1440px) {
   .paytable {
-    height: 400px;
+    height: 330px;
     overflow-y: scroll;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .paytable {
-    height: 800px;
+    height: 470px;
     overflow-y: scroll;
   }
 }

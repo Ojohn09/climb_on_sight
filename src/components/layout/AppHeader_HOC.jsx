@@ -18,15 +18,16 @@ function AppHeader_HOC() {
         <div className=" h-full flex flex-col gap-4 md:flex-row justify-between items-center bg-[#FBF7F4]">
             <div className=" md:w-[50%]">
                 <div className='w-full'>
-                    <div className="relative flex items-center w-full rounded-2xl shadow-sm bg-white overflow-hidden">
+                    <div className="relative flex items-center w-full p-2 xl:p-3 2xl:p-4 2xl:text-lg 4xl:text-2xl rounded-2xl 2xl:rounded-full shadow-sm bg-white overflow-hidden">
                         <div className="grid place-items-center h-full w-12 text-gray-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 22 21" fill="none">
+                                <circle cx="9" cy="9" r="8.5" stroke="black" />
+                                <circle cx="19.5" cy="18.5" r="2" stroke="black" />
                             </svg>
                         </div>
 
                         <input
-                            className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+                            className="peer h-full w-full outline-none text-sm 2xl:text-lg 4xl:text-2xl text-gray-700 pr-2"
                             type="text"
                             id="search"
                             placeholder="Search something.." />
