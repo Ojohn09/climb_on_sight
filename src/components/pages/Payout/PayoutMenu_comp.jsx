@@ -3,7 +3,7 @@ import { PlusIcon } from '../../../utils/icons'
 
 function PayoutMenu_comp() {
     return (
-        <div className="bg-white w-full h-full rounded-xl p-4">
+        <div className="bg-white w-full h-full rounded-xl p-4 ">
             <div className="flex justify-center text-sm font-semibold">
                 <p>Payout menu</p>
             </div>

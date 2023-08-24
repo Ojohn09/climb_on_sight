@@ -89,7 +89,7 @@ input[type='number'] {
   /* Firefox */
 }
 
-select {
+.select-menu {
   /* for Firefox */
   -moz-appearance: none;
   /* for Chrome */
@@ -97,7 +97,7 @@ select {
 }
 
 /* For IE10 */
-select::-ms-expand {
+.select-menu::-ms-expand {
   display: none;
 }
 

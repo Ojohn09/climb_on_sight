@@ -63,17 +63,17 @@ function CalenderEvents_comp() {
             <div className="flex flex-col lg:flex-row w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-7 ">
                 <div className='lg:w-[70%]'>
 
-                    <div className='text-lg p-2 xl:text-xl 2xl:text-3xl px-6 mt-2 font-semibold'>
+                    <div className='text-lg p-2 xl:text-xl 3xl:text-3xl px-6 mt-2 font-semibold'>
                         {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
                     </div>
-                    <div className='grid grid-cols-7 gap-1 text-center mt-4 text-[10px] xl:text-sm 2xl:text-xl'>
+                    <div className='grid grid-cols-7 gap-1 text-center mt-4 text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>
                         {weeks[0].map((week, i) => (
                             <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}
                     </div>
-                    <div className={`grid grid-cols-7 w-full h-full lg:h-[60%] divide-gray-300 text-[10px] xl:text-sm border-t border-b border-gray-400`}>
+                    <div className={`grid grid-cols-7 w-full h-full lg:h-[50%] xl:h-[60%] text-[10px] xl:text-sm border-b border-gray-200`}>
                         {totalDate.map((date, i) => (
-                            <p key={i} className={`flex items-end justify-end p-1 2xl:text-xl border-t border-l ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
+                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-l ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
                         ))}
                     </div>
                     <div className='justify-between flex mt-4 xl:mt-8 px-4'>

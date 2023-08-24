@@ -7,7 +7,7 @@ import PayoutMenu_comp from "../../components/pages/Payout/PayoutMenu_comp"
 function Payout_page() {
     return (
         <AppLayout_HOC>
-            <div className="flex flex-col lg:flex-row w-full gap-5 lg:max-h-[85vh] xl:max-h-[90vh]">
+            <div className="flex flex-col lg:flex-row w-full gap-5 h-full">
                 <div className="lg:w-[75%]">
                     <div>
                         <PayoutCounter_comp />
