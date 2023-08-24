@@ -1,3 +1,4 @@
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 
 function PayoutCounter_comp() {
@@ -11,7 +12,7 @@ function PayoutCounter_comp() {
                     </div>
                     <div className="">
                         <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $34,256
+                            $23,256.23
                         </p>
                     </div>
                 </div>
@@ -23,9 +24,9 @@ function PayoutCounter_comp() {
                     </div>
                     <div className=" flex gap-6 items-center">
                         <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
+                            $4,536.76
                         </p>
-                        <div className="text-green-400 flex items-center text-center text-[8px] p-1 bg-white rounded">
+                        <div className="text-green-400 flex items-center text-center text-[8px] xl:text-[8px] p-1 px-2 bg-white rounded">
                             <p className="">
                                 paid
                             </p>
@@ -40,9 +41,9 @@ function PayoutCounter_comp() {
                     </div>
                     <div className=" flex gap-3 items-center">
                         <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
+                            $7,765.12
                         </p>
-                        <div className="text-red-400 flex items-center text-center text-[6px] p-1 bg-white rounded">
+                        <div className="text-red-400 flex items-center text-center text-[6px] xl:text-[8px] p-1 px-2 bg-white rounded">
                             <p className="">
                                 In balance
                             </p>
@@ -50,14 +51,18 @@ function PayoutCounter_comp() {
                     </div>
                 </div>
 
-                <div className="flex flex-col bg-green-50  rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
+                <div className="flex flex-col bg-green-50  rounded-xl p-4 gap-1 w-full md:w-[25%] shadow-sm">
                     <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
                         <p className="font-semibold">Earnings summary</p>
                         <p>23 May</p>
                     </div>
-                    <div className=" flex gap-4 items-center">
+                    <div className=" flex flex-col">
                         <p className="lg:text-lg text-xl xl:text-xl font-semibold">
-                            $23,444
+                            $7,765.12
+                        </p>
+                        <p className="text-[6px] xl:text-[10px] gap-2 text-emerald-400 flex items-center hover:underline">
+                            <span>View transactions</span>
+                            <span><HiOutlineArrowNarrowRight /></span>
                         </p>
                     </div>
                 </div>
