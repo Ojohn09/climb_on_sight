@@ -105,3 +105,10 @@ input[type='number'] {
   height: 230px;
   overflow-y: scroll;
 }
+
+@media screen and (min-width: 1440px) {
+  .paytable {
+    height: 400px;
+    overflow-y: scroll;
+  }
+}

@@ -3,7 +3,7 @@
 function PayoutCounter_comp() {
     return (
         <div>
-            <div className="flex flex-col md:flex-row gap-8 lg:gap-4 xl:gap-8 items-center w-full ">
+            <div className="flex flex-col md:flex-row gap-8 lg:gap-4 xl:gap-8 items-center w-full mt-4">
                 <div className="flex flex-col bg-indigo-100 rounded-xl p-4 gap-4 w-full md:w-[25%] shadow-sm">
                     <div className="flex flex-col lg:text-[10px] text-[12px] xl:text-[12px] text-start">
                         <p className="font-semibold">Current Balance</p>

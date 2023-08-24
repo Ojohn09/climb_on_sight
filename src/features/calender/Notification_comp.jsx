@@ -25,7 +25,6 @@ function Notification_comp() {
         { id: 1, notiText: "You have a guide request" },
         { id: 2, notiText: "You have a guide request" },
         { id: 3, notiText: "You have a guide request" },
-        { id: 4, notiText: "You have a guide request" },
 
     ]
 

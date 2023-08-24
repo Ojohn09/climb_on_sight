@@ -8,7 +8,7 @@ function Payout_page() {
     return (
         <AppLayout_HOC>
             <div className="flex flex-col lg:flex-row w-full gap-5 h-full">
-                <div className="lg:w-[75%]">
+                <div className="lg:w-[75%] h-full">
                     <div>
                         <PayoutCounter_comp />
                     </div>
@@ -16,7 +16,7 @@ function Payout_page() {
                         <PaymentTable_comp />
                     </div>
                 </div>
-                <div className="lg:w-[25%]">
+                <div className="lg:w-[25%] h-full">
                     <PayoutMenu_comp />
                 </div>
             </div>
