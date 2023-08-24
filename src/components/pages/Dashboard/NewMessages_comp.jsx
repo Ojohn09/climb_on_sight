@@ -58,7 +58,7 @@ function NewMessages_comp() {
                 <p className="xl:text-lg 2xl:text-3xl xl:mt-6">
                     Verification status
                 </p>
-                <div className="flex flex-col bg-white rounded-xl p-4 text-xs xl:text-lg 3xl:text-3xl xl:p-6 2xl:p-12 mt-2">
+                <div className="flex flex-col bg-white rounded-xl p-4 text-xs xl:text-lg 3xl:text-3xl xl:p-6 3xl:p-12 mt-2">
                     <p>Climbers review</p>
                     <div><svg xmlns="http://www.w3.org/2000/svg" width="158" height="28" viewBox="0 0 158 28" fill="none">
                         <path d="M12.7989 2.92705C13.0983 2.00574 14.4017 2.00574 14.7011 2.92705L16.6126 8.81003C16.7464 9.22206 17.1304 9.50102 17.5636 9.50102H23.7493C24.7181 9.50102 25.1208 10.7406 24.3371 11.31L19.3328 14.9459C18.9823 15.2006 18.8356 15.6519 18.9695 16.064L20.881 21.9469C21.1803 22.8682 20.1259 23.6344 19.3421 23.065L14.3378 19.4291C13.9873 19.1744 13.5127 19.1744 13.1622 19.4291L8.15785 23.065C7.37414 23.6344 6.31966 22.8682 6.61901 21.9469L8.53051 16.064C8.66438 15.6519 8.51772 15.2006 8.16723 14.9459L3.16287 11.31C2.37916 10.7406 2.78193 9.50102 3.75066 9.50102H9.93639C10.3696 9.50102 10.7536 9.22206 10.8874 8.81003L12.7989 2.92705Z" fill="#FAC87E" />
