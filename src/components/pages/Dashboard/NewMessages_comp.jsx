@@ -5,7 +5,7 @@ function NewMessages_comp() {
         <div className="flex gap-4 flex-col mt-2 md:flex-row">
             <div className="md:w-[60%]">
                 <div>
-                    <p className="text-sm xl:text-lg 2xl:text-xl ">New messages</p>
+                    <p className="text-sm xl:text-base 2xl:text-xl ">New messages</p>
                     <div className="flex flex-col  sm:grid grid-cols-2 bg-white rounded-xl text-[8px] xl:text-xs p-2 xl:p-4 gap-5 3xl:text-sm">
                         <div className="flex items-center gap-1">
 
@@ -55,7 +55,7 @@ function NewMessages_comp() {
                 </div>
             </div>
             <div className="md:w-[40%]">
-                <p className="text-sm xl:text-lg 2xl:text-xl ">
+                <p className="text-sm xl:text-base 2xl:text-xl ">
                     Verification status
                 </p>
                 <div className="flex flex-col bg-white rounded-xl p-4 text-xs xl:text-lg 3xl:text-2xl xl:p-6 3xl:p-8 mt-2">

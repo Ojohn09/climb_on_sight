@@ -32,7 +32,7 @@ function UpcomingEvent_comp() {
         <div className="scrollbar-hide">
             <div className='w-full flex gap-10 z-10 h-full scrollbar-hide'>
                 <div className='lg:w-[50%] overflow-hidden scrollbar-hide'>
-                    <div className=' p-3 z-10 bg-[#FBF7F4] fixed w-[45%] 3xl:w-[47%] scrollbar-hide'>
+                    <div className=' p-3 z-10 bg-[#FBF7F4] fixed w-full lg:w-[45%] 3xl:w-[47%] scrollbar-hide'>
                         <p className='text-[20px] 2xl:text-4xl h-full overflow-hidden'>All upcoming trips</p>
                     </div>
                     <div className=''>
@@ -43,7 +43,7 @@ function UpcomingEvent_comp() {
                                         <div
                                             key={data.id}
                                             onClick={() => handleEventClick(data)}
-                                            className={`bg-white rounded-xl shadow-xl p-3 w-fit cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
+                                            className={`bg-white rounded-xl shadow-sm p-3 w-fit cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
                                                 }`}>
                                             <div>
                                                 <img src={data.image} alt="" className='w-full rounded-xl object-cover object-center' />

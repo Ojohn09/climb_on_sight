@@ -3,6 +3,7 @@ import * as dateFns from 'date-fns'
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentDate } from '../../../redux/slices/features/calendarSlice'
+import { date } from 'yup'
 
 function CalenderEvents_comp() {
 
@@ -68,12 +69,12 @@ function CalenderEvents_comp() {
                     </div>
                     <div className='grid grid-cols-7 gap-1 text-center mt-4 text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>
                         {weeks[0].map((week, i) => (
-                            <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
+                            <span key={i} className={`${dateFns.isWeekend(date) ? 'text-gray-200 ' : ''}`}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}
                     </div>
                     <div className={`grid grid-cols-7 w-full h-full lg:h-[50%] xl:h-[60%] text-[10px] xl:text-sm border-b border-gray-200`}>
                         {totalDate.map((date, i) => (
-                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-l ${dateFns.isWeekend(date) ? 'text-gray-500 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
+                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-r ${dateFns.isWeekend(date) ? 'text-gray-400 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
                         ))}
                     </div>
                     <div className='justify-between flex mt-4 xl:mt-8 px-4'>
@@ -88,8 +89,8 @@ function CalenderEvents_comp() {
                     </div>
                 </div>
                 <div className='lg:w-[30%] h-full'>
-                    <div className='flex flex-col gap-3 mt-12'>
-                        <div className='bg-[#EFFCEF] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                    <div className='flex flex-col gap-2 3xl:gap-8 mt-12 px-4'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -101,7 +102,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#ECF6F7] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#ECF6F7] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -113,7 +114,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#FFEEE2] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#FFEEE2] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -125,7 +126,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-[#EEE8FC] px-4 py-2 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#EEE8FC] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
                             <p className='flex items-center gap-1'>
                                 <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
                                 <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
@@ -137,7 +138,7 @@ function CalenderEvents_comp() {
                             </p>
                         </div>
 
-                        <div className='bg-white rounded-xl text-xs 2xl:text-lg 3xl:text-2xl p-4 '>
+                        <div className='bg-white rounded-xl text-xs 2xl:text-lg 3xl:text-2xl p-2 '>
                             <p className='m-2 p-1 flex justify-between'>
                                 <span>Event Total amount</span>
                                 <span className='text-white bg-black rounded-full px-1 2xl:px-2'>4</span>

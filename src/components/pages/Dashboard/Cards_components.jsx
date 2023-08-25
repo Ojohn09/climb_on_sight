@@ -19,7 +19,7 @@ function Cards_components() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] 3xl:text-base text-center">
+                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] gap-0.5 3xl:text-base text-center">
                         <p className="font-semibold ">Cash Payout</p>
                         <p >23% increase from last week</p>
                     </div>
@@ -38,7 +38,7 @@ function Cards_components() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] 3xl:text-base  text-center">
+                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] gap-0.5 3xl:text-base  text-center">
                         <p className="font-semibold flex items-center justify-center gap-1">
                             <span>Number of trips listed in june</span>
                             <span className="text-[8px] 3xl:text-[12px] 4xl:text-sm bg-white"><BiTransferAlt /></span>
@@ -61,7 +61,7 @@ function Cards_components() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] 3xl:text-base  text-center">
+                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] gap-0.5 3xl:text-base  text-center">
                         <p className="font-semibold flex items-center justify-center gap-1">
                             <span>Number of trips booked in june</span>
                             <span className="text-[8px] 3xl:text-[12px] 4xl:text-sm bg-white"><BiTransferAlt /></span>
@@ -84,7 +84,7 @@ function Cards_components() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] 3xl:text-base  text-center">
+                    <div className="flex flex-col lg:text-[8px] xl:text-[10px] gap-0.5 3xl:text-base  text-center">
                         <p className="font-semibold ">Number of climbers booked</p>
                         <p >19% increase from last week</p>
                     </div>

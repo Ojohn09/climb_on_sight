@@ -1,15 +1,14 @@
 import { months, time } from "../../../utils/mockData"
-import React, { useState } from 'react'
+
 import * as dateFns from 'date-fns'
 import { useDispatch, useSelector } from "react-redux"
-import { setSelectedMonth } from "../../../redux/slices/features/calendarSlice"
 
 
 function AddEventCalender_comp() {
 
     const dispatch = useDispatch()
     const currentDate = useSelector((state) => state.calendar.currentDate);
-    const selectedMonth = useSelector((state) => state.calendar.selectedMonth);
+
 
 
 
@@ -23,42 +22,31 @@ function AddEventCalender_comp() {
     const isToday = (day) => dateFns.isSameDay(day, today)
 
     // find first day of currentDate 
-    const selectedMonthFirstDay = dateFns.startOfMonth(selectedMonth);
+    const firstDay = dateFns.startOfMonth(currentDate)
 
     //find last day of the currentDate
-    const selectedMonthLastDay = dateFns.lastDayOfMonth(selectedMonth);
+    const lastDay = dateFns.lastDayOfMonth(currentDate)
 
     //find first day of week of firstDay
-    const selectedMonthStartDate = dateFns.startOfWeek(selectedMonthFirstDay, { weekStartsOn: 1 });
+    const startDate = dateFns.startOfWeek(firstDay, { weekStartsOn: 1 })
 
     //find first day of week of lastDay
-    const selectedMonthEndDate = dateFns.lastDayOfWeek(selectedMonthLastDay);
+    const endDate = dateFns.lastDayOfWeek(lastDay)
 
     //render all days
-    const selectedMonthTotalDate = dateFns.eachDayOfInterval({ start: selectedMonthStartDate, end: selectedMonthEndDate });
+    const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate })
 
 
-    console.log("selectedMonthStartDate:", selectedMonthStartDate);
-    console.log("selectedMonthEndDate:", selectedMonthEndDate);
-    console.log("selectedMonthTotalDate:", selectedMonthTotalDate);
 
 
-    // Handler for month selection
-    const handleMonthSelect = (event) => {
-        const selectedMonthIndex = parseInt(event.target.value);
-        const selectedMonthDate = new Date(currentDate, selectedMonthIndex, 1);
-        const selectedMonthTimestamp = selectedMonthDate.getTime()
-        dispatch(setSelectedMonth(selectedMonthTimestamp)); // Dispatch the selected month
-    };
 
-
-    const selectedMonthWeeks = ((date) => {
-        const weeks = [];
-        for (let day = 0; day < selectedMonthTotalDate.length; day += 7) {
-            weeks.push(selectedMonthTotalDate.slice(day, day + 7));
+    const weeks = ((date) => {
+        const weeks = []
+        for (let day = 0; day < totalDate.length; day += 7) {
+            weeks.push(totalDate.slice(day, day + 7));
         }
-        return weeks;
-    })(selectedMonthTotalDate);
+        return weeks
+    })(totalDate)
 
     const hours = [];
 
@@ -73,34 +61,34 @@ function AddEventCalender_comp() {
 
     return (
         <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-2">
-            <p className="w-full text-center font-semibold mt-4 xl:text-xl 3xl:text-2xl h-fit overflow-hidden">Add to your calendar</p>
-            <div className='mt-2 xl:mt-4 text-[8px] xl:h-full'>
-                <div className="xl:text-sm 3xl:text-2xl">
+            <p className="w-full text-center font-semibold  xl:text-xl 3xl:text-2xl h-fit overflow-hidden">Add to your calendar</p>
+            <div className='mt-2 xl:mt-4 xl:h-full'>
+                <div className="text-xs xl:text-sm 3xl:text-2xl">
                     <p>Add month</p>
-                    <select name="" id="" className="p-2 rounded-lg w-full" onChange={handleMonthSelect}>
+                    <select name="" id="" className="p-2 rounded-lg w-full" >
                         {months.map((data, i) => (
                             <option key={i} value={i}>{data.month}</option>
                         ))}
                     </select>
                 </div>
 
-                <div className="xl:mt-4 text-[8px] 3xl:mt-8 3xl:text-2xl my-5 xl:h-[50%] ">
-                    <p className="xl:text-sm 2xl:text-base 3xl:text-2xl">Add day</p>
-                    <div className="bg-white text-[10px] 3xl:text-xl rounded-lg lg:h-[70%] xl:h-[80%] pt-5">
+                <div className="xl:mt-4 3xl:mt-8 3xl:text-2xl my-2 xl:h-[50%]">
+                    <p className="text-xs xl:text-sm 2xl:text-base 3xl:text-2xl">Add day</p>
+                    <div className="bg-white text-[10px] 2xl:text-sm 3xl:text-xl rounded-lg lg:h-[100%] xl:h-[80%] p-1">
                         <div className='grid grid-cols-7 gap-1 text-center mt-2'>
-                            {selectedMonthWeeks[0].map((week, i) => (
+                            {weeks[0].map((week, i) => (
                                 <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                             ))}
                         </div>
-                        <div className={`grid grid-cols-7 w-full lg:h-[100%] xl:h-[80%] gap-1 mt-2`}>
-                            {selectedMonthTotalDate.map((date, i) => (
-                                <p key={i} className={`flex items-center justify-center ${isToday(date) ? 'bg-black text-white rounded-full' : ''} `}>{dateFns.format(date, formatOfDay)}</p>
+                        <div className={`grid grid-cols-7 w-full lg:h-[100%] xl:h-[80%] gap-2 mt-2`}>
+                            {totalDate.map((date, i) => (
+                                <p key={i} className={`flex items-center justify-center py-0.5 4xl:py-0 ${isToday(date) ? 'bg-black text-white rounded-full' : ''} `}>{dateFns.format(date, formatOfDay)}</p>
                             ))}
                         </div>
                     </div>
                 </div>
 
-                <div className="xl:mt-4 text-[8px] 2xl:text-sm 3xl:mt-4 4xl:mt-6 3xl:text-2xl">
+                <div className="xl:mt-4 text-xs 2xl:text-sm 3xl:mt-4 4xl:mt-6 3xl:text-2xl">
                     <p>Start time</p>
                     <select name="" id="" className="p-2 rounded-lg w-full flex gap-2 outline-none">
                         {time.map((data, i) => (
@@ -109,17 +97,17 @@ function AddEventCalender_comp() {
                     </select>
                 </div>
 
-                <div className="xl:mt-4 text-[8px] 2xl:text-sm 3xl:mt-8 3xl:text-2xl">
+                <div className="xl:mt-4 text-xs 2xl:text-sm 3xl:mt-8 3xl:text-2xl">
                     <p>End time</p>
-                    <select name="" id="" className="p-2 rounded-lg w-full flex gap-2 outline-none">
+                    <select name="" id="" className="p-2 rounded-lg w-full flex flex-row gap-2 outline-none">
                         {time.map((data, i) => (
-                            <option key={i} value={data.time}>{data.time}</option>
+                            <option className="flex bg-gray-50" key={i} value={data.time}>{data.time}</option>
                         ))}
                     </select>
                 </div>
 
 
-                <button className="w-full mt-4 3xl:mt-8 rounded-lg bg-black 2xl:text-xl text-white p-2">Next</button>
+                <button className="w-full mt-4 3xl:mt-8 rounded-lg bg-black text-sm xl:text-base 2xl:text-lg text-white p-2">Next</button>
 
             </div>
         </div>

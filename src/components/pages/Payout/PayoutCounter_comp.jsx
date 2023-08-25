@@ -11,7 +11,7 @@ function PayoutCounter_comp() {
                         <p>Today</p>
                     </div>
                     <div className="">
-                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-semibold">
+                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-medium">
                             $23,256.23
                         </p>
                     </div>
@@ -23,10 +23,10 @@ function PayoutCounter_comp() {
                         <p>Today</p>
                     </div>
                     <div className=" flex gap-6 items-center">
-                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-semibold">
+                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-medium">
                             $4,536.76
                         </p>
-                        <div className="text-green-400 flex items-center text-center text-[6px] xl:text-[8px] 3xl:text-[14px] p-1 px-2 bg-white rounded">
+                        <div className="text-green-400 flex items-center text-center text-[8px]  3xl:text-[14px] p-1 px-2 bg-white rounded">
                             <p className="">
                                 paid
                             </p>
@@ -40,10 +40,10 @@ function PayoutCounter_comp() {
                         <p>29 July</p>
                     </div>
                     <div className=" flex gap-3 items-center">
-                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-semibold">
+                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-medium">
                             $7,765.12
                         </p>
-                        <div className="text-red-400 flex items-center text-center text-[6px] xl:text-[8px] 3xl:text-[14px] p-1 px-2 bg-white rounded">
+                        <div className="text-red-400 flex items-center text-center text-[10px]  3xl:text-[14px] p-1 px-2 bg-white rounded">
                             <p className="">
                                 In balance
                             </p>
@@ -57,7 +57,7 @@ function PayoutCounter_comp() {
                         <p>23 May</p>
                     </div>
                     <div className=" flex flex-col mt-2 xl:mt-0">
-                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-semibold">
+                        <p className="lg:text-sm text-xl xl:text-xl 3xl:text-4xl py-1 font-medium">
                             $7,765.12
                         </p>
                         <p className="text-[6px] xl:text-[10px] 3xl:text-sm gap-2 text-emerald-400 flex items-center hover:underline">
