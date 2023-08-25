@@ -74,7 +74,7 @@ function CalenderEvents_comp() {
                     </div>
                     <div className={`grid grid-cols-7 w-full h-full lg:h-[50%] xl:h-[60%] text-[10px] xl:text-sm border-b border-gray-200`}>
                         {totalDate.map((date, i) => (
-                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-r ${dateFns.isWeekend(date) ? 'text-gray-400 bg-gray-50 opacity-50 border-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
+                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-r ${dateFns.isWeekend(date) ? 'text-gray-400 bg-gray-50 opacity-50 border-0 border-r-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
                         ))}
                     </div>
                     <div className='justify-between flex mt-4 xl:mt-8 px-4'>

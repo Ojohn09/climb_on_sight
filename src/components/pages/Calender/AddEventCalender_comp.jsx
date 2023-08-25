@@ -1,41 +1,52 @@
 import { months, time } from "../../../utils/mockData"
-
+import { setCurrentDate } from "../../../redux/slices/features/calendarSlice"
 import * as dateFns from 'date-fns'
 import { useDispatch, useSelector } from "react-redux"
+import { useState } from "react"
 
 
 function AddEventCalender_comp() {
-
+    const [selectedMonth, setSelectedMonth] = useState(0);
     const dispatch = useDispatch()
-    const currentDate = useSelector((state) => state.calendar.currentDate);
-
-
-
+    const calendarState = useSelector((state) => state.calendar);
+    const currentDate = new Date(calendarState.currentDate);
 
     // format of date 
     const formatOfMonth = "MMMM"
     const formatOfWeek = 'iiiii'
     const formatOfDay = 'd'
 
-
     const today = new Date()
-    const isToday = (day) => dateFns.isSameDay(day, today)
 
-    // find first day of currentDate 
-    const firstDay = dateFns.startOfMonth(currentDate)
+    const isToday = (day) => dateFns.isSameDay(day, new Date());
+    // const isToday = (day) => dateFns.isSameDay(day, today)
 
-    //find last day of the currentDate
-    const lastDay = dateFns.lastDayOfMonth(currentDate)
+    // // find first day of currentDate 
+    // const firstDay = dateFns.startOfMonth(currentDate)
 
-    //find first day of week of firstDay
-    const startDate = dateFns.startOfWeek(firstDay, { weekStartsOn: 1 })
+    // //find last day of the currentDate
+    // const lastDay = dateFns.lastDayOfMonth(currentDate)
 
-    //find first day of week of lastDay
-    const endDate = dateFns.lastDayOfWeek(lastDay)
+    // //find first day of week of firstDay
+    // const startDate = dateFns.startOfWeek(firstDay, { weekStartsOn: 1 })
 
-    //render all days
-    const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate })
+    // //find first day of week of lastDay
+    // const endDate = dateFns.lastDayOfWeek(lastDay)
 
+    // //render all days
+    // const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate })
+
+    const selectedMonthDate = new Date(currentDate.getFullYear(), selectedMonth + 1, 1);
+    const firstDay = dateFns.startOfMonth(selectedMonthDate);
+    const lastDay = dateFns.lastDayOfMonth(selectedMonthDate);
+    const startDate = dateFns.startOfWeek(firstDay, { weekStartsOn: 1 });
+    const endDate = dateFns.lastDayOfWeek(lastDay);
+    const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate });
+
+    const handleMonthChange = (event) => {
+        setSelectedMonth(event.target.value);
+        dispatch(setCurrentDate(new Date(calendarState.currentDate).setMonth(event.target.value)));
+    }
 
 
 
@@ -65,7 +76,13 @@ function AddEventCalender_comp() {
             <div className='mt-2 xl:mt-4 xl:h-full'>
                 <div className="text-xs xl:text-sm 3xl:text-2xl">
                     <p>Add month</p>
-                    <select name="" id="" className="p-2 rounded-lg w-full" >
+                    <select
+                        name=""
+                        id=""
+                        className="p-2 rounded-lg w-full"
+                        value={selectedMonth}
+                        onChange={handleMonthChange}
+                    >
                         {months.map((data, i) => (
                             <option key={i} value={i}>{data.month}</option>
                         ))}
