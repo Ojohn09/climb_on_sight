@@ -13,7 +13,7 @@ function SideNav_HOC() {
         <div className=" p-3">
             <div className="bg-[#F4E8DF] h-[90%] fixed border border-r menu flex flex-col items-start justify-between gap-[150px] z-50 p-3 w-[50px]">
                 <div>
-                    <Link to="/dashboard" className="text-[10px] font-face-mr ">CBO</Link>
+                    <Link to="/dashboard" className="text-[10px] font-face-mr ">CO</Link>
                 </div>
 
 
