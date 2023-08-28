@@ -1,12 +1,10 @@
 import { IoNotifications } from "react-icons/io5"
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal2, openModal2 } from "../../redux/slices/features/modalSlice";
-import RequestModal from "../../components/modal/requestModal";
-import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
 
-function Notification_comp() {
+function NotificationModal() {
 
     const dispatch = useDispatch();//dispatching the action
     const isModalOpen = useSelector((state) => state.modal.isModalOpen)//getting the modalstate from the store
@@ -47,4 +45,4 @@ function Notification_comp() {
     )
 }
 
-export default Notification_comp
+export default NotificationModal

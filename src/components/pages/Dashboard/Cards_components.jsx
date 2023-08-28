@@ -8,7 +8,7 @@ function Cards_components() {
 
     return (
         <div className="w-full 2xl:mb-10">
-            <div className="flex flex-col md:flex-row gap-8 lg:gap-4 xl:gap-8 items-center w-full ">
+            <div className="flex flex-col md:flex-row gap-6 lg:gap-4 xl:gap-8 items-center w-full ">
 
 
                 <div className="flex flex-col bg-violet-100 rounded-xl p-2 py-4 3xl:p-6 4xl:p-8 gap-1 w-full md:w-[25%] shadow-sm">
