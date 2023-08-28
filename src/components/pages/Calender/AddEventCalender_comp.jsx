@@ -51,7 +51,7 @@ function AddEventCalender_comp() {
 
 
 
-    const weeks = ((date) => {
+    const weeks = ((totalDate) => {
         const weeks = []
         for (let day = 0; day < totalDate.length; day += 7) {
             weeks.push(totalDate.slice(day, day + 7));
@@ -69,6 +69,8 @@ function AddEventCalender_comp() {
             hour: `${displayHour}${ampm}`
         });
     }
+
+
 
     return (
         <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-2">

@@ -7,11 +7,44 @@ import { useDispatch, useSelector } from 'react-redux'
 import { UserIcon } from '../../utils/icons'
 import Lock from '../../assets/icons/Lock.svg'
 import { MdClose } from 'react-icons/md'
+import SettingsModal from '../modal/SettingsModal';
+import ProfileModal from '../modal/ProfileModal';
+import NotificationModal from '../modal/NotificationModal';
 
 
 function AppHeader_HOC() {
 
     const dispatch = useDispatch()
+
+    const openSettingsModal = () => {
+        dispatch(
+            openModal({
+                id: 'settings-modal',
+                title: 'Settings',
+                children: <SettingsModal />,
+            })
+        );
+    };
+
+    const openProfileModal = () => {
+        dispatch(
+            openModal({
+                id: 'profile-modal',
+                title: 'Profile',
+                children: <ProfileModal />,
+            })
+        );
+    };
+
+    const openNotificationModal = () => {
+        dispatch(
+            openModal({
+                id: 'notification-modal',
+                title: 'Notification',
+                children: <NotificationModal />,
+            })
+        );
+    };
 
     return (
 

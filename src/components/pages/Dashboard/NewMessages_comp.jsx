@@ -3,16 +3,16 @@
 function NewMessages_comp() {
     return (
         <div className="flex gap-4 flex-col mt-2 md:flex-row">
-            <div className="md:w-[60%]">
+            <div className="md:w-[65%]">
                 <div>
                     <p className="text-sm xl:text-base 2xl:text-xl ">New messages</p>
-                    <div className="flex flex-col  sm:grid grid-cols-2 bg-white rounded-xl text-[8px] xl:text-xs p-2 xl:p-4 gap-5 3xl:text-sm">
+                    <div className="flex flex-col  sm:grid grid-cols-2 bg-white rounded-xl text-[8px] xl:text-xs p-2 xl:p-4 gap-4 3xl:text-sm">
                         <div className="flex items-center gap-1">
 
                             <img src="https://picsum.photos/200/300" alt="" className="w-5 h-5 xl:w-8 xl:h-8 2xl:w-8 3xl:w-13 2xl:h-8 3xl:h-13 rounded-full" />
                             <div className="w-[70%]">
                                 <p>Andrey Finn</p>
-                                <p className="text-gray-500 text-[7px] xl:text-xs 3xl:text-sm 4xl:text-lg">Hello, Good day i would love to make an enquiry .... </p>
+                                <p className="text-gray-500 text-[7px] xl:text-[10px] 3xl:text-xs 4xl:text-sm">Hello, Good day i would love to make an enquiry .... </p>
                             </div>
                             <p className="p-1 px-2 2xl:px-3 2xl:p-1.5 text-white bg-black rounded-full flex">
                                 3
@@ -54,7 +54,7 @@ function NewMessages_comp() {
                     </div>
                 </div>
             </div>
-            <div className="md:w-[40%]">
+            <div className="md:w-[35%]">
                 <p className="text-sm xl:text-base 2xl:text-xl ">
                     Verification status
                 </p>
