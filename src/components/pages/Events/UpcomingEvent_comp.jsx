@@ -43,7 +43,7 @@ function UpcomingEvent_comp() {
                                         <div
                                             key={data.id}
                                             onClick={() => handleEventClick(data)}
-                                            className={`bg-white rounded-xl shadow-sm p-3 w-fit cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
+                                            className={`bg-white rounded-xl shadow-sm p-3 w-full cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
                                                 }`}>
                                             <div>
                                                 <img src={data.image} alt="" className='w-full rounded-xl object-cover object-center' />
@@ -53,7 +53,7 @@ function UpcomingEvent_comp() {
                                                 <p>Climb off</p>
                                                 <p>{data.amount}</p>
                                             </div>
-                                            <div className='flex text-[8px] gap-3 mt-2 xl:text-xs 3xl:text-[12px]'>
+                                            <div className='flex text-[8px] gap-3 mt-2 xl:text-xs 3xl:text-[16px]'>
                                                 <div className="flex flex-col gap-1">
                                                     <p className='text-gray-400'>Date</p>
                                                     <p>{data.date}</p>

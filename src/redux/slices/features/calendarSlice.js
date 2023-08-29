@@ -5,8 +5,8 @@ const calendarSlice = createSlice({
     initialState: {
         currentDate: new Date().getTime(),
         events: [], // Replace this with your actual events data structure
-        selectedMonth: new Date(),
-        selectedDate: new Date(),
+        selectedMonth: new Date().getTime(),
+        selectedDate: new Date().getTime(),
     },
     reducers: {
         setCurrentDate: (state, action) => {

@@ -1,47 +1,38 @@
 import { IoSettings } from 'react-icons/io5'
 import { BsBellFill } from 'react-icons/bs'
-import ModalModal from '../modal/ModalModal'
-import { openModal } from '../../redux/slices/features/modalSlice'
-import { closeModal } from '../../redux/slices/features/modalSlice';
 import { useDispatch, useSelector } from 'react-redux'
-import { UserIcon } from '../../utils/icons'
-import Lock from '../../assets/icons/Lock.svg'
-import { MdClose } from 'react-icons/md'
-import SettingsModal from '../modal/SettingsModal';
-import ProfileModal from '../modal/ProfileModal';
-import NotificationModal from '../modal/NotificationModal';
+import { openMultiModal } from '../../redux/slices/features/multiModalSlice'
+import MultiModal from '../modal/MultiModal'
 
 
 function AppHeader_HOC() {
 
     const dispatch = useDispatch()
+    const modals = useSelector(state => state.multiModal.modals);
 
     const openSettingsModal = () => {
         dispatch(
-            openModal({
+            openMultiModal({
                 id: 'settings-modal',
                 title: 'Settings',
-                children: <SettingsModal />,
             })
         );
     };
 
     const openProfileModal = () => {
         dispatch(
-            openModal({
+            openMultiModal({
                 id: 'profile-modal',
                 title: 'Profile',
-                children: <ProfileModal />,
             })
         );
     };
 
     const openNotificationModal = () => {
         dispatch(
-            openModal({
+            openMultiModal({
                 id: 'notification-modal',
                 title: 'Notification',
-                children: <NotificationModal />,
             })
         );
     };
@@ -70,45 +61,31 @@ function AppHeader_HOC() {
 
             <div className='w-full flex items-end'>
                 <div className="flex items-center justify-end w-full gap-4">
-                    <div className='relative'>
-                        <div onClick={() => dispatch(openModal())} className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer`}>
+                    <div className='relative' onClick={openSettingsModal}>
+                        <div className={`p-2 bg-white rounded-full text-gray-700 cursor-pointer`}>
                             <IoSettings />
                         </div>
-                        <ModalModal>
-                            <div className='p-5 bg-white absolute top-16 right-[150px] rounded-xl'>
-                                <div className='flex justify-between py-1 items-center'>
-                                    <p className='mb-2'>Settings</p>
-                                    <p
-                                        onClick={() => dispatch(closeModal())}
-                                        className=' border border-black rounded-full cursor-pointer'><MdClose /></p>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <div className='w-[200px] border rounded-lg p-2 flex items-center justify-between text-xs bg-gray-100'>
-                                        <p>Edit profile</p>
-                                        <p><UserIcon /></p>
-                                    </div>
-
-                                    <div className='w-[200px] border rounded-lg p-2 flex items-center justify-between text-xs bg-gray-100'>
-                                        <p>Password reset</p>
-                                        <img src={Lock} alt="" className='w-4 h-4' />
-                                    </div>
-                                </div>
-                            </div>
-                        </ModalModal>
 
                     </div>
-                    <div className='relative'>
-                        <div className='p-2 bg-white rounded-full text- text-gray-700'>
+                    <div className='relative' onClick={openNotificationModal}>
+                        <div className='p-2 bg-white rounded-full text- text-gray-700 cursor-pointer'>
                             <BsBellFill />
                         </div>
                         <div className='absolute'>
 
                         </div>
                     </div>
-                    <div className=''>
-                        <img src="https://picsum.photos/200/300" alt="" className='w-10 h-10 rounded-full' />
+                    <div className='' onClick={openProfileModal}>
+                        <img src="https://picsum.photos/200/300" alt="" className='w-10 h-10 rounded-full cursor-pointer' />
                     </div>
                 </div>
+                {modals.map(modal => (
+                    <MultiModal
+                        key={modal.id}
+                        id={modal.id}
+                        title={modal.title}
+                    />
+                ))}
             </div>
         </div>
 
