@@ -30,7 +30,7 @@ function AddBankModal({ id }) {
             </div>
             {detailsAdded ? (
                 <>
-                    <div className="flex flex-col gap-4 items-center 3xl:text-2xl">
+                    <div className="flex flex-col gap-6 items-center 3xl:text-2xl">
                         <div>
                             <p className="font-face-mr">CLIMBONSIGHT</p>
                         </div>
@@ -51,7 +51,7 @@ function AddBankModal({ id }) {
                         </div>
 
                         <div className="w-full ">
-                            <button onClick={handleClose} className='bg-black text-white 3xl:p-4 p-3 rounded-lg w-full text-center'>Back</button>
+                            <button onClick={handleClose} className='bg-black text-white 3xl:p-4 p-3 rounded-lg w-full text-center mb-10'>Back</button>
                         </div>
                     </div>
                 </>
