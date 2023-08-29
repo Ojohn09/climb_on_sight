@@ -19,5 +19,4 @@ const multiModalSlice = createSlice({
 });
 
 export const { openMultiModal, closeMultiModal } = multiModalSlice.actions;
-
 export default multiModalSlice.reducer

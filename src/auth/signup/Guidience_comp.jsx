@@ -23,7 +23,7 @@ function Guidience_comp() {
                     </div>
                     <div className='w-full'>
                         <label htmlFor='' className='text-[14px] text-gray-400'>
-                            Mandatory
+                        Proof of guiding insurance (Mandatory)
                         </label>
                         <input
                             type='file'
@@ -39,7 +39,7 @@ function Guidience_comp() {
 
                     <div className='w-full'>
                         <label htmlFor='' className='text-[14px] text-gray-400'>
-                            If applicable
+                        Guiding Certificate (If applicable)
                         </label>
                         <input
                             type='file'
