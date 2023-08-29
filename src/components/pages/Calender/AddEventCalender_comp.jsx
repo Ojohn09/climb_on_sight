@@ -17,24 +17,7 @@ function AddEventCalender_comp() {
     const formatOfDay = 'd'
 
     const today = new Date()
-
     const isToday = (day) => dateFns.isSameDay(day, new Date());
-    // const isToday = (day) => dateFns.isSameDay(day, today)
-
-    // // find first day of currentDate 
-    // const firstDay = dateFns.startOfMonth(currentDate)
-
-    // //find last day of the currentDate
-    // const lastDay = dateFns.lastDayOfMonth(currentDate)
-
-    // //find first day of week of firstDay
-    // const startDate = dateFns.startOfWeek(firstDay, { weekStartsOn: 1 })
-
-    // //find first day of week of lastDay
-    // const endDate = dateFns.lastDayOfWeek(lastDay)
-
-    // //render all days
-    // const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate })
 
     const selectedMonthDate = new Date(currentDate.getFullYear(), selectedMonth + 1, 1);
     const firstDay = dateFns.startOfMonth(selectedMonthDate);

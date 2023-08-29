@@ -6,6 +6,8 @@ import NotificationModal from './NotificationModal';
 import WithdrawModal from './WithdrawModal';
 import AddBankModal from './AddBankModal';
 import RegisteredBank from './RegisteredBank';
+import RequestModal from './requestModal';
+import BankDetailMOdal from './BankDetailModal';
 
 
 const MultiModal = ({ id, title, }) => {
@@ -26,7 +28,12 @@ const MultiModal = ({ id, title, }) => {
         modalContent = <AddBankModal id={id} />;
     } else if (title === 'Registered') {
         modalContent = <RegisteredBank id={id} />;
+    } else if (title === 'Request') {
+        modalContent = <RequestModal id={id} />;
+    } else if (title === 'BankDetail') {
+        modalContent = <BankDetailMOdal id={id} />;
     }
+
 
 
     return (
