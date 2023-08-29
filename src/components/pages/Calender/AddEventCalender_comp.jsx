@@ -3,7 +3,6 @@ import { setCurrentDate } from "../../../redux/slices/features/calendarSlice"
 import * as dateFns from 'date-fns'
 import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react"
-import { Form } from "formik"
 
 
 function AddEventCalender_comp() {
@@ -45,12 +44,9 @@ function AddEventCalender_comp() {
     const totalDate = dateFns.eachDayOfInterval({ start: startDate, end: endDate });
 
     const handleMonthChange = (event) => {
-        setSelectedMonth(event.target.value); // Update the local state
-        dispatch(setSelectedMonth(new Date(calendarState.currentDate).setMonth(event.target.value)));
+        setSelectedMonth(event.target.value);
+        dispatch(setCurrentDate(new Date(calendarState.currentDate).setMonth(event.target.value)));
     }
-
-
-
 
     const weeks = ((totalDate) => {
         const weeks = []
@@ -77,7 +73,6 @@ function AddEventCalender_comp() {
         <div className="w-full bg-[#FBF7F4] h-full p-3 rounded-t-xl flex flex-col gap-2">
             <p className="w-full text-center font-semibold  xl:text-xl 3xl:text-2xl h-fit overflow-hidden">Add to your calendar</p>
             <div className='mt-2 xl:mt-4 xl:h-full'>
-
                 <div className="text-xs xl:text-sm 3xl:text-2xl">
                     <p>Add month</p>
                     <select
