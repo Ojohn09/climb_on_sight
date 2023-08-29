@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiPlus } from 'react-icons/bi';
+import { AiFillPlusCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 function TodayEvent_comp() {
@@ -20,8 +20,12 @@ function TodayEvent_comp() {
                     <p>{formattedDate}</p>
                 </div>
 
-                <div className='text-lg 3xl:text-2xl p-1 bg-black text-white rounded-full cursor-pointer'>
-                    <Link to='/calendar'><BiPlus /> </Link>
+                <div className='flex items-center'>
+                    <p className='text-xs 2xl:text-lg 3xl:text-2xl'>Add trips</p>
+                    <Link to='/calendar' className='text-2xl 3xl:text-5xl cursor-pointer'>
+                        <AiFillPlusCircle />
+                    </Link>
+
                 </div>
             </div>
 
@@ -49,13 +53,30 @@ function TodayEvent_comp() {
             </div>
 
 
-            <div className='flex flex-col gap-1 2xl:gap-4 2xl:mt-4'>
-             
-
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
+            <div className='flex flex-col xl:gap-2'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+
+                        <div className='flex flex-col xl:gap-1 3xl:gap-2'>
+                            <p className=''>Sarah martins</p>
+                            <p className='text-gray-400'>Ice climbing</p>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col text-end'>
+                        <p className=''>June 20th</p>
+                        <p>02:00pm</p>
+                    </div>
+                </div>
+
+
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
+                    <div className='flex gap-2 items-center'>
+
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+
 
                         <div className='flex flex-col xl:gap-2'>
                             <p className='font-bold'>Sarah martins</p>
@@ -69,10 +90,10 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
                             <p className='font-bold'>Sarah martins</p>
@@ -86,10 +107,11 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+
 
                         <div className='flex flex-col xl:gap-2'>
                             <p className='font-bold'>Sarah martins</p>
@@ -103,10 +125,11 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+
 
                         <div className='flex flex-col xl:gap-2'>
                             <p className='font-bold'>Sarah martins</p>
@@ -120,10 +143,11 @@ function TodayEvent_comp() {
                     </div>
                 </div>
 
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[9px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-12 2xl:h-13 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
+
 
                         <div className='flex flex-col xl:gap-2'>
                             <p className='font-bold'>Sarah martins</p>

@@ -1,4 +1,4 @@
-// src/features/modal/modalSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const multiModalSlice = createSlice({
-    name: 'modal',
+    name: 'multiModal',
     initialState,
     reducers: {
         openMultiModal: (state, action) => {
@@ -18,6 +18,5 @@ const multiModalSlice = createSlice({
     },
 });
 
-export const { openModal, closeModal } = multiModalSlice.actions;
-
+export const { openMultiModal, closeMultiModal } = multiModalSlice.actions;
 export default multiModalSlice.reducer

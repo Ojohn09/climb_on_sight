@@ -5,6 +5,7 @@ import modalReducer from '../slices/features/modalSlice'
 import calendarReducer from '../slices/features/calendarSlice'
 import eventReducer from '../slices/features/eventSlice'
 import multiModalReducer from '../slices/features/multiModalSlice'
+import addEventCalendarReducer from '../slices/features/addEventCalendarSlice'
 
 const store = configureStore({
     reducer: {
@@ -14,6 +15,8 @@ const store = configureStore({
         calendar: calendarReducer,
         event: eventReducer,
         multiModal: multiModalReducer,
+        addEventCalendar: addEventCalendarReducer,
+
     }
 })
 
