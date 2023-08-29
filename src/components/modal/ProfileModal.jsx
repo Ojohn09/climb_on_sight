@@ -1,6 +1,6 @@
 import { MdClose, MdDoneOutline, MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import prof from '../../assets/images/profileBack.svg'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useState } from 'react';
 import { closeMultiModal } from '../../redux/slices/features/multiModalSlice';
 

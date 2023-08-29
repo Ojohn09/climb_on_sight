@@ -2,7 +2,6 @@ import { MdClose } from "react-icons/md";
 import { closeMultiModal } from "../../redux/slices/features/multiModalSlice"
 import { useDispatch } from "react-redux"
 import { useState } from "react";
-import { Form } from "formik";
 
 function AddBankModal({ id }) {
 
@@ -64,14 +63,14 @@ function AddBankModal({ id }) {
                     </div>
 
                     <div className="w-full">
-                        <Form className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4">
                             <input type="text" className="p-3 3xl:p-4 rounded-xl bg-gray-100 outline-none" placeholder="Name on bank" />
                             <input type="text" className="p-3 3xl:p-4 rounded-xl bg-gray-100 outline-none" placeholder="Account number" />
                             <input type="text" className="p-3 3xl:p-4 rounded-xl bg-gray-100 outline-none" placeholder="Bank name" />
                             <input type="text" className="p-3 3xl:p-4 rounded-xl bg-gray-100 outline-none" placeholder="Sort code" />
                             <input type="text" className="p-3 3xl:p-4 rounded-xl bg-gray-100 outline-none" placeholder="Address" />
                             <button onClick={handleDetails} className='bg-black text-white 3xl:p-4 p-3 rounded-lg w-full text-center'>Add bank details</button>
-                        </Form>
+                        </div>
                     </div>
                 </div>
             )}

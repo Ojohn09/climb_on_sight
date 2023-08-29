@@ -35,6 +35,15 @@ function PayoutMenu_comp() {
         );
     };
 
+    const BankDetail = () => {
+        dispatch(
+            openMultiModal({
+                id: 'bank-detail',
+                title: 'BankDetail',
+            })
+        );
+    };
+
     return (
         <div className="bg-white w-full rounded-xl p-4 h-fit">
             <div className="flex justify-center text-sm font-semibold xl:text-lg 2xl:text-2xl 3xl:text-3xl mt-4 3xl:mt-8">
@@ -51,7 +60,7 @@ function PayoutMenu_comp() {
                             <p>Greenstone bank</p>
                         </div>
 
-                        <div className="p-2 bg-black rounded-3xl text-white">
+                        <div onClick={BankDetail} className="p-2 bg-black rounded-3xl text-white">
                             <button>Details</button>
                         </div>
                     </div>
@@ -62,7 +71,7 @@ function PayoutMenu_comp() {
                             <p>Greenstone bank</p>
                         </div>
 
-                        <div className="p-2 bg-black rounded-3xl text-white">
+                        <div onClick={BankDetail} className="p-2 bg-black rounded-3xl text-white">
                             <button>Details</button>
                         </div>
                     </div>
@@ -73,7 +82,7 @@ function PayoutMenu_comp() {
                             <p>Greenstone bank</p>
                         </div>
 
-                        <div className="p-2 bg-black rounded-3xl text-white">
+                        <div onClick={BankDetail} className="p-2 bg-black rounded-3xl text-white">
                             <button>Details</button>
                         </div>
                     </div>
