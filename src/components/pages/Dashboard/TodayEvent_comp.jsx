@@ -50,19 +50,21 @@ function TodayEvent_comp() {
 
 
             <div className='flex flex-col gap-1 2xl:gap-4 2xl:mt-4'>
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[10px] xl:text-[12px] 3xl:text-base items-center'>
+             
+
+                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
                     <div className='flex gap-2 items-center'>
 
                         <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
+                            <p className='font-bold'>Sarah martins</p>
                             <p className='text-gray-400'>Ice climbing</p>
                         </div>
                     </div>
 
                     <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
+                        <p className='font-bold'>June 20th</p>
                         <p>02:00pm</p>
                     </div>
                 </div>
@@ -73,13 +75,13 @@ function TodayEvent_comp() {
                         <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
+                            <p className='font-bold'>Sarah martins</p>
                             <p className='text-gray-400'>Ice climbing</p>
                         </div>
                     </div>
 
                     <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
+                        <p className='font-bold'>June 20th</p>
                         <p>02:00pm</p>
                     </div>
                 </div>
@@ -90,13 +92,13 @@ function TodayEvent_comp() {
                         <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
+                            <p className='font-bold'>Sarah martins</p>
                             <p className='text-gray-400'>Ice climbing</p>
                         </div>
                     </div>
 
                     <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
+                        <p className='font-bold'>June 20th</p>
                         <p>02:00pm</p>
                     </div>
                 </div>
@@ -107,13 +109,13 @@ function TodayEvent_comp() {
                         <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
+                            <p className='font-bold'>Sarah martins</p>
                             <p className='text-gray-400'>Ice climbing</p>
                         </div>
                     </div>
 
                     <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
+                        <p className='font-bold'>June 20th</p>
                         <p>02:00pm</p>
                     </div>
                 </div>
@@ -124,30 +126,13 @@ function TodayEvent_comp() {
                         <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
 
                         <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
+                            <p className='font-bold'>Sarah martins</p>
                             <p className='text-gray-400'>Ice climbing</p>
                         </div>
                     </div>
 
                     <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
-                        <p>02:00pm</p>
-                    </div>
-                </div>
-
-                <div className=' flex justify-between text-[8px] sm:text-[12px] lg:text-[12px] xl:text-[12px] 3xl:text-base items-center'>
-                    <div className='flex gap-2 items-center'>
-
-                        <img src="https://picsum.photos/200/300" alt="" className='w-8 h-8 sm:w-14 sm:h-14 lg:w-8 lg:h-8 2xl:w-14 2xl:h-14 3xl:w-15 3xl:h-15 4xl:w-20 4xl:h-20 rounded-full ' />
-
-                        <div className='flex flex-col xl:gap-2'>
-                            <p className=''>Sarah martins</p>
-                            <p className='text-gray-400'>Ice climbing</p>
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col text-end'>
-                        <p className=''>June 20th</p>
+                        <p className='font-bold'>June 20th</p>
                         <p>02:00pm</p>
                     </div>
                 </div>
