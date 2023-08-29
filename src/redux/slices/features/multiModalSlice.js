@@ -18,6 +18,6 @@ const multiModalSlice = createSlice({
     },
 });
 
-export const { openModal, closeModal } = modalSlice.actions;
+export const { openModal, closeModal } = multiModalSlice.actions;
 
 export default multiModalSlice.reducer
