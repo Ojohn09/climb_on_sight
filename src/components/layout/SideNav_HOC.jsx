@@ -17,7 +17,7 @@ function SideNav_HOC() {
                 </div>
 
 
-                <div className="flex flex-col gap-4 2xl:gap-10 2xl:text-xl text-gray-400">
+                <div className="flex flex-col gap-2 2xl:gap-10 2xl:text-xl text-gray-400">
                     <Link to='/dashboard'>
                         <div className="menu-icon flex items-center gap-2">
                             <HomeIcon />

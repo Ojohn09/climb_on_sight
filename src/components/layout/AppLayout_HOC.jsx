@@ -11,11 +11,11 @@ function AppLayout_HOC(props) {
 
             <div className="h-full w-full ml-[20px]">
 
-                <header className="h-[10%] w-full">
+                <header className="h-[12%] w-full">
                     <AppHeader_HOC />
                 </header>
 
-                <div className='h-[90%] w-full'>
+                <div className='h-[88%] w-full'>
                     {props.children}
                 </div>
             </div>
