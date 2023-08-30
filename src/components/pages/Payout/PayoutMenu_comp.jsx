@@ -46,10 +46,10 @@ function PayoutMenu_comp() {
 
     return (
         <div className="bg-white w-full rounded-xl p-4 h-fit">
-            <div className="flex justify-center text-sm font-semibold xl:text-lg 2xl:text-2xl 3xl:text-3xl mt-4 3xl:mt-8">
+            <div className="flex justify-center text-sm font-semibold xl:text-lg 2xl:text-2xl 3xl:text-3xl mt-2 3xl:mt-8">
                 <p>Payout menu</p>
             </div>
-            <div className="mt-5 2xl:mt-6">
+            <div className="mt-2 2xl:mt-6">
                 <p className="text-sm font-medium xl:text-lg 2xl:text-2xl 3xl:text-3xl ">Saved payment options</p>
 
 

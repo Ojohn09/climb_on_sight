@@ -11,13 +11,13 @@ function SideNav_HOC() {
 
     return (
         <div className=" p-3">
-            <div className="bg-[#F4E8DF] h-[90%] fixed border border-r menu flex flex-col items-start justify-between gap-[150px] z-50 p-3 w-[50px]">
+            <div className="bg-[#F4E8DF] h-[90%] fixed border border-r menu flex flex-col items-start justify-between z-50 p-3 w-[50px]">
                 <div>
                     <Link to="/dashboard" className="text-[10px] font-face-mr ">CO</Link>
                 </div>
 
 
-                <div className="flex flex-col gap-4 2xl:gap-10 2xl:text-xl text-gray-400">
+                <div className="flex flex-col gap-2 2xl:gap-10 2xl:text-xl text-gray-400">
                     <Link to='/dashboard'>
                         <div className="menu-icon flex items-center gap-2">
                             <HomeIcon />
