@@ -17,20 +17,20 @@
 
 .menu {
   overflow: hidden;
-  transition: width 1.5s, border-radius 1.5s;
+  transition: width 2s, border-radius 2s;
   border-radius: 50px;
 }
 
 .menu:hover {
-  width: 200px;
+  width: 300px;
   border-radius: 30px;
 }
 
 .menu-icon .menu-text {
   position: absolute;
-  left: 80px;
+  left: 100px;
   transition: left 2s;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .menu:hover .menu-icon .menu-text {
