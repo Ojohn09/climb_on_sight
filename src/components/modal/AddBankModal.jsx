@@ -21,22 +21,11 @@ function AddBankModal({ id }) {
 
 
     return (
-        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[640px] mx-auto rounded-3xl p-5 3xl:p-8">
+        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[640px] mx-auto rounded-3xl p-5 3xl:p-6">
 
             {detailsAdded ? (
-                <div></div>
-            )
-                : (<div className="text-center w-full my-4 flex justify-between items-center">
-                    <p className="lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px]">Add new details</p>
-                    <p
-                        onClick={handleClose}
-                        className=' border border-black rounded-full cursor-pointer text-xl'>
-                        <BiX />
-                    </p>
-                </div>)
-            }            {detailsAdded ? (
                 <>
-                    <div className="flex flex-col gap-6 items-center 3xl:text-2xl">
+                    <div className="flex flex-col gap-6 3xl:gap-10 items-center 3xl:text-2xl mt-10">
                         <div>
                             <p className="font-face-mr">CLIMBONSIGHT</p>
                         </div>
@@ -64,6 +53,14 @@ function AddBankModal({ id }) {
             ) : (
                 <div className="w-full 3xl:text-xl">
 
+                    <div className="text-center w-full flex mb-5 justify-between items-center">
+                        <p className="lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px]">Add new details</p>
+                        <p
+                            onClick={handleClose}
+                            className=' border border-gray-400 rounded-full cursor-pointer text-xl 3xl:text-4xl'>
+                            <BiX />
+                        </p>
+                    </div>
 
                     <div className="w-full">
                         <div className="flex flex-col gap-4 3xl:gap-6">

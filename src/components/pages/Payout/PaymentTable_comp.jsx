@@ -22,7 +22,7 @@ function PaymentTable_comp() {
             </div>
 
             <div className=' h-full mt-4'>
-                <ul className='flex text-xs xl:text-sm 2xl:text-xl 3xl:text-2xl  bg-white p-2 w-fit gap-1 rounded-3xl'>
+                <ul className='flex  bg-white p-2 w-fit gap-1 rounded-3xl'>
                     <li onClick={handleTab1} className={`p-1 cursor-pointer  ${activeTab === "tab1" ? "bg-black rounded-3xl text-white px-4" : ""}`}>Recent</li>
                     <li onClick={handleTab2} className={`p-1 cursor-pointer  ${activeTab === "tab2" ? "bg-black rounded-3xl text-white px-4" : ""}`}>All</li>
                 </ul>

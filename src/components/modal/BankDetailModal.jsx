@@ -1,6 +1,7 @@
 import { MdClose } from "react-icons/md";
 import { closeMultiModal } from "../../redux/slices/features/multiModalSlice"
 import { useDispatch } from "react-redux"
+import { BiX } from "react-icons/bi";
 
 function BankDetailMOdal({ id }) {
 
@@ -19,15 +20,14 @@ function BankDetailMOdal({ id }) {
     ]
 
     return (
-        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[640px] mx-auto rounded-3xl p-5">
-            <div className="w-full flex justify-end">
+        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[700px] mx-auto rounded-3xl p-5 3xl:p-6">
+            <div className="text-center w-full mb-5 flex justify-between items-center">
+                <p className="lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px]">Bank details</p>
                 <p
                     onClick={handleClose}
-                    className=' border border-black rounded-full cursor-pointer text-[28px] 3xl:text-[38px]'><MdClose />
+                    className=' border border-gray-400 rounded-full cursor-pointer text-xl 3xl:text-4xl'>
+                    <BiX />
                 </p>
-            </div>
-            <div className="text-center w-full my-4">
-                <p className="3xl:text-[38px] font-semibold">Bank details</p>
             </div>
 
             <div className="bg-gray-100 rounded-xl text-xs 3xl:text-xl flex flex-col gap-5 p-5 mb-4">
