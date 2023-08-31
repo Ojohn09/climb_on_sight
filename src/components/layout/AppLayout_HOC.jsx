@@ -9,7 +9,7 @@ function AppLayout_HOC(props) {
                 <SideNav_HOC />
             </aside>
 
-            <div className="h-full w-full ml-[20px]">
+            <div className="h-full w-full ml-[30px]">
 
                 <header className="h-[12%] w-full">
                     <AppHeader_HOC />

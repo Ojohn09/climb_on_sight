@@ -2,6 +2,7 @@ import { MdClose } from "react-icons/md";
 import { closeMultiModal } from "../../redux/slices/features/multiModalSlice"
 import { useDispatch } from "react-redux"
 import { useState } from "react";
+import { BiX } from "react-icons/bi";
 
 function WithdrawModal({ id }) {
 
@@ -22,12 +23,8 @@ function WithdrawModal({ id }) {
 
 
     return (
-        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[640px] mx-auto rounded-3xl p-5">
+        <div className="bg-white w-[300px] lg:w-[400px] 3xl:w-[640px] mx-auto rounded-3xl p-5 3xl:p-6">
             <div className="w-full flex justify-end">
-                <p
-                    onClick={handleClose}
-                    className=' border border-black rounded-full cursor-pointer text-[28px] 3xl:text-[38px]'><MdClose />
-                </p>
             </div>
             {withdraw ? (
                 <>
@@ -48,7 +45,7 @@ function WithdrawModal({ id }) {
                         </div>
 
                         <div>
-                            <p>Withdraw successful</p>
+                            <p>Withdrawal successful</p>
                         </div>
 
                         <div className="w-full">
@@ -60,22 +57,28 @@ function WithdrawModal({ id }) {
                 :
                 (
                     <>
-                        <div className="text-center w-full my-4">
-                            <p className="3xl:text-[38px] font-semibold">Funds withdrawal</p>
+                        <div className="text-center w-full mb-4 flex justify-between items-center">
+                            <p className="lg:text-[20px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[32px]">Funds withdrawal</p>
+                            <p
+                                onClick={handleClose}
+                                className=' border border-black rounded-full cursor-pointer text-xl'>
+                                <BiX />
+                            </p>
                         </div>
 
                         <div className="w-full">
-                            <div className=' rounded-lg flex flex-col items-center cursor-pointer justify-between gap-4 text-xs 3xl:text-2xl'>
+                            <div className=' rounded-lg flex flex-col items-center cursor-pointer justify-between gap-4 3xl:gap-6 text-xs 3xl:text-2xl'>
                                 <input type="number" placeholder='Amount' className='3xl:p-4 p-3 rounded-lg outline-none border w-full' />
                                 <select name="" id="" className="3xl:p-4 p-3 rounded-lg outline-none border w-full">
                                     <option value="">Select saved bank</option>
+                                    <option value="">Bank of America</option>
+                                    <option value="">Greenstone Bank</option>
                                 </select>
                                 <button onClick={handleWithdraw} className='bg-black text-white 3xl:p-4 p-3 rounded-lg w-full text-center'>Withdraw</button>
                             </div>
                         </div>
                     </>
                 )}
-
         </div>
     )
 }

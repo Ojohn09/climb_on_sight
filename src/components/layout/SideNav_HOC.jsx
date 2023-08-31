@@ -11,7 +11,7 @@ function SideNav_HOC() {
 
     return (
         <div className=" p-4">
-            <div className="bg-[#F4E8DF] h-[90%] fixed border border-r menu flex flex-col items-start justify-between z-50 p-3 w-[50px] 3xl:w-[70px] 3xl:px-5">
+            <div className="bg-[#F4E8DF] h-[90%] fixed border border-r menu flex flex-col items-start justify-between z-40 p-3 w-[50px] 3xl:w-[70px] 3xl:px-5">
                 <div>
                     <Link to="/dashboard" className="text-[10px] font-face-mr ">CO</Link>
                 </div>
