@@ -30,20 +30,20 @@ function UpcomingEvent_comp() {
 
 
         <div className="scrollbar-hide">
-            <div className='w-full flex gap-10 z-10 h-full scrollbar-hide'>
-                <div className='lg:w-[50%] overflow-hidden scrollbar-hide'>
-                    <div className=' p-3 z-10 bg-[#FBF7F4] fixed w-full lg:w-[45%] 3xl:w-[47%] scrollbar-hide'>
-                        <p className='text-[20px] 2xl:text-4xl h-full overflow-hidden'>All upcoming trips</p>
+            <div className='w-full flex z-10 h-full scrollbar-hide'>
+                <div className='lg:w-[40%] overflow-hidden scrollbar-hide'>
+                    <div className=' p-3 z-10 bg-[#FBF7F4] border-b fixed w-full lg:w-[35%] xl:w-[36%] 2xl:w-[36%] 3xl:w-[37%] 4xl:w-[37.5%] scrollbar-hide'>
+                        <p className='text-xl 3xl:text-4xl h-full overflow-hidden'>All upcoming trips</p>
                     </div>
                     <div className=''>
                         <div className="h-full">
-                            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-3 mt-20 scrollbar-hide overflow-hidden'>
+                            <div className='grid grid-cols-1 w-full md:grid-cols-2 gap-3 p-3 mt-20 scrollbar-hide overflow-hidden'>
                                 {
                                     eventData.map((data) => (
                                         <div
                                             key={data.id}
                                             onClick={() => handleEventClick(data)}
-                                            className={`bg-white rounded-2xl shadow-sm px-[14px] py-[19px] w-full cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
+                                            className={`bg-white rounded-2xl shadow-sm p-3 3xl:px-[14px] 3xl:py-[19px] w-full cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
                                                 }`}>
                                             <div>
                                                 <img src={data.image} alt="" className='w-full rounded-2xl object-cover object-center' />
@@ -75,8 +75,8 @@ function UpcomingEvent_comp() {
                         </div>
                     </div>
                 </div>
-                <div className='lg:w-[50%] lg:block hidden relative border-l'>
-                    <div className='fixed p-5 text-xl 3xl:text-4xl '>
+                <div className='lg:w-[60%] lg:block hidden relative border-l'>
+                    <div className='fixed p-3 w-full border-b text-xl 3xl:text-4xl '>
                         <p className="overflow-hidden">Selected events</p>
                     </div>
 

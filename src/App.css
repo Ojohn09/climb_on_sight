@@ -28,9 +28,9 @@
 
 .menu-icon .menu-text {
   position: absolute;
-  left: 80px;
+  left: 100px;
   transition: left 2s;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .menu:hover .menu-icon .menu-text {
