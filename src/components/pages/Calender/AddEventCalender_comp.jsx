@@ -55,10 +55,10 @@ function AddEventCalender_comp() {
 
 
     return (
-        <div className="w-full bg-[#FBF7F4] h-full px-10 p-4 rounded-t-xl flex flex-col gap-2">
+        <div className="w-full bg-[#FBF7F4] h-full px-10 p-4 3xl:p-10 rounded-t-xl flex flex-col gap-2">
             <p className="w-full text-center font-semibold 3xl:text-xl h-fit overflow-hidden">Add to your calendar</p>
-            <div className='mt-2 xl:mt-4 xl:h-full flex flex-col gap-3 3xl:gap-[30px]'>
-                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1">
+            <div className='mt-2 xl:mt-4 xl:h-full flex flex-col gap-3 3xl:gap-[40px]'>
+                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1 3xl:gap-2">
                     <p>Add month</p>
                     <select
                         name=""
@@ -74,7 +74,7 @@ function AddEventCalender_comp() {
                 </div>
 
                 <div className=" 3xl:text-2xl my-2 h-fit ">
-                    <p className="text-xs xl:text-sm 2xl:text-base">Add day</p>
+                    <p className="text-xs xl:text-sm 2xl:text-base mb-4">Add day</p>
                     <div className="bg-white text-[8px] 2xl:text-[10px] 3xl:text-[14px] rounded-xl lg:h-fit p-2">
                         <div className='grid grid-cols-7 gap-1 text-center mt-2'>
                             {weeks[0].map((week, i) => (
@@ -91,7 +91,7 @@ function AddEventCalender_comp() {
                     </div>
                 </div>
 
-                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1">
+                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1 3xl:gap-2">
                     <p className="p-1">Start time</p>
                     <select name="" id="" className="p-2 rounded-xl w-full flex gap-2 outline-none text-[10px] 3xl:text-[14px]">
                         {time.map((data, i) => (
@@ -100,7 +100,7 @@ function AddEventCalender_comp() {
                     </select>
                 </div>
 
-                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1">
+                <div className="text-xs xl:text-sm 3xl:text-base flex flex-col gap-1 3xl:gap-2">
                     <p className="p-1">End time</p>
                     <select name="" id="" className="p-2 rounded-xl w-full flex flex-row gap-2 outline-none text-[10px] 3xl:text-[14px]">
                         {time.map((data, i) => (

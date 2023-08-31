@@ -36,21 +36,21 @@ function EventModal() {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-10 h-screen z-10">
-            <div className="max-w-screen mx-auto flex items-end justify-end mt-5 2xl:mt-28 ">
-                <button onClick={closeModal} className=" bg-white text-black  px-2 rounded-full mt-16 mr-6">
+            <div className="max-w-screen mx-auto flex items-end justify-end mt-5 2xl:mt-5 3xl:mt-24">
+                <button onClick={closeModal} className=" bg-white text-black 3xl:text-3xl px-2 rounded-full mt-16 mr-6">
                     x
                 </button>
             </div>
             <div className="w-[100%] flex items-end justify-end">
-                <div className="bg-white p-3 rounded-xl  mr-5 mt-6 xl:mt-12 2xl:mt-16 3xl:mt-16  w-[50%]">
-                    <div className="flex flex-col sm:flex-row  items-start justify-between gap-5">
-                        <div className="lg:w-[60%]">
-                            <img src={selectedEvent.image} alt="" className="w-[80%]  rounded-2xl py-2 object-cover object-center" />
-                            <p className="font-semibold 2xl:text-2xl">Climb off</p>
+                <div className="bg-white p-2 3xl:p-6 rounded-xl 3xl:rounded-3xl  mr-5 mt-6 xl:mt-12 2xl:mt-12 3xl:mt-14 lg:w-[50%] 2xl:w-[53%] 3xl:w-[55%]">
+                    <div className="flex flex-col sm:flex-row   items-start justify-between">
+                        <div className="lg:w-[50%]">
+                            <img src={selectedEvent.image} alt="" className="w-[100%] rounded-2xl 3xl:rounded-2xl object-cover object-center" />
+                            <p className="font-semibold 2xl:text-xl 3xl:text-2xl">Climb off</p>
                             <div className="flex flex-col text-[8px] xl:text-[12px] 2xl:text-sm 3xl:text-base font-medium mt-2">
 
-                                <div>
-                                    <p className="text-gray-500">Event details</p>
+                                <div className="text-justify">
+                                    <p className="text-gray-400 text-[9px] xl:text-[13px] 2xl:text-[15px]">Event details</p>
                                     <p>
                                         It sportsman earnestly ye preserved an on. Moment led family sooner cannot her window pulled any.
                                         Or raillery if improved landlord to speaking hastened differed he. Furniture discourse elsewhere
@@ -59,17 +59,17 @@ function EventModal() {
                                 </div>
                                 <div className="flex flex-col gap-2 3xl:gap-4">
                                     <div>
-                                        <p className="text-gray-500">Event pricing</p>
+                                        <p className="text-gray-400 text-[9px] xl:text-[13px] 2xl:text-[15px]">Event pricing</p>
                                         <p>{selectedEvent.amount}</p>
                                     </div>
                                     <div>
-                                        <p className="text-gray-500"> Date </p>
+                                        <p className="text-gray-400 text-[9px] xl:text-[13px] 2xl:text-[15px]"> Date </p>
                                         <p>{selectedEvent.date}</p>
                                     </div>
-                                    <div><p className="text-gray-500">Event location</p>
+                                    <div><p className="text-gray-400 text-[9px] xl:text-[13px] 2xl:text-[15px]">Event location</p>
                                         <p>{selectedEvent.location}</p></div>
                                     <div>
-                                        <p className="text-gray-500">Time</p>
+                                        <p className="text-gray-400 text-[9px] xl:text-[13px] 2xl:text-[15px]">Time</p>
                                         <p>{selectedEvent.time}</p>
                                     </div>
                                 </div>
