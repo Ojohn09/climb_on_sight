@@ -49,11 +49,11 @@ function UpcomingEvent_comp() {
                                                 <img src={data.image} alt="" className='w-full rounded-2xl object-cover object-center' />
 
                                             </div>
-                                            <div className="flex justify-between w-auto mt-2 font-semibold 3xl:text-[28px]">
+                                            <div className="flex justify-between w-auto mt-2 font-semibold text-sm 2xl:text-base">
                                                 <p>Climb off</p>
                                                 <p>{data.amount}</p>
                                             </div>
-                                            <div className='flex text-[8px] gap-3 mt-2 xl:text-xs 3xl:text-[16px]'>
+                                            <div className='flex text-[8px] gap-3 mt-2 text-xs]'>
                                                 <div className="flex flex-col gap-1">
                                                     <p className='text-gray-400'>Date</p>
                                                     <p>{data.date}</p>
