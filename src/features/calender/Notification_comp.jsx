@@ -41,7 +41,7 @@ function Notification_comp() {
             <div className="scrollbar-hide">
                 <div className="flex flex-col gap-2.5 xl:gap-5 3xl:gap-8 mt-2 items-center">
                     {notificationArray.map((data) => (
-                        <div key={data.id} className="flex gap-2 xl:gap-6 2xl:gap-4 3xl:gap-7 4xl:gap-[68px] xs:text-[8px] sm:text-[12px] lg:text-[9px] w-full xl:text-[12.5px] 2xl:text-[15px] 3xl:text-[20px] 4xl:text-3xl items-center ">
+                        <div key={data.id} className="flex gap-2 xl:gap-6 2xl:gap-4 3xl:gap-[33px] 4xl:gap-[68px] xs:text-[8px] sm:text-[12px] lg:text-[9px] w-full xl:text-[12.5px] 2xl:text-[15px] 3xl:text-[19px] 4xl:text-3xl items-center ">
                             <p className="text-black bg-gray-200 p-1 md:p-2 rounded-full"><IoNotifications /></p>
                             <p className="">{data.notiText}</p>
                             <button onClick={openRequest} className="bg-[#C69776] text-black p-1.5 px-2 rounded-2xl cursor-pointer">View</button>
