@@ -71,9 +71,9 @@ function Calender_comp() {
                     <span key={i}>{dateFns.format(week, formatOfWeek)}</span>
                 ))}
             </div>
-            <div className={`grid grid-cols-7 h-[80%] border-collapse text-[6px] lg:text-[10px] 2xl:text-sm border-t border-gray-300`}>
+            <div className={`grid grid-cols-7 h-[80%] border-collapse text-[6px] lg:text-[10px] 3xl:text-sm border-t border-gray-300`}>
                 {totalDate.map((date, i) => (
-                    <div key={i} className={`flex items-end justify-end p-1 border-gray-300 3xl:text-2xl  ${dateFns.isWeekend(date) ? 'text-gray-300 bg-gray-50 opacity-70 border-0' : ''} ${i % 1 === 5 ? '' : 'border-r '} ${i < totalDate.length - 7 ? 'border-b' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
+                    <div key={i} className={`flex items-end justify-end p-1 border-gray-300  ${dateFns.isWeekend(date) ? 'text-gray-300 bg-gray-50 opacity-70 border-0' : ''} ${i % 1 === 5 ? '' : 'border-r '} ${i < totalDate.length - 7 ? 'border-b' : ''}`}>{dateFns.format(date, formatOfDay)}</div>
                 ))}
             </div>
         </div>

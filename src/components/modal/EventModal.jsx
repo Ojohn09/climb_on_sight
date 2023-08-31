@@ -47,7 +47,7 @@ function EventModal() {
                         <div className="sm:w-[50%]">
                             <img src={selectedEvent.image} alt="" className="w-full rounded-2xl py-2" />
                             <p className="font-semibold 2xl:text-2xl">Climb off</p>
-                            <div className="flex flex-col text-[8px] xl:text-[12px] 2xl:text-sm 3xl:text-lg gap-1 2xl:gap-2 font-medium  mt-2">
+                            <div className="flex flex-col text-[8px] xl:text-[12px] 2xl:text-sm 3xl:text-base gap-1 2xl:gap-2 font-medium mt-2">
 
                                 <div>
                                     <p className="text-gray-500">Event details</p>

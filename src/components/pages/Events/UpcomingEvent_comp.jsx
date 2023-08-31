@@ -5,7 +5,7 @@ import { selectEvent, toggleModal } from "../../../redux/slices/features/eventSl
 function UpcomingEvent_comp() {
     const eventData = [
         { id: 0, image: 'https://plus.unsplash.com/premium_photo-1682308191763-2813d4a2e746?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
-        { id: 1, image: 'https://images.unsplash.com/photo-1682685797406-97f364419b4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MXx8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
+        { id: 1, image: 'https://plus.unsplash.com/premium_photo-1682308191763-2813d4a2e746?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
         { id: 2, image: 'https://images.unsplash.com/photo-1440186347098-386b7459ad6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
         { id: 3, image: 'https://images.unsplash.com/photo-1458442310124-dde6edb43d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
         { id: 4, image: 'https://plus.unsplash.com/premium_photo-1682308191763-2813d4a2e746?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', amount: '$243', date: 'September 3', time: '02:00 PM', location: '23 victoria avenue' },
@@ -37,16 +37,16 @@ function UpcomingEvent_comp() {
                     </div>
                     <div className=''>
                         <div className="h-full">
-                            <div className='grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-6 p-3 mt-20 scrollbar-hide overflow-hidden'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-3 mt-20 scrollbar-hide overflow-hidden'>
                                 {
                                     eventData.map((data) => (
                                         <div
                                             key={data.id}
                                             onClick={() => handleEventClick(data)}
-                                            className={`bg-white rounded-xl shadow-sm p-3 w-full cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
+                                            className={`bg-white rounded-2xl shadow-sm px-[14px] py-[19px] w-full cursor-pointer ${selectedEvent?.id === data.id ? 'lg:z-[25]' : 'z-0'
                                                 }`}>
                                             <div>
-                                                <img src={data.image} alt="" className='w-full rounded-xl object-cover object-center' />
+                                                <img src={data.image} alt="" className='w-full rounded-2xl object-cover object-center' />
 
                                             </div>
                                             <div className="flex justify-between w-auto mt-2 font-semibold 3xl:text-[28px]">

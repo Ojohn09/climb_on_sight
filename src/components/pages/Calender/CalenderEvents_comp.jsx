@@ -62,76 +62,76 @@ function CalenderEvents_comp() {
     return (
         <div className='w-full h-full'>
             <div className="flex flex-col lg:flex-row w-full h-full bg-[#FBF7F4] rounded-t-xl gap-4 xl:gap-7 ">
-                <div className='lg:w-[70%]'>
+                <div className='lg:w-[70%] h-full'>
 
                     <div className='text-lg p-2 xl:text-xl 3xl:text-3xl px-6 mt-2 font-semibold'>
                         {dateFns.format(currentDate, formatOfMonth)} {dateFns.format(currentDate, formatOfDay)}
                     </div>
                     <div className='grid grid-cols-7 gap-1 text-center mt-4 text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>
                         {weeks[0].map((week, i) => (
-                            <span key={i} className={`${dateFns.isWeekend(date) ? 'text-gray-200 ' : ''}`}>{dateFns.format(week, formatOfWeek)}</span>
+                            <span key={i} className={`${dateFns.isWeekend(week) ? 'text-gray-200 ' : ''}`}>{dateFns.format(week, formatOfWeek)}</span>
                         ))}
                     </div>
-                    <div className={`grid grid-cols-7 w-full h-full lg:h-[50%] xl:h-[60%] text-[10px] xl:text-sm border-b border-gray-200`}>
+                    <div className={`grid grid-cols-7 w-full h-full lg:h-[50%] xl:h-[65%] 4xl:h-[70%] text-[10px] xl:text-sm 3xl:text-base`}>
                         {totalDate.map((date, i) => (
-                            <p key={i} className={`flex items-end justify-end p-1  3xl:text-xl border-t border-r ${dateFns.isWeekend(date) ? 'text-gray-400 bg-gray-50 opacity-50 border-0 border-r-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
+                            <p key={i} className={`flex items-end justify-end p-1 border-t border-r border-gray-200 ${dateFns.isWeekend(date) ? 'text-gray-200 bg-gray-50 opacity-50 border-t-0 border-r-0' : ''}`}>{dateFns.format(date, formatOfDay)}</p>
                         ))}
                     </div>
-                    <div className='justify-between flex mt-4 xl:mt-8 px-4'>
-                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={handlePrevMonthClick}>
-                            <span className='text-[14px]'><BiLeftArrowAlt /></span>
-                            <span className='text-[10px] xl:text-sm'>{prevMonth}</span>
+                    <div className='justify-between flex mt-4 xl:mt-8 px-4 3xl:text-[20px] 3xl:mt-[90px]'>
+                        <button className='bg-white p-2 rounded-lg flex items-center' onClick={handlePrevMonthClick}>
+                            <span className='text-[14px] 2xl:text-lg 3xl:text-xl'><BiLeftArrowAlt /></span>
+                            <span className='text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>{prevMonth}</span>
                         </button>
-                        <button className='bg-white p-1 rounded-lg flex items-center' onClick={handleNextMonthClick}>
-                            <span className='text-[10px] xl:text-sm'>{nextMonth}</span>
-                            <span className='text-[14px]'><BiRightArrowAlt /></span>
+                        <button className='bg-white p-2 rounded-lg flex items-center' onClick={handleNextMonthClick}>
+                            <span className='text-[10px] xl:text-sm 2xl:text-base 3xl:text-xl'>{nextMonth}</span>
+                            <span className='text-[14px] 2xl:text-lg 3xl:text-xl'><BiRightArrowAlt /></span>
                         </button>
                     </div>
                 </div>
                 <div className='lg:w-[30%] h-full'>
-                    <div className='flex flex-col gap-2 3xl:gap-8 mt-12 px-4'>
-                        <div className='bg-[#EFFCEF] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                    <div className='flex flex-col gap-2 3xl:gap-6 4xl:gap-8 mt-12 px-4'>
+                        <div className='bg-[#EFFCEF] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-base'>
                             <p className='flex items-center gap-1'>
-                                <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
-                                <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
+                                <span className='text-xl xl:text-3xl 2xl:text-5xl font-bold p-2'>9</span>
+                                <span className='font-semibold text-[12px] xl:text-[16px] 3xl:text-xl'>Event one</span>
                             </p>
-                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='text-[12px] xl:text-[16px] 3xl:text-2xl'>Wednesday,10th, 2023</p>
                             <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#ECF6F7] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#ECF6F7] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-base'>
                             <p className='flex items-center gap-1'>
-                                <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
-                                <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
+                                <span className='text-xl xl:text-3xl 2xl:text-5xl font-bold p-2'>9</span>
+                                <span className='font-semibold text-[12px] xl:text-[16px] 3xl:text-xl'>Event one</span>
                             </p>
-                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='text-[12px] xl:text-[16px] 3xl:text-2xl'>Wednesday,10th, 2023</p>
                             <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#FFEEE2] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#FFEEE2] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-base'>
                             <p className='flex items-center gap-1'>
-                                <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
-                                <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
+                                <span className='text-xl xl:text-3xl 2xl:text-5xl font-bold p-2'>9</span>
+                                <span className='font-semibold text-[12px] xl:text-[16px] 3xl:text-xl'>Event one</span>
                             </p>
-                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='text-[12px] xl:text-[16px] 3xl:text-2xl'>Wednesday,10th, 2023</p>
                             <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
                             </p>
                         </div>
 
-                        <div className='bg-[#EEE8FC] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-2xl'>
+                        <div className='bg-[#EEE8FC] px-4 py-2 3xl:p-6 rounded-xl text-[8px] xl:text-[12px] 3xl:text-base'>
                             <p className='flex items-center gap-1'>
-                                <span className='text-xl xl:text-4xl 2xl:text-6xl font-bold p-2'>9</span>
-                                <span className='font-semibold text-[12px] xl:text-[16px] 2xl:'>Event one</span>
+                                <span className='text-xl xl:text-3xl 2xl:text-5xl font-bold p-2'>9</span>
+                                <span className='font-semibold text-[12px] xl:text-[16px] 3xl:text-xl'>Event one</span>
                             </p>
-                            <p className=''>Wednesday,10th, 2023</p>
+                            <p className='text-[12px] xl:text-[16px] 3xl:text-2xl'>Wednesday,10th, 2023</p>
                             <p className='flex gap-3 text-gray-500 '>
                                 <span>01:30 PM</span>
                                 <span>Ice Piercer</span>
