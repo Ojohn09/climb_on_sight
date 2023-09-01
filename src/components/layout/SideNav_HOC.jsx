@@ -77,7 +77,7 @@ function SideNav_HOC() {
                 </div>
 
                 <div>
-                    <Link to=''>
+                    <Link to='/login'>
                         <div className="menu-icon flex items-center gap-2 text-base ">
                             <p className="p-1 bg-black text-white rounded-full text-[10px]">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 3xl:h-7" viewBox="0 0 17 19" fill="none">

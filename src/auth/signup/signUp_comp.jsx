@@ -8,6 +8,9 @@ import FormStepper from './FormStepper_comp';
 import { DocumentIcon, FingerPrintIcon, HashtagIcon, StarIcon, UserGroupIcon, UserIcon } from '../../utils/icons';
 import AccountSettings_comp from './AccountSettings_comp';
 import { Formik, Form } from 'formik';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { updateCustomerReview, updateExperience, updateGuideReference, updateGuidience, updatePersonalInfo } from '../../redux/slices/auth/signUpFormSlice';
 
 const steps = [
     { icon: <UserIcon />, text: 'Personal Information' },
@@ -22,8 +25,12 @@ const steps = [
 
 function SignUpForm() {
 
+    const dispatch = useDispatch()
+
     const [currentStep, setCurrentStep] = useState(0);
     const totalSteps = steps.length - 1;
+    const navigate = useNavigate()
+
 
     const handleNextStep = () => {
         if (currentStep < totalSteps) {
@@ -41,7 +48,7 @@ function SignUpForm() {
         dispatch(updateCustomerReview(values.customerReview));
         dispatch(updateExperience(values.experience));
         dispatch(updateGuideReference(values.guideReference));
-
+        navigate('/success-page')
         // Perform any additional actions, such as submitting the entire form to the server.
         // ...
     };
