@@ -45,3 +45,138 @@ export const payoutTableData = [
     { id: 10, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
     { id: 11, name: 'morris anderson', amount: '$234', trip: 'bayou rock climbing', date: 'April 5' },
 ]
+
+export const allChatUsers = [
+    {
+        image:
+            "https://randomuser.me/api/portraits/men/61.jpg",
+        id: 1,
+        name: "Tim Hover",
+        active: true,
+        isOnline: true,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/men/62.jpg",
+        id: 2,
+        name: "Ayub Rossi",
+        active: false,
+        isOnline: false,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/men/61.jpg",
+        id: 3,
+        name: "Hamaad Dejesus",
+        active: false,
+        isOnline: false,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/women/61.jpg",
+        id: 4,
+        name: "Eleni Hobbs",
+        active: false,
+        isOnline: true,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/women/70.jpg",
+        id: 5,
+        name: "Elsa Black",
+        active: false,
+        isOnline: false,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/women/67.jpg",
+        id: 6,
+        name: "Kayley Mellor",
+        active: false,
+        isOnline: true,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/men/70.jpg",
+        id: 7,
+        name: "Hasan Mcculloch",
+        active: false,
+        isOnline: true,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/women/61.jpg",
+        id: 8,
+        name: "Autumn Mckee",
+        active: false,
+        isOnline: false,
+    },
+    {
+        image:
+            "https://randomuser.me/api/portraits/men/81.jpg",
+        id: 9,
+        name: "Allen Woodley",
+        active: false,
+        isOnline: true,
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/61.jpg",
+        id: 10,
+        name: "Manpreet David",
+        active: false,
+        isOnline: true,
+    },
+];
+
+
+export const chatItms = [
+    {
+        key: 1,
+        image:
+            "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        type: "",
+        msg: "Hi Tim, How are you?",
+    },
+    {
+        key: 2,
+        image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        type: "other",
+        msg: "I am fine.",
+    },
+    {
+        key: 3,
+        image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        type: "other",
+        msg: "What about you?",
+    },
+    {
+        key: 4,
+        image:
+            "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        type: "",
+        msg: "Awesome these days.",
+    },
+    {
+        key: 5,
+        image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        type: "other",
+        msg: "Finally. What's the plan?",
+    },
+    {
+        key: 6,
+        image:
+            "https://pbs.twimg.com/profile_images/1116431270697766912/-NfnQHvh_400x400.jpg",
+        type: "",
+        msg: "what plan mate?",
+    },
+    {
+        key: 7,
+        image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTA78Na63ws7B7EAWYgTr9BxhX_Z8oLa1nvOA&usqp=CAU",
+        type: "other",
+        msg: "I'm taliking about the tutorial",
+    },
+];
