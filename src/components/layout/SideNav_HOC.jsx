@@ -65,7 +65,7 @@ function SideNav_HOC() {
                             </svg>
                             <p className="menu-text text-black font-semibold">Payout</p> </div>
                     </Link>
-                    <Link to=''>
+                    <Link to='/chat'>
                         <div className="menu-icon flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 3xl:h-7" viewBox="0 0 23 23" fill="none">
                                 <g opacity="">
